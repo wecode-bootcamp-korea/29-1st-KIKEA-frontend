@@ -1,7 +1,14 @@
 import React from 'react';
 
 const Main = () => {
-  return <div>메인입니다</div>;
+  return (
+    <>
+      <nav />
+      <main>
+        <div>홈퍼니싱 아이디어 더보기</div>
+      </main>
+    </>
+  );
 };
 
 export default Main;
