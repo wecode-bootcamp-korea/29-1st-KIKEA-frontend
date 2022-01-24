@@ -2,34 +2,146 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  .main {
+  .message-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 460px;
+    background-color: black;
+    .message-content {
+      cursor: pointer;
+      color: white;
+      .message-text {
+        font-size: 13px;
+        margin-left: 10px;
+      }
+      .message-text:hover {
+        font-size: 13px;
+        margin-left: 10px;
+        text-decoration: underline;
+        font: gray;
+      }
+    }
+  }
+  .sidebar-nav-container {
+    padding-right: 20px;
     display: flex;
     .menu {
       display: flex;
       justify-content: center;
       height: 100%;
       width: 125px;
-      background-color: grey;
+      background-color: white; // front: bug
       position: fixed;
-      z-index: 1;
       left: 0;
+
       .menu-toggle-btn {
-        height: 20px;
-        margin-top: 40px;
+        margin-top: 30px;
+        background-color: white;
+        height: 40px;
+        border: none;
+      }
+      .menu-toggle-btn:hover {
+        background-color: #f5f5f5;
+        border-radius: 50px;
+        width: 35px;
+        height: 35px;
+        border: none;
+      }
+      .menu-btn {
+        font-size: 20px;
       }
     }
-    .main-nav {
-      border: 0.1m solid black;
-      height: 16vh;
-      // margin-left:0
-      .nav-left {
-        .kikea-logo {
+    .header-container {
+      margin-left: 125px;
+      .main-nav {
+        display: flex;
+        align-items: center;
+        padding: 0px 50px 0px 0px;
+        border: 0.1m solid black;
+        height: 13vh; // front: 수정 요청 [height 부여 의미/변화]
+        width: 100%;
+        .nav-left {
+          .kikea-logo {
+            cursor: pointer;
+          }
+        }
+        .nav-center {
+          .search-box {
+            height: 55px;
+            width: 700px;
+            font-size: 17px;
+            padding-left: 40px;
+            margin-left: 30px;
+            background-color: #f5f5f5;
+            border-radius: 30px;
+            border: none;
+            outline: none;
+          }
+          .camera-btn {
+            position: absolute;
+          }
+        }
+        .nav-icons-container {
+          width: 400px;
+          margin-left: 40px;
+          .nav-icons-list {
+            display: flex;
+            align-items: center;
+            .ware-house-btn {
+              background-color: white;
+              border: none;
+              margin-left: 10px;
+              width: 75px;
+              text-align: left;
+            }
+            .btn-span {
+              font-size: 12px;
+              cursor: pointer;
+            }
+            .btn-span-two {
+              font-weight: bold;
+              letter-spacing: 0.1em;
+              cursor: pointer;
+            }
+            .btn-span-two:hover {
+              text-decoration: underline;
+            }
+            .icon {
+              font-size: 20px;
+              cursor: pointer;
+            }
+            .ware-house-icon {
+              margin-left: 10px;
+            }
+            .truck-icon {
+              margin-left: 100px;
+            }
+            .user-icon,
+            .heart-icon,
+            .bag-icon {
+              margin-left: 30px;
+            }
+          }
         }
       }
-      .nav-center {
-      }
-      .nav-right {
+      .all-products-container {
+        width: 100%;
+        padding-right: 55px;
+        .all-products-list {
+          border-bottom: 0.1em solid lightgray;
+          display: flex;
+          .all-products-menu {
+            // border: red 0.1em solid;
+            font-size: 15px;
+            font-weight: bold;
+            margin-right: 20px;
+            padding-bottom: 10px;
+          }
+        }
       }
     }
+  }
+  .daniel {
+    margin-left: 200px;
   }
 }
