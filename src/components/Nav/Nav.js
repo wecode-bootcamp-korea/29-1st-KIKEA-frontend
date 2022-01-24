@@ -2,7 +2,7 @@ import React from 'react';
 
 function Nav() {
   return <div>
-    ddddsss
+    slack 연동
   </div>;
 }
 
