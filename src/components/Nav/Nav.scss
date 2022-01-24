@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  .main {
+    display: flex;
+    .menu {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      width: 125px;
+      background-color: grey;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      .menu-toggle-btn {
+        height: 20px;
+        margin-top: 40px;
+      }
+    }
+    .main-nav {
+      border: 0.1m solid black;
+      height: 16vh;
+      // margin-left:0
+      .nav-left {
+        .kikea-logo {
+        }
+      }
+      .nav-center {
+      }
+      .nav-right {
+      }
+    }
+  }
+}
