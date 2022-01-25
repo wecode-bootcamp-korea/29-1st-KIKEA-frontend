@@ -1,1 +1,84 @@
-{}
+// <ProductsGrid/ >
+// <h1>온라인 쇼룸</h1>
+// <ul>
+//   {navData.map(kikea => (
+//     <NavItem
+//       key={kikea.id}
+//       data={kikea}
+//       setNavNumber={setNavNumber}
+//       navNumber={navNumber}
+//     />
+//   ))}
+// </ul>
+
+
+const navData = [
+  {
+    id: 1,
+    name: '홈스마트',
+    detail: [
+      { id: 1, img: '', name: '리모콘/무선장치' },
+      { id: 2, img: '', name: '스마트시스템' },
+      { id: 3, img: '', name: '스마트 조명' },
+      { id: 4, img: '', name: '전동 블라인드' },
+    ],
+  },
+  {
+    id: 2,
+    name: '가구',
+    detail: [
+      { id: 5, img: '', name: '소파/암체어' },
+      { id: 6, img: '', name: '침대' },
+      { id: 7, img: '', name: '옷장' },
+      { id: 8, img: '', name: '식탁/책상' },
+      { id: 9, img: '', name: '의자' },
+      { id: 10, img: '', name: 'TV/멀티미디어가구' },
+      { id: 11, img: '', name: '책장/선반유닛' },
+      { id: 12, img: '', name: '서랍' },
+      { id: 13, img: '', name: '수납장/장식장' },
+      { id: 14, img: '', name: '이동식 선반' },
+      { id: 15, img: '', name: '야외용 가구' },
+      { id: 16, img: '', name: '바테이블/의자' },
+      { id: 17, img: '', name: '카페가구' },
+      { id: 18, img: '', name: '거실장/찬장/콘솔테이블' },
+      { id: 19, img: '', name: '칸막이/파티션' },
+      { id: 20, img: '', name: '어린이가구' },
+      { id: 21, img: '', name: '영아용가구' },
+    ],
+  },
+  {
+    id: 3,
+    name: '침대/매트리스',
+    detail: [
+      { id: 22, img: '', name: '침대' },
+      { id: 23, img: '', name: '매트리스' },
+      { id: 24, img: '', name: '침구' },
+      { id: 25, img: '', name: '침대수납' },
+      { id: 26, img: '', name: '침대협탁' },
+      { id: 27, img: '', name: '침대갈빗살' },
+      { id: 28, img: '', name: '침대헤드' },
+      { id: 29, img: '', name: '메트리스 베이스' },
+      { id: 30, img: '', name: '침대다리' },
+    ],
+  },
+  {
+    id: 4,
+    name: '수납/정리',
+    detail: [
+      { id: 31,  img: '', name: '옷장' },
+      { id: 32,  img: '', name: 'TV/멀티미디어' },
+      { id: 33,  img: '', name: '책장/선반유닛' },
+      { id: 34,  img: '', name: '수납장/장식장' },
+      { id: 35,  img: '', name: '서랍' },
+      { id: 36,  img: '', name: '후크/벽수납' },
+      { id: 37,  img: '', name: '거실장/찬장/콘솔테이블' },
+      { id: 38,  img: '', name: '수납 솔루션 시스템' },
+      { id: 39,  img: '', name: '이동식 선반' },
+      { id: 40,  img: '', name: '스탠드 옷걸리/신발 수납' },
+      { id: 41,  img: '', name: '소형 수납' },
+      { id: 42,  img: '', name: '이동 보조용품' },
+      { id: 43,  img: '', name: '가방' },
+    ],
+  },
+
+];

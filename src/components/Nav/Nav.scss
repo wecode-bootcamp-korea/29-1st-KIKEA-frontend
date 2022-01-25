@@ -2,8 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  .menu-container {
-  }
   .message-container {
     display: flex;
     justify-content: space-between;
@@ -42,6 +40,7 @@
         background-color: white;
         height: 40px;
         border: none;
+        cursor: pointer;
       }
       .side-bar-on-btn:hover {
         background-color: #f5f5f5;
@@ -55,7 +54,6 @@
     }
     .header-container {
       margin-left: 125px;
-      // position: fixed;
       .main-nav {
         display: flex;
         align-items: center;
@@ -149,6 +147,6 @@
     }
   }
   .daniel {
-    height: 2000vh;
+    height: 1000vh;
   }
 }

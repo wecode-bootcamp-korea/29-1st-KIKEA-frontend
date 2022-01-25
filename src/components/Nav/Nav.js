@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, useNavigate } from 'react-router-dom';
 import Menu from '../Menu/Menu';
+import MenuChild from '../Menu/MenuChild';
+import LoginBar from '../Menu/LoginBar';
+
 import './Nav.scss';
 import 'font-awesome/css/font-awesome.min.css';
 import {
@@ -19,20 +22,32 @@ import {
 
 function Nav() {
   const [isShownMenu, setIsShownMenu] = useState(false);
-
-  const navigate = useNavigate();
+  const [isShownLoginBar, setIsShownLoginBar] = useState(false);
 
   const closeMenu = e => {
     setIsShownMenu(false);
   };
-
   const showMenu = e => {
     setIsShownMenu(true);
   };
 
-  // const [isShownList, setIsShownList] = useState(false);
-  // const [isShownProducts, setIsShownProducts] = useState(false);
-  // const [isShownMenu, setIsShownMenu] = useState(false);
+  const closeLoginBar = e => {
+    setIsShownLoginBar(false);
+  };
+  const showLoginBar = e => {
+    setIsShownLoginBar(true);
+  };
+
+  // const [isShownMenuChild, setIsShownMenuChild] = useState(false);
+
+  // const closeMenuChild = e => {
+  //   setIsShownMenuChild(false);
+  // };
+
+  // const showMenuChild = e => {
+  //   setIsShownMenuChild(true);
+
+  const navigate = useNavigate();
   // function goToMain() {
   //   navigate('/');
   // }
@@ -67,7 +82,14 @@ function Nav() {
       </div> */}
       {isShownMenu === true ? (
         <div className="menu-container" isShownMenu={isShownMenu}>
-          <Menu showMenu={showMenu} closeMenu={closeMenu} />
+          <Menu closeMenu={closeMenu} />
+        </div>
+      ) : null}
+      {/* <MenuChild closeMenuChild={closeMenuChild}
+          showMenuChild={showMenuChild}/> */}
+      {isShownLoginBar === true ? (
+        <div className="" isShownLoginBar={isShownLoginBar}>
+          <LoginBar closeLoginBar={closeLoginBar} />
         </div>
       ) : null}
 
@@ -131,7 +153,7 @@ function Nav() {
                 </li>
                 <li className="nav-icon-list">
                   <FontAwesomeIcon
-                    // onClick={} 로그인 sidebar
+                    onClick={showLoginBar}
                     className="user-icon icon"
                     icon={faUser}
                   />
@@ -160,92 +182,101 @@ function Nav() {
             </ul>
           </div>
           <div>
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-          </div>
-          <div>
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-          </div>
-          <div>
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-          </div>
-          <div>
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-          </div>
-          <div>
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-          </div>
-          <div>
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-          </div>
-          <div className="daniel">
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasda sdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-          </div>
-          <div className="daniel">
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasda sdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-          </div>
-          <div className="daniel">
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasda sdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-          </div>
-          <div className="daniel">
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasda sdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-          </div>
-          <div className="daniel">
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasda sdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
-            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
+            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
           </div>
         </section>
       </div>
