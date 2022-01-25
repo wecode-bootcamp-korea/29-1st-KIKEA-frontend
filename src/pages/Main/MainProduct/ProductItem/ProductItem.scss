@@ -1,0 +1,16 @@
+.ProductItem-wrapper {
+  .ProductItem-item-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    .ProductItem-item-flex {
+      width: 28vw;
+      margin: 10px;
+      .ProductItem-item-flex-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
