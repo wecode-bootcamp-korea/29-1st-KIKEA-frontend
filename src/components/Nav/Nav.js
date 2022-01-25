@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, useNavigate } from 'react-router-dom';
+import Menu from '../Menu/Menu';
 import './Nav.scss';
 import 'font-awesome/css/font-awesome.min.css';
 import {
@@ -17,8 +18,21 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 function Nav() {
+  const [isShownMenu, setIsShownMenu] = useState(false);
+
   const navigate = useNavigate();
 
+  const closeMenu = e => {
+    setIsShownMenu(false);
+  };
+
+  const showMenu = e => {
+    setIsShownMenu(true);
+  };
+
+  // const [isShownList, setIsShownList] = useState(false);
+  // const [isShownProducts, setIsShownProducts] = useState(false);
+  // const [isShownMenu, setIsShownMenu] = useState(false);
   // function goToMain() {
   //   navigate('/');
   // }
@@ -48,10 +62,19 @@ function Nav() {
           <span className="message-text">KIKEA 인기제품</span>
         </div>
       </div>
+      {/* <div className="menu-container" isShownMenu={isShownMenu}>
+        <Menu closeMenu={closeMenu} />
+      </div> */}
+      {isShownMenu === true ? (
+        <div className="menu-container" isShownMenu={isShownMenu}>
+          <Menu showMenu={showMenu} closeMenu={closeMenu} />
+        </div>
+      ) : null}
+
       <div className="sidebar-nav-container">
         <section className="menu">
-          <button className="menu-toggle-btn">
-            <FontAwesomeIcon icon={faBars} className="menu-btn" />
+          <button className="side-bar-on-btn" onClick={showMenu}>
+            <FontAwesomeIcon icon={faBars} className="side-bar-btn" />
           </button>
         </section>
         <section className="header-container">
@@ -83,11 +106,6 @@ function Nav() {
                     icon={faWarehouse}
                   />
                 </li>
-                {/* <FontAwesomeIcon
-                    onClick={useNavigate('/')}
-                    className="ware-house-icon icon"
-                    icon={faWarehouse}
-                  /> */}
                 <button
                   onClick={() => {
                     navigate('/');
@@ -140,6 +158,94 @@ function Nav() {
               <li className="all-products-menu">모든 제품</li>
               <li className="all-products-menu">온라인 쇼룸</li>
             </ul>
+          </div>
+          <div>
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+          </div>
+          <div>
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+          </div>
+          <div>
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+          </div>
+          <div>
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+          </div>
+          <div>
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+          </div>
+          <div>
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+          </div>
+          <div className="daniel">
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasda sdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+          </div>
+          <div className="daniel">
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasda sdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+          </div>
+          <div className="daniel">
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasda sdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+          </div>
+          <div className="daniel">
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasda sdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+          </div>
+          <div className="daniel">
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasda sdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
+            asdasdasdasdasddasdasdasdasdasddasdasdasdasdasddasdasdasdasdasdd
           </div>
         </section>
       </div>

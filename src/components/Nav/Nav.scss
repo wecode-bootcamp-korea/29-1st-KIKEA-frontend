@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  .menu-container {
+  }
   .message-container {
     display: flex;
     justify-content: space-between;
@@ -28,31 +30,32 @@
     .menu {
       display: flex;
       justify-content: center;
+
       height: 100%;
       width: 125px;
-      background-color: white; // front: bug
+      // front: bug
       position: fixed;
       left: 0;
 
-      .menu-toggle-btn {
+      .side-bar-on-btn {
         margin-top: 30px;
         background-color: white;
         height: 40px;
         border: none;
       }
-      .menu-toggle-btn:hover {
+      .side-bar-on-btn:hover {
         background-color: #f5f5f5;
         border-radius: 50px;
         width: 35px;
         height: 35px;
-        border: none;
       }
-      .menu-btn {
+      .side-bar-btn {
         font-size: 20px;
       }
     }
     .header-container {
       margin-left: 125px;
+      // position: fixed;
       .main-nav {
         display: flex;
         align-items: center;
@@ -66,24 +69,28 @@
           }
         }
         .nav-center {
+          padding-bottom: 60px;
           .search-box {
             height: 55px;
-            width: 700px;
+            width: 710px;
             font-size: 17px;
-            padding-left: 40px;
+            padding-left: 50px;
             margin-left: 30px;
+
             background-color: #f5f5f5;
             border-radius: 30px;
             border: none;
             outline: none;
+            position: absolute;
           }
+
           .camera-btn {
             position: absolute;
           }
         }
         .nav-icons-container {
           width: 400px;
-          margin-left: 40px;
+          margin-left: 770px;
           .nav-icons-list {
             display: flex;
             align-items: center;
@@ -142,6 +149,6 @@
     }
   }
   .daniel {
-    margin-left: 200px;
+    height: 2000vh;
   }
 }

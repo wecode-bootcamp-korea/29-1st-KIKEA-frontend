@@ -1,0 +1,38 @@
+.side-bar-container {
+  overflow-y: scroll;
+  border: 0.1em green solid;
+  width: 33vw;
+  height: 110vh;
+  z-index: 10;
+  top: 0;
+  position: fixed;
+  background: white;
+  .side-bar-nav {
+    display: flex;
+    align-items: center;
+    padding: 45px 65px;
+    height: 50px;
+    border: 0.1em solid red;
+    position: fixed;
+    top: 0;
+    // overflow: hidden;
+    .side-bar-off-btn {
+      height: 40px;
+    }
+    .kikea-logo {
+      height: 35px;
+    }
+  }
+  .side-bar-content-container {
+    margin-top: 90px;
+    border: 0.1em solid blue;
+
+    .side-bar-content-container {
+      .side-bar-content {
+        .side-bar-category {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
