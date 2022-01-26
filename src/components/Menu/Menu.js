@@ -1,16 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Menu.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import { faTimesCircle, faGlobe } from '@fortawesome/free-solid-svg-icons';
 // import MenuChild from './MenuChild';
-function Menu({ closeMenu }) {
+function Menu({ closeMenu, isShownMenu }) {
   const [isShownList, setIsShownList] = useState(false);
 
   // const navigate = useNavigate();
+
+  const ref = useRef();
+
+  useEffect(() => {
+    const checkIfClickedOutside = e => {
+      if (ref.current && !ref.current.contains(e.target)) {
+        closeMenu();
+      }
+    };
+    document.addEventListener('click', checkIfClickedOutside);
+    return () => {
+      document.removeEventListener('click', checkIfClickedOutside);
+    };
+  }, [closeMenu]);
+  // console.log(isShownMenu);
+
   return (
     <>
-      <div className="side-bar-container">
+      <div
+        className={
+          isShownMenu === true
+            ? 'side-bar-container-slide-in '
+            : 'side-bar-container-slide-out'
+        }
+        ref={ref}
+      >
         <div className="side-bar-nav">
           <button
             onClick={closeMenu}
@@ -30,14 +53,14 @@ function Menu({ closeMenu }) {
         </div>
         <div className="side-bar-content-container">
           <div className="side-bar-content">
-            <p
+            <h1
               className="side-bar-category"
               onClick={() => {
                 setIsShownList(!isShownList);
               }}
             >
               모든 제품
-            </p>
+            </h1>
             {isShownList === true ? <List /> : null}
             <p
               className="side-bar-category side-bar-category-last"
@@ -64,10 +87,17 @@ function Menu({ closeMenu }) {
               <li className="service-list-content">내 프로필</li>
             </ul>
             <div className="side-bar-footer-container">
-              <button type="button" className="side-bar-foot-btn">
+              <button type="button" className="side-bar-footer-btn">
                 한국어
               </button>
-              <button type="button" className="side-bar-foot-btn">
+              <button
+                type="button"
+                className="side-bar-footer-btn choose-country-btn"
+              >
+                <FontAwesomeIcon
+                  icon={faGlobe}
+                  className="choose-country-icon"
+                />
                 국가 변경
               </button>
             </div>
@@ -81,38 +111,16 @@ function Menu({ closeMenu }) {
 function List() {
   return (
     <>
-      <p>김성수 화이팅</p>
-      <p>주다희 화이팅</p>
-      <p>신수녕 화이팅</p>
-      <p>박혜린 화이팅</p>
-      <p>김성수 화이팅</p>
-      <p>주다희 화이팅</p>
-      <p>신수녕 화이팅</p>
-      <p>박혜린 화이팅</p>
-      <p>김성수 화이팅</p>
-      <p>주다희 화이팅</p>
-      <p>신수녕 화이팅</p>
-      <p>박혜린 화이팅</p>
-      <p>김성수 화이팅</p>
-      <p>주다희 화이팅</p>
-      <p>신수녕 화이팅</p>
-      <p>박혜린 화이팅</p>
-      <p>김성수 화이팅</p>
-      <p>주다희 화이팅</p>
-      <p>신수녕 화이팅</p>
-      <p>박혜린 화이팅</p>
-      <p>김성수 화이팅</p>
-      <p>주다희 화이팅</p>
-      <p>신수녕 화이팅</p>
-      <p>박혜린 화이팅</p>
-      <p>김성수 화이팅</p>
-      <p>주다희 화이팅</p>
-      <p>신수녕 화이팅</p>
-      <p>박혜린 화이팅</p>
-      <p>김성수 화이팅</p>
-      <p>주다희 화이팅</p>
-      <p>신수녕 화이팅</p>
-      <p>박혜린 화이팅</p>
+      <ul className="menu-list">
+        <li
+          className="menu-items"
+          // onCilck={ } 가구 page
+        >
+          가구
+        </li>
+        <li className="menu-items">침대/매트리스</li>
+        <li className="menu-items">조명</li>
+      </ul>
     </>
   );
 }

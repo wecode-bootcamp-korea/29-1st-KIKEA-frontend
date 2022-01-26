@@ -4,6 +4,8 @@ import './MenuChild.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
+// ============= MenuChild 컴포넌트 사용 미정 / 추후 삭제 ================
+
 function MenuChild() {
   // const navigate = useNavigate();
   return (

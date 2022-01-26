@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, useNavigate } from 'react-router-dom';
 import Menu from '../Menu/Menu';
@@ -12,7 +12,6 @@ import {
   faInfoCircle,
   faPhoneAlt,
   faSearch,
-  faCamera,
   faWarehouse,
   faShoppingBag,
   faHeart,
@@ -37,6 +36,7 @@ function Nav() {
   const showLoginBar = e => {
     setIsShownLoginBar(true);
   };
+  console.log(isShownMenu);
 
   // const [isShownMenuChild, setIsShownMenuChild] = useState(false);
 
@@ -77,9 +77,7 @@ function Nav() {
           <span className="message-text">KIKEA 인기제품</span>
         </div>
       </div>
-      {/* <div className="menu-container" isShownMenu={isShownMenu}>
-        <Menu closeMenu={closeMenu} />
-      </div> */}
+
       {isShownMenu === true ? (
         <div className="menu-container" isShownMenu={isShownMenu}>
           <Menu closeMenu={closeMenu} />
@@ -103,7 +101,7 @@ function Nav() {
           <div className="main-nav">
             <div className="nav-left">
               <img
-                onClick={useNavigate('/')}
+                // onClick={useNavigate('/')}
                 className="kikea-logo"
                 alt="kikea"
                 src="https://www.ikea.com/kr/ko/static/ikea-logo.f7d9229f806b59ec64cb.svg"
@@ -115,38 +113,47 @@ function Nav() {
                 type="text"
                 placeholder="검색어 입력"
               />
+              <button className="search-btn">
+                <FontAwesomeIcon icon={faSearch} className="search-icon" />
+              </button>
             </div>
 
             <div className="nav-icons-container">
               <ul className="nav-icons-list">
                 <li>
                   <FontAwesomeIcon
-                    onClick={() => {
-                      navigate('/');
-                    }}
+                    // onClick={() => {
+                    //   navigate('/');
+                    // }}
                     className="ware-house-icon icon"
                     icon={faWarehouse}
                   />
                 </li>
                 <button
-                  onClick={() => {
-                    navigate('/');
-                  }}
+                  // onClick={() => {
+                  //   navigate('/');
+                  // }}
                   type="button"
                   className="ware-house-btn"
                 >
-                  <span onClick={useNavigate('/detail')} className="btn-span">
+                  <span
+                    // onClick={useNavigate('/detail')}
+                    className="btn-span"
+                  >
                     매장 정보 확인
                   </span>
-                  <p onClick={useNavigate('/')} className="btn-span-two">
+                  <p
+                    // onClick={useNavigate('/')}
+                    className="btn-span-two"
+                  >
                     매장 선택
                   </p>
                 </button>
                 <li className="nav-icon-list">
                   <FontAwesomeIcon
-                    onClick={() => {
-                      navigate('/');
-                    }}
+                    // onClick={() => {
+                    //   navigate('/');
+                    // }}
                     className="truck-icon icon"
                     icon={faTruck}
                   />
@@ -158,16 +165,16 @@ function Nav() {
                     icon={faUser}
                   />
                 </li>
-                <li className="nav-icon-list">
+                <li className="nav-icon-lgiist">
                   <FontAwesomeIcon
-                    onClick={useNavigate('/')}
+                    // onClick={useNavigate('/')}
                     className="heart-icon icon"
                     icon={faHeart}
                   />
                 </li>
                 <li className="nav-icon-list">
                   <FontAwesomeIcon
-                    onClick={useNavigate('/detail')}
+                    // onClick={useNavigate('/detail')}
                     className="bag-icon icon"
                     icon={faShoppingBag}
                   />
@@ -177,106 +184,11 @@ function Nav() {
           </div>
           <div className="all-products-container">
             <ul className="all-products-list">
-              <li className="all-products-menu">모든 제품</li>
+              <li onClick={showMenu} className="all-products-menu">
+                모든 제품
+              </li>
               <li className="all-products-menu">온라인 쇼룸</li>
             </ul>
-          </div>
-          <div>
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
-            KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA KIKEA
           </div>
         </section>
       </div>

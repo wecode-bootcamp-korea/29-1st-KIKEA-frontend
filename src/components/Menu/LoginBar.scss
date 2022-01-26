@@ -7,6 +7,7 @@
   right: 0;
   position: fixed;
   background: white;
+  overscroll-behavior-y: none;
   .login-signup-content {
     height: 45%;
     background-color: #0158a3;
@@ -16,10 +17,14 @@
       border-bottom: 1px solid white;
       .close-login-btn {
         position: relative;
-        margin-left: 350px;
+        margin-left: 355px;
+        font-size: 28px;
+        cursor: pointer;
+        background-color: #0158a3;
+        border: none;
       }
       .login-content {
-        padding-top: 70px;
+        padding-top: 60px;
         display: flex;
         justify-content: space-between;
 
@@ -35,6 +40,9 @@
           border-radius: 20px;
           cursor: pointer;
         }
+        .faTimesCircle {
+          background-color: white;
+        }
       }
     }
     .signup-content-container {
@@ -44,15 +52,15 @@
         .signup-content {
           height: 25%;
           width: 70%;
-
-          padding: 23px 50px;
+          padding: 20px 50px;
           color: white;
           .signup-message {
-            font-size: 18px;
+            font-size: 17px;
           }
           .signup-text {
             width: 320px;
             font-size: 14px;
+            margin-top: 15px;
           }
         }
       }

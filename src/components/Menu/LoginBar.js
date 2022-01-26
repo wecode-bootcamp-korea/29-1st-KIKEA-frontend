@@ -1,12 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
+import {
+  faArrowCircleRight,
+  faTimesCircle,
+} from '@fortawesome/free-solid-svg-icons';
 import './LoginBar.scss';
 
 function LoginBar({ closeLoginBar }) {
+  // const navigate = useNavigate();
+
+  const ref = useRef();
+
+  useEffect(() => {
+    const checkIfClickedOutside = e => {
+      if (ref.current && !ref.current.contains(e.target)) {
+        closeLoginBar();
+      }
+    };
+    document.addEventListener('click', checkIfClickedOutside);
+    return () => {
+      document.removeEventListener('click', checkIfClickedOutside);
+    };
+  }, [closeLoginBar]);
+
   return (
     <>
-      <div className="login-bar-container">
+      <div className="login-bar-container" ref={ref}>
         <div className="login-signup-content">
           <div className="login-content-container">
             <button
@@ -14,11 +34,15 @@ function LoginBar({ closeLoginBar }) {
               type="button"
               className="close-login-btn"
             >
-              x
+              <FontAwesomeIcon icon={faTimesCircle} className="faTimesCircle" />
             </button>
             <div className="login-content">
               <span className="login-message">Hej</span>
-              <button type="button" className="to-login-page-btn">
+              <button
+                onClick={useNavigate('/')}
+                type="button"
+                className="to-login-page-btn"
+              >
                 로그인
               </button>
             </div>
