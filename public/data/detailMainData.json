@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "name": "TÄLLBYN 텔뷘",
+    "price": "₩59,900",
+    "type": "탁상스탠드, 니켈 도금/오팔 화이트 유리, 40cm",
+    "content": "TÄLLBYN 텔뷘 시리즈의 조명은 메탈과 입으로 불어 만드는 유리 소재로 만들어서 클래식하면서도 튼튼한 디자인이에요. 멋진 분위기를 연출하는 기능성 조명이죠. 집안에 추억을 떠올리게 하는 공간을 만들어보세요.",
+    "description": "부드러운 느낌의 불빛이 따뜻하고 포근한 분위기를 연출합니다. 이 유리 전등갓은 숙련된 전문가가 입으로 불어서 만든 제품으로 독특한 개성을 느낄 수 있어요.",
+    "material": "스틸, 니켈도금, 아크릴 코팅",
+    "review": "★★★★",
+    "img": [
+      {
+        "id": 1,
+        "src": "https://www.ikea.com/kr/ko/images/products/taellbyn-table-lamp-nickel-plated-opal-white-glass__0779136_pe759268_s5.jpg?f=xl"
+      },
+      {
+        "id": 2,
+        "src": "https://www.ikea.com/kr/ko/images/products/taellbyn-table-lamp-nickel-plated-opal-white-glass__0779133_pe759267_s5.jpg?f=xl"
+      },
+      {
+        "id": 3,
+        "src": "https://www.ikea.com/kr/ko/images/products/taellbyn-table-lamp-nickel-plated-opal-white-glass__0779134_pe759270_s5.jpg?f=xl"
+      },
+      {
+        "id": 4,
+        "src": "https://www.ikea.com/kr/ko/images/products/taellbyn-table-lamp-nickel-plated-opal-white-glass__0779142_pe759273_s5.jpg?f=xl"
+      },
+      {
+        "id": 5,
+        "src": "https://www.ikea.com/kr/ko/images/products/taellbyn-table-lamp-nickel-plated-opal-white-glass__0779135_pe759269_s5.jpg?f=xl"
+      },
+      {
+        "id": 6,
+        "src": "https://www.ikea.com/kr/ko/images/products/taellbyn-table-lamp-nickel-plated-opal-white-glass__0974551_ph171410_s5.jpg?f=xl"
+      },
+      {
+        "id": 7,
+        "src": "https://www.ikea.com/kr/ko/images/products/taellbyn-table-lamp-nickel-plated-opal-white-glass__0979583_ph172360_s5.jpg?f=xl"
+      },
+      {
+        "id": 8,
+        "src": "https://www.ikea.com/kr/ko/images/products/taellbyn-table-lamp-nickel-plated-opal-white-glass__0964594_ph172828_s5.jpg?f=xl"
+      }
+    ]
+  }
+]

@@ -1,0 +1,108 @@
+.side-container {
+  width: 30vw;
+  margin: 10px;
+
+  .side-product-box {
+    // display: flex;
+    // flex-direction: column;
+
+    .side-product-container {
+      display: flex;
+      justify-content: space-between;
+
+      .side-product-name {
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      .side-product-price-wrap {
+        .side-product-price-unit {
+          font-size: 10px;
+          font-weight: bold;
+          margin-right: 10px;
+        }
+
+        .side-product-price {
+          font-size: 22px;
+          font-weight: bold;
+        }
+      }
+    }
+    .side-product-type {
+      font-size: 14px;
+      margin-top: 10px;
+      color: rgb(105, 105, 105);
+    }
+
+    .side-product-review {
+      display: inline-block;
+      font-size: 14px;
+      margin: 18px 14px 0 0;
+    }
+
+    .side-product-review-value {
+      font-size: 13px;
+    }
+
+    .btn-wrap {
+      margin: 30px 0 30px 0;
+      display: flex;
+      justify-content: space-around;
+
+      .buying-btn {
+        width: 75%;
+        border: none;
+        padding: 20px;
+        background-color: rgb(56, 56, 223);
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+        border-radius: 50px;
+      }
+
+      .click-heart {
+        font-size: 18px;
+        width: 50px;
+        height: 50px;
+        border: 0.8px solid rgb(204, 203, 203);
+        border-radius: 100%;
+        background-color: white;
+      }
+    }
+
+    .delivery-wrap {
+      margin-bottom: 25px;
+      i {
+      }
+
+      .delivery {
+        font-size: 12px;
+        color: rgb(105, 105, 105);
+      }
+
+      .delivery-comment {
+        font-size: 12px;
+        color: rgb(126, 126, 126);
+        margin-top: 10px;
+      }
+    }
+
+    .rec-wrap {
+      margin-top: 25px;
+
+      i {
+      }
+
+      .rec {
+        font-size: 12px;
+        color: rgb(105, 105, 105);
+      }
+
+      .rec-comment {
+        font-size: 12px;
+        color: rgb(126, 126, 126);
+        margin-top: 10px;
+      }
+    }
+  }
+}
