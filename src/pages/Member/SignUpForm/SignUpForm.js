@@ -73,42 +73,44 @@ const SignUpForm = () => {
           아니요, 추가 혜택 없이 온라인 몰만 가입하고 싶습니다. IKEA Family 혜택
         </label>
       </div>
-      <input
-        className="member-email"
-        type="text"
-        name="email"
-        placeholder="이메일"
-        onChange={changeInfo}
-      />
-      <input
-        className="member-password"
-        type="password"
-        name="password"
-        placeholder="패스워드"
-        onChange={changeInfo}
-      />
-      <input
-        className="member-name"
-        type="text"
-        name="name"
-        placeholder="이름"
-        onChange={changeInfo}
-      />
-      <input
-        className="member-phoneNumber"
-        type="text"
-        name="phoneNumber"
-        placeholder="휴대전화"
-        onChange={changeInfo}
-      />
-      <input
-        className="member-address"
-        type="text"
-        name="address"
-        placeholder="주소"
-        onChange={changeInfo}
-      />
-      <button onClick={signUp}>회원가입</button>
+      <div className="information">
+        <input
+          className="member-email"
+          type="text"
+          name="email"
+          placeholder="이메일"
+          onChange={changeInfo}
+        />
+        <input
+          className="member-password"
+          type="password"
+          name="password"
+          placeholder="패스워드"
+          onChange={changeInfo}
+        />
+        <input
+          className="member-name"
+          type="text"
+          name="name"
+          placeholder="이름"
+          onChange={changeInfo}
+        />
+        <input
+          className="member-phoneNumber"
+          type="text"
+          name="phoneNumber"
+          placeholder="휴대전화"
+          onChange={changeInfo}
+        />
+        <input
+          className="member-address"
+          type="text"
+          name="address"
+          placeholder="주소"
+          onChange={changeInfo}
+        />
+        <button onClick={signUp}>회원가입</button>
+      </div>
     </div>
   );
 };

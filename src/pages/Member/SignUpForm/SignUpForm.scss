@@ -1,4 +1,36 @@
 .signupform-wrapper {
   width: 60%;
   padding: 70px 50px;
+
+  .information {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+    input {
+      height: 10vw;
+      border: 0;
+      border-radius: 0;
+      border-bottom: 1px solid #929292;
+      margin-bottom: 50px;
+    }
+
+    input:focus::-webkit-input-placeholder {
+      font-size: 1em;
+      position: relative;
+      top: -25px;
+      transition: 0.2s ease-out;
+    }
+
+    input::-webkit-input-placeholder {
+      transition: 3s ease-in;
+    }
+
+    input[type='text']:focus,
+    input[type='password']:focus {
+      height: 50px;
+      padding-bottom: 0px;
+      transition: 0.2s ease-in;
+    }
+  }
 }
