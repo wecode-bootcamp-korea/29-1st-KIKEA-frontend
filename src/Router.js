@@ -2,9 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Detail from './pages/Detail/Detail';
 import Main from './pages/Main/Main';
-import ProductCategory from './pages/ProductType/ProductCategory/ProductType';
-import ProductSuggestion from './pages/ProductType/ProductSuggestion/ProductSuggestion';
-import ProducFitler from './pages/ProductType/ProductFilter/ProductFilter';
+import ProductTypeMain from './pages/ProductType/ProductTypeMain';
 
 function Router() {
   return (
@@ -12,8 +10,7 @@ function Router() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/detail" element={<Detail />} />
-        <Route path="/productCategory" element={<ProductCategory />} />
-        <Route path="/productSuggestion" element={<ProductSuggestion />} />
+        <Route path="/productTypeMain" element={<ProductTypeMain />} />
       </Routes>
     </BrowserRouter>
   );
