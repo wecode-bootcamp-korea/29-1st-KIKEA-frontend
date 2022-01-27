@@ -1,8 +1,11 @@
 .detail-page-container {
   box-sizing: border-box;
   width: 100vw;
+  overflow-y: hidden;
+
   .detail-page {
     margin-left: 50px;
+
     .detail-container {
       display: flex;
       width: 100vw;

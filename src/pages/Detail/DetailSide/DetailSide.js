@@ -1,15 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './DetailSide.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 
-const DetailSide = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleAddBtn = () => {
-    setIsOpen(isOpen => !isOpen);
-  };
-
+const DetailSide = ({ toggleAddBtn }) => {
   return (
     <div className="side-container">
       <div className="side-product-box">
@@ -26,14 +20,12 @@ const DetailSide = () => {
         <div className="side-product-review">★★★★</div>
         <span className="side-product-review-value">(8)</span>
         <div className="btn-wrap">
-          <button className="buying-btn" onClicK={() => toggleAddBtn()}>
+          <button className="buying-btn" onClick={toggleAddBtn}>
             구매하기
           </button>
           <button className="click-heart">
             <FontAwesomeIcon icon={faHeart} />
           </button>
-
-          {/* <aside className={isOpen ? 'show-aside' : 'hide-main'}></aside> */}
         </div>
         <div className="delivery-wrap">
           <div className="delivery">배송 가능</div>

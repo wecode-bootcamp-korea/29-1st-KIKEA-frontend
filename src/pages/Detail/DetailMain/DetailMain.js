@@ -3,7 +3,7 @@ import ProductImg from './ProductImg';
 import DetailDesc from './DetailDesc';
 import './DetailMain.scss';
 
-const DetailMain = ({ productBox }) => {
+const DetailMain = ({ productBox, toggleDescBtn }) => {
   return (
     <div className="detailMain">
       <div className="productImg-container">
@@ -19,7 +19,7 @@ const DetailMain = ({ productBox }) => {
             );
           })}
       </div>
-      <DetailDesc />
+      <DetailDesc toggleDescBtn={toggleDescBtn} />
     </div>
   );
 };

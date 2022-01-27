@@ -42,7 +42,8 @@
       border-left: none;
       border-right: none;
 
-      .product-desc-btn-comment {
+      &:hover {
+        cursor: pointer;
       }
     }
 
@@ -55,6 +56,10 @@
       background-color: white;
       border: none;
       border-bottom: 0.1px solid rgb(168, 168, 168);
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './DetailDesc.scss';
 
-const DetailDesc = () => {
+const DetailDesc = ({ toggleDescBtn }) => {
   return (
     <div className="main-desc-container">
       <div className="main-desc-wrap">
@@ -20,7 +20,7 @@ const DetailDesc = () => {
         <span className="product-num">504.376.69</span>
       </div>
       <div className="desc-box">
-        <button className="product-desc-btn">
+        <button className="product-desc-btn" onClick={toggleDescBtn}>
           <span className="product-desc-btn-comment">제품 설명</span>
           <FontAwesomeIcon icon={faArrowRight} />
         </button>
