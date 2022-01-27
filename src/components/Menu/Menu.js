@@ -11,28 +11,27 @@ function Menu({ closeMenu, isShownMenu }) {
 
   const ref = useRef();
 
-  useEffect(() => {
-    const checkIfClickedOutside = e => {
-      if (ref.current && !ref.current.contains(e.target)) {
-        closeMenu();
-      }
-    };
-    document.addEventListener('click', checkIfClickedOutside);
-    return () => {
-      document.removeEventListener('click', checkIfClickedOutside);
-    };
-  }, [closeMenu]);
-  // console.log(isShownMenu);
+  // useEffect(() => {
+  //   const checkIfClickedOutside = e => {
+  //     if (ref.current && !ref.current.contains(e.target)) {
+  //       closeMenu();
+  //     }
+  //   };
+  //   document.addEventListener('click', checkIfClickedOutside);
+  //   return () => {
+  //     document.removeEventListener('click', checkIfClickedOutside);
+  //   };
+  // }, [closeMenu]);
 
   return (
     <>
       <div
         className={
           isShownMenu === true
-            ? 'side-bar-container-slide-in '
-            : 'side-bar-container-slide-out'
+            ? 'side-bar-container-slide-out'
+            : 'side-bar-container-slide-in'
         }
-        ref={ref}
+        // ref={ref}
       >
         <div className="side-bar-nav">
           <button
@@ -62,13 +61,9 @@ function Menu({ closeMenu, isShownMenu }) {
               모든 제품
             </h1>
             {isShownList === true ? <List /> : null}
-            <p
-              className="side-bar-category side-bar-category-last"
-              // onClick={showMenuChild}
-            >
+            <p className="side-bar-category side-bar-category-last">
               온라인 쇼룸
             </p>
-
             <ul className="product-list">
               <li className="product-list-content">할인 중</li>
               <li className="product-list-content">신제품</li>

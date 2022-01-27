@@ -36,7 +36,6 @@ function Nav() {
   const showLoginBar = e => {
     setIsShownLoginBar(true);
   };
-  console.log(isShownMenu);
 
   // const [isShownMenuChild, setIsShownMenuChild] = useState(false);
 
@@ -54,6 +53,11 @@ function Nav() {
 
   return (
     <>
+      <Menu isShownMenu={isShownMenu} closeMenu={closeMenu} />
+      <LoginBar
+        isShownLoginBar={isShownLoginBar}
+        closeLoginBar={closeLoginBar}
+      />
       <div className="message-container">
         <div
           // onClick={}
@@ -78,11 +82,11 @@ function Nav() {
         </div>
       </div>
 
-      {isShownMenu === true ? (
+      {/* {isShownMenu === true ? (
         <div className="menu-container" isShownMenu={isShownMenu}>
           <Menu closeMenu={closeMenu} />
         </div>
-      ) : null}
+      ) : null} */}
       {/* <MenuChild closeMenuChild={closeMenuChild}
           showMenuChild={showMenuChild}/> */}
       {isShownLoginBar === true ? (

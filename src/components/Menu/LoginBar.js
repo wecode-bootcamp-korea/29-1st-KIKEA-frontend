@@ -7,26 +7,33 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import './LoginBar.scss';
 
-function LoginBar({ closeLoginBar }) {
+function LoginBar({ closeLoginBar, isShownLoginBar }) {
   // const navigate = useNavigate();
 
-  const ref = useRef();
+  // const ref = useRef();
 
-  useEffect(() => {
-    const checkIfClickedOutside = e => {
-      if (ref.current && !ref.current.contains(e.target)) {
-        closeLoginBar();
-      }
-    };
-    document.addEventListener('click', checkIfClickedOutside);
-    return () => {
-      document.removeEventListener('click', checkIfClickedOutside);
-    };
-  }, [closeLoginBar]);
+  // useEffect(() => {
+  //   const checkIfClickedOutside = e => {
+  //     if (ref.current && !ref.current.contains(e.target)) {
+  //       closeLoginBar();
+  //     }
+  //   };
+  //   document.addEventListener('click', checkIfClickedOutside);
+  //   return () => {
+  //     document.removeEventListener('click', checkIfClickedOutside);
+  //   };
+  // }, [closeLoginBar]);
 
   return (
     <>
-      <div className="login-bar-container" ref={ref}>
+      <div
+        className={
+          isShownLoginBar === true
+            ? 'login-bar-container-slide-out'
+            : 'login-bar-container-slide-in'
+        }
+        // ref={ref}
+      >
         <div className="login-signup-content">
           <div className="login-content-container">
             <button
