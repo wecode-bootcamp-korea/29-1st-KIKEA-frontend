@@ -1,11 +1,18 @@
 import React from 'react';
+import './Main.scss';
+import Promotion from './Promotion/Promotion';
+import MainProduct from './MainProduct/MainProduct';
+import RecommendItem from './RecommentItem/RecommendItem';
 
 const Main = () => {
   return (
     <>
       <nav />
-      <main>
-        <div>홈퍼니싱 아이디어 더보기</div>
+      <main className="main">
+        <Promotion />
+        <RecommendItem />
+        <MainProduct />
+
       </main>
     </>
   );
