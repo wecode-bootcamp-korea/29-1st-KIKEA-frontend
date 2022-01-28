@@ -1,36 +1,143 @@
 .signupform-wrapper {
   width: 60%;
-  padding: 70px 50px;
+  padding: 100px 100px;
+
+  .kikeafamily-title {
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-indent: 10px;
+  }
+
+  .signupform-radio {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: gray;
+
+    .radioBtn {
+      width: 20px;
+      height: 20px;
+    }
+
+    .radioBtn + p {
+      display: inline;
+    }
+
+    .radioBtn:checked ~ p {
+      color: black;
+    }
+
+    .radioBtn + p + p {
+      display: inline;
+      margin-left: 10px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .signupform-radio:hover {
+    color: black;
+  }
 
   .information {
-    margin-top: 30px;
+    margin-top: 10vh;
     display: flex;
     flex-direction: column;
 
-    input {
-      height: 10vw;
-      border: 0;
-      border-radius: 0;
-      border-bottom: 1px solid #929292;
-      margin-bottom: 50px;
-    }
-
-    input:focus::-webkit-input-placeholder {
-      font-size: 1em;
+    .input-box {
       position: relative;
-      top: -25px;
-      transition: 0.2s ease-out;
+      margin-bottom: 70px;
+
+      input,
+      span,
+      label {
+        font-family: 'Ubuntu', sans-serif;
+        display: block;
+        margin: 10px;
+        padding: 5px;
+        border: none;
+      }
+
+      input:focus {
+        outline: 0;
+      }
+
+      input {
+        font-size: 20px;
+        font-weight: 300;
+        border-radius: 2px;
+        margin: 0;
+        border: none;
+        width: 80%;
+        background: rgba(0, 0, 0, 0);
+        transition: padding-top 0.2s ease, margin-top 0.2s ease;
+        overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
+      }
+
+      input + label {
+        display: block;
+        position: relative;
+        white-space: nowrap;
+        padding: 0;
+        margin: 0;
+        width: 70%;
+        border-top: 1px solid black;
+        -webkit-transition: width 0.4s ease;
+        transition: width 0.4s ease;
+        height: 0px;
+      }
+
+      input:focus + label {
+        width: 80%;
+      }
+
+      input:focus,
+      input:valid {
+        padding-top: 55px;
+      }
+
+      input:focus + label > span,
+      input:valid + label > span {
+        top: -65px;
+        color: #333;
+      }
+
+      input:valid + label {
+        border-color: #cc6a00;
+      }
+
+      input:invalid {
+        box-shadow: none;
+      }
+
+      input + label > span {
+        font-weight: 300;
+        margin: 0;
+        position: absolute;
+        color: #8f8f8f;
+        font-size: 15px;
+        top: -30px;
+        left: 0px;
+        z-index: -1;
+        -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+        transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+      }
     }
 
-    input::-webkit-input-placeholder {
-      transition: 3s ease-in;
+    .signupButton {
+      margin-top: 10vh;
+      width: 15vw;
+      background-color: #cc6a00;
+      border-style: none;
+      cursor: pointer;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 40px;
     }
 
-    input[type='text']:focus,
-    input[type='password']:focus {
-      height: 50px;
-      padding-bottom: 0px;
-      transition: 0.2s ease-in;
+    .signupButton:hover {
+      background-color: #c57825;
     }
   }
 }

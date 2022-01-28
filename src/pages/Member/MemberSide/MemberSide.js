@@ -6,7 +6,7 @@ const MemberSide = () => {
     <div className="memberside-wrapper">
       <div className="memberside-title">
         <div className="logo-img-container">
-          <img alt="kikea logo" src="/images/logo.jpeg" className="logo-img" />
+          <img alt="kikea logo" src="/images/logo.jpg" className="logo-img" />
         </div>
         <p className="memberside-title-text1">
           <span>IKEA Family </span>
