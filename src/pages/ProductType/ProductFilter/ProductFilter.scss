@@ -1,0 +1,41 @@
+.filter-section-container {
+  .filter-btn-container {
+    .filter-btn {
+    }
+    .filter-btn-category {
+    }
+  }
+  .product-card-container {
+    height: 50vh;
+    border: 0.1em solid red;
+    .item-select-btn {
+      .checkbox-btn {
+      }
+    }
+    .card-img {
+      height: 10vh;
+    }
+    .product-name {
+    }
+    .product-type {
+    }
+    .price-review-container {
+      border: 0.1em solid green;
+      .price-review-wrapper {
+        .won-symbol {
+        }
+        .product-price {
+        }
+      }
+      .add-cart-btn {
+      }
+    }
+    .rating-container {
+      border: 0.1em solid blue;
+      .rating {
+      }
+      .review-nums {
+      }
+    }
+  }
+}

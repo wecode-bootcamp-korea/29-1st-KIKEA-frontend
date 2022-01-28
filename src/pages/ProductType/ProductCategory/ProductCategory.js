@@ -90,5 +90,77 @@ const CATEGORYDATA = [
     img: 'https://images.pexels.com/photos/8987435/pexels-photo-8987435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     description: 'sofa',
   },
+  {
+    id: 1,
+    categoryName: '소파베드',
+    img: 'https://images.pexels.com/photos/8987435/pexels-photo-8987435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    description: 'sofa',
+  },
+  {
+    id: 1,
+    categoryName: '소파베드',
+    img: 'https://images.pexels.com/photos/8987435/pexels-photo-8987435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    description: 'sofa',
+  },
+  {
+    id: 1,
+    categoryName: '소파베드',
+    img: 'https://images.pexels.com/photos/8987435/pexels-photo-8987435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    description: 'sofa',
+  },
+  {
+    id: 1,
+    categoryName: '소파베드',
+    img: 'https://images.pexels.com/photos/8987435/pexels-photo-8987435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    description: 'sofa',
+  },
+  {
+    id: 1,
+    categoryName: '소파베드',
+    img: 'https://images.pexels.com/photos/8987435/pexels-photo-8987435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    description: 'sofa',
+  },
+  {
+    id: 1,
+    categoryName: '소파베드',
+    img: 'https://images.pexels.com/photos/8987435/pexels-photo-8987435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    description: 'sofa',
+  },
+  {
+    id: 1,
+    categoryName: '소파베드',
+    img: 'https://images.pexels.com/photos/8987435/pexels-photo-8987435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    description: 'sofa',
+  },
+  {
+    id: 1,
+    categoryName: '소파베드',
+    img: 'https://images.pexels.com/photos/8987435/pexels-photo-8987435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    description: 'sofa',
+  },
+  {
+    id: 1,
+    categoryName: '소파베드',
+    img: 'https://images.pexels.com/photos/8987435/pexels-photo-8987435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    description: 'sofa',
+  },
+  {
+    id: 1,
+    categoryName: '소파베드',
+    img: 'https://images.pexels.com/photos/8987435/pexels-photo-8987435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    description: 'sofa',
+  },
+  {
+    id: 1,
+    categoryName: '소파베드',
+    img: 'https://images.pexels.com/photos/8987435/pexels-photo-8987435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    description: 'sofa',
+  },
+  {
+    id: 1,
+    categoryName: '소파베드',
+    img: 'https://images.pexels.com/photos/8987435/pexels-photo-8987435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    description: 'sofa',
+  },
 ];
 export default ProductCategory;
