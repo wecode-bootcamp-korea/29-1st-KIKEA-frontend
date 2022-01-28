@@ -3,7 +3,7 @@ import './MemberSide.scss';
 
 const MemberSide = () => {
   return (
-    <div className="memberside-wrapper">
+    <div className="memberside">
       <div className="memberside-title">
         <div className="logo-img-container">
           <img alt="kikea logo" src="/images/logo.jpg" className="logo-img" />

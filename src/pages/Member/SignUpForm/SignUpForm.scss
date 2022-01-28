@@ -1,4 +1,4 @@
-.signupform-wrapper {
+.signupform {
   width: 60%;
   padding: 100px 100px;
 
@@ -41,8 +41,8 @@
   }
 
   .information {
-    margin-top: 10vh;
     display: flex;
+    margin-top: 10vh;
     flex-direction: column;
 
     .input-box {
@@ -64,12 +64,12 @@
       }
 
       input {
+        margin: 0;
+        width: 80%;
         font-size: 20px;
         font-weight: 300;
         border-radius: 2px;
-        margin: 0;
         border: none;
-        width: 80%;
         background: rgba(0, 0, 0, 0);
         transition: padding-top 0.2s ease, margin-top 0.2s ease;
         overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
@@ -104,7 +104,7 @@
       }
 
       input:valid + label {
-        border-color: #cc6a00;
+        border-color: #00a6d2;
       }
 
       input:invalid {
@@ -112,13 +112,13 @@
       }
 
       input + label > span {
-        font-weight: 300;
-        margin: 0;
         position: absolute;
-        color: #8f8f8f;
-        font-size: 15px;
         top: -30px;
         left: 0px;
+        font-weight: 300;
+        margin: 0;
+        color: #8f8f8f;
+        font-size: 15px;
         z-index: -1;
         -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
         transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;

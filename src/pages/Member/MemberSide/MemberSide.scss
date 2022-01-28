@@ -1,4 +1,4 @@
-.memberside-wrapper {
+.memberside {
   width: 40vw;
   padding-top: 3vh;
   padding-left: 14vw;
@@ -7,6 +7,7 @@
   .memberside-title {
     .logo-img-container {
       width: 8vw;
+
       .logo-img {
         width: 100%;
       }
@@ -16,8 +17,9 @@
       margin-top: 10px;
       font-size: 30px;
       font-weight: 600;
+
       span:nth-child(1) {
-        color: #cc6a00;
+        color: #00a6d2;
       }
     }
 

@@ -5,7 +5,7 @@ import SignUpForm from './SignUpForm/SignUpForm';
 
 const Member = () => {
   return (
-    <div className="member-wrapper">
+    <div className="member">
       <MemberSide />
       <SignUpForm />
     </div>

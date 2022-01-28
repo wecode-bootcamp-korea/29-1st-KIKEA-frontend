@@ -51,7 +51,7 @@ const SignUpForm = () => {
     console.log(event);
   };
   return (
-    <div className="signupform-wrapper">
+    <div className="signupform">
       <p className="kikeafamily-title">KIKEA Family에 가입하시겠어요?</p>
       <div className="signupform-radio">
         <input
