@@ -4,7 +4,7 @@ import PromotionCard from './PromotionCard/PromotionCard';
 
 const Promotion = () => {
   return (
-    <div className="promotion-wrapper">
+    <div className="promotion">
       <span className="promotion-title">진행중인 프로모션</span>
       <div className="promotion-item">
         {DATA.map(card => (

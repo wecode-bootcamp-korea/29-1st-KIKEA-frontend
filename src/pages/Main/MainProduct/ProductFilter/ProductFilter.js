@@ -3,16 +3,16 @@ import './ProductFilter.scss';
 
 const ProductFilter = () => {
   return (
-    <div className="productFilter-wrapper">
-      <div className="productFilter-carousel">
-        {MENU2.map(category => (
-          <button key={category.id} className="productFilter-button">
-            <span>{category.name}</span>
+    <div className="productfilter">
+      <div className="productfilter-carousel">
+        {MAINMENU.map(({ id, name }) => (
+          <button key={id} className="productfilter-button">
+            <span>{name}</span>
           </button>
         ))}
-        {MENU.map(category => (
-          <button key={category.id} className="productFilter-button">
-            <span>{category.name}</span>
+        {SUBMENU.map(({ id, name }) => (
+          <button key={id} className="productfilter-button">
+            <span>{name}</span>
           </button>
         ))}
       </div>
@@ -20,14 +20,14 @@ const ProductFilter = () => {
   );
 };
 
-const MENU2 = [
+const MAINMENU = [
   { id: 1, name: '모든 공간' },
   { id: 2, name: '가구' },
   { id: 3, name: '조명' },
   { id: 4, name: '기타' },
 ];
 
-const MENU = [
+const SUBMENU = [
   { id: 1, name: '거실' },
   { id: 2, name: '주방' },
   { id: 3, name: '홈오피스' },

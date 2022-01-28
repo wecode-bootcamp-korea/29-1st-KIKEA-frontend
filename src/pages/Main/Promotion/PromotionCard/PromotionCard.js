@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const PromotionCard = ({ title, img, description }) => {
   return (
-    <div className="promotioncard-wrapper">
+    <div className="promotioncard">
       <img alt={description} src={img} className="promotioncard-img" />
       <div className="promotioncard-description">
         <p>{title}</p>

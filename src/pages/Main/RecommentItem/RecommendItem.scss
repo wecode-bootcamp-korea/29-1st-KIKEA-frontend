@@ -1,4 +1,4 @@
-.recommendItem-wrapper {
+.recommendItem {
   margin-top: 30px;
   margin-left: 10px;
 
@@ -7,8 +7,8 @@
     font-weight: 700;
   }
   .recommendtaion-item-wrapper {
-    width: 88vw;
     display: flex;
+    width: 88vw;
     margin-top: 20px;
     overflow: hidden;
     flex-wrap: nowrap;

@@ -3,14 +3,14 @@ import './ProductItem.scss';
 
 const ProductItem = () => {
   return (
-    <div className="ProductItem-wrapper">
-      <div className="ProductItem-item-wrapper">
-        {MOCKDATA.map(item => (
-          <div className="ProductItem-item-flex" key={item.id}>
+    <div className="productitem">
+      <div className="productitem-item-wrapper">
+        {PRODUCTS.map(({ description, img, id }) => (
+          <div className="productitem-item-flex" key={id}>
             <img
-              alt={item.description}
-              src={item.img}
-              className="ProductItem-item-flex-img"
+              alt={description}
+              src={img}
+              className="productitem-item-flex-img"
             />
           </div>
         ))}
@@ -19,7 +19,7 @@ const ProductItem = () => {
   );
 };
 
-const MOCKDATA = [
+const PRODUCTS = [
   {
     id: 1,
     productName: '의자',

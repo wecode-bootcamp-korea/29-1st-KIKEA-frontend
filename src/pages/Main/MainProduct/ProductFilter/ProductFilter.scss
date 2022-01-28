@@ -1,28 +1,26 @@
-.productFilter-wrapper {
+.productfilter {
   width: 90vw;
   margin-bottom: 15px;
-  .productFilter-carousel {
-    .productFilter-button {
+
+  .productfilter-carousel {
+    .productfilter-button {
       display: inline-flex;
       position: relative;
       margin-top: 10px;
       margin-right: 10px;
-      font-size: 15px;
       justify-content: center;
       align-items: center;
       font-weight: bold;
       text-align: center;
       cursor: pointer;
       vertical-align: top;
-      border-radius: 64px;
-      // transition-property: opacity, transform;
-      // transition-duration: 250ms;
-      // transition-timing-function: cubic-bezier(0.4, 0, 0.4, 1);
-      height: 3rem;
-      padding: 0 2rem;
-      color: #111;
       background: #f5f5f5;
       border: 1px solid #f5f5f5;
+      border-radius: 64px;
+      height: 3rem;
+      padding: 0 2rem;
+      font-size: 15px;
+      color: #111;
     }
   }
 }

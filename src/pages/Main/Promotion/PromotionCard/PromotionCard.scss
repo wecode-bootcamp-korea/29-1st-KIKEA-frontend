@@ -1,4 +1,4 @@
-.promotioncard-wrapper {
+.promotioncard {
   width: 22vw;
   margin-right: 13px;
   background-color: #0b79ba;
@@ -40,24 +40,23 @@
         height: 40px;
         padding: 2px;
         width: 40px;
+        align-items: center;
+        border-style: none;
         background-color: black;
         color: white;
         border-radius: 64px;
-        align-items: center;
-        border-style: none;
         cursor: pointer;
       }
     }
   }
 }
-
-.promotioncard-wrapper:nth-child(2) {
+.promotioncard:nth-child(2) {
   background-color: #f5deb2;
 }
 
-.promotioncard-wrapper:nth-child(3) {
+.promotioncard:nth-child(3) {
   background-color: #e4ccc6;
 }
-.promotioncard-wrapper:nth-child(4) {
+.promotioncard:nth-child(4) {
   background-color: #81aec6;
 }

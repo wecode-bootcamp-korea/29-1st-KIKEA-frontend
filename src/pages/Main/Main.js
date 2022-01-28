@@ -8,7 +8,7 @@ const Main = () => {
   return (
     <>
       <nav />
-      <main className="main-wrapper">
+      <main className="main">
         <Promotion />
         <RecommendItem />
         <MainProduct />

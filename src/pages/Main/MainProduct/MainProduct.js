@@ -5,7 +5,7 @@ import ProductItem from './ProductItem/ProductItem';
 
 const MainProduct = () => {
   return (
-    <div className="mainproduct-wrapper">
+    <div className="mainproduct">
       <h2 className="main-wrapper-homefurnishing">홈 퍼니싱 상품</h2>
       <ProductFilter />
       <ProductItem />
