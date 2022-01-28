@@ -12,6 +12,7 @@ const Main = () => {
         <Promotion />
         <RecommendItem />
         <MainProduct />
+
       </main>
     </>
   );
