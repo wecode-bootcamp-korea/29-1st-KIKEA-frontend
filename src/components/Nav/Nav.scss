@@ -3,26 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 
-  .message-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 460px;
-    background-color: black;
-    .message-content {
-      cursor: pointer;
-      color: white;
-      .message-text {
-        font-size: 13px;
-        margin-left: 10px;
-      }
-      .message-text:hover {
-        font-size: 13px;
-        margin-left: 10px;
-        text-decoration: underline;
-        font: gray;
-      }
-    }
-  }
   .sidebar-nav-container {
     padding-right: 20px;
     display: flex;
@@ -32,7 +12,7 @@
 
       height: 100%;
       width: 125px;
-      // front: bug
+
       position: fixed;
       left: 0;
 
@@ -60,7 +40,7 @@
         align-items: center;
         padding: 0px 50px 0px 0px;
         border: 0.1m solid black;
-        height: 13vh; // front: 수정 요청 [height 부여 의미/변화]
+        height: 13vh;
         width: 100%;
         .nav-left {
           .kikea-logo {
@@ -145,7 +125,6 @@
           border-bottom: 0.1em solid lightgray;
           display: flex;
           .all-products-menu {
-            // border: red 0.1em solid;
             font-size: 1em;
             font-weight: 700;
             margin-right: 20px;

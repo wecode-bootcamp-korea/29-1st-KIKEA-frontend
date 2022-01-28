@@ -1,0 +1,20 @@
+.message-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 460px;
+  background-color: black;
+  .message-content {
+    cursor: pointer;
+    color: white;
+    .message-text {
+      font-size: 13px;
+      margin-left: 10px;
+    }
+    .message-text:hover {
+      font-size: 13px;
+      margin-left: 10px;
+      text-decoration: underline;
+      font: gray;
+    }
+  }
+}

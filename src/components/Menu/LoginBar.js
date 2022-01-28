@@ -8,22 +8,6 @@ import {
 import './LoginBar.scss';
 
 function LoginBar({ closeLoginBar, isShownLoginBar }) {
-  // const navigate = useNavigate();
-
-  // const ref = useRef();
-
-  // useEffect(() => {
-  //   const checkIfClickedOutside = e => {
-  //     if (ref.current && !ref.current.contains(e.target)) {
-  //       closeLoginBar();
-  //     }
-  //   };
-  //   document.addEventListener('click', checkIfClickedOutside);
-  //   return () => {
-  //     document.removeEventListener('click', checkIfClickedOutside);
-  //   };
-  // }, [closeLoginBar]);
-
   return (
     <>
       <div
@@ -32,7 +16,6 @@ function LoginBar({ closeLoginBar, isShownLoginBar }) {
             ? 'login-bar-container-slide-out'
             : 'login-bar-container-slide-in'
         }
-        // ref={ref}
       >
         <div className="login-signup-content">
           <div className="login-content-container">

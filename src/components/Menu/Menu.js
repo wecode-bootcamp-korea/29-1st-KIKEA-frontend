@@ -3,25 +3,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Menu.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle, faGlobe } from '@fortawesome/free-solid-svg-icons';
-// import MenuChild from './MenuChild';
+
 function Menu({ closeMenu, isShownMenu }) {
   const [isShownList, setIsShownList] = useState(false);
 
-  // const navigate = useNavigate();
-
   const ref = useRef();
-
-  // useEffect(() => {
-  //   const checkIfClickedOutside = e => {
-  //     if (ref.current && !ref.current.contains(e.target)) {
-  //       closeMenu();
-  //     }
-  //   };
-  //   document.addEventListener('click', checkIfClickedOutside);
-  //   return () => {
-  //     document.removeEventListener('click', checkIfClickedOutside);
-  //   };
-  // }, [closeMenu]);
 
   return (
     <>
@@ -31,7 +17,6 @@ function Menu({ closeMenu, isShownMenu }) {
             ? 'side-bar-container-slide-out'
             : 'side-bar-container-slide-in'
         }
-        // ref={ref}
       >
         <div className="side-bar-nav">
           <button
@@ -107,12 +92,7 @@ function List() {
   return (
     <>
       <ul className="menu-list">
-        <li
-          className="menu-items"
-          // onCilck={ } 가구 page
-        >
-          가구
-        </li>
+        <li className="menu-items">가구</li>
         <li className="menu-items">침대/매트리스</li>
         <li className="menu-items">조명</li>
       </ul>
