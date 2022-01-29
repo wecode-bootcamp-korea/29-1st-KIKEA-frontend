@@ -3,11 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import './DetailAside.scss';
 
-const DetailAside = ({ isOpen }) => {
+const DetailAside = ({ isOpen, toggleCloseBtn }) => {
+  console.log(toggleCloseBtn);
   return (
     <aside className={isOpen ? 'add-item-slide-in' : 'add-item-slide-out'}>
       <div className="aside-top">
-        <button className="close-btn">
+        <button className="close-btn" onClick={toggleCloseBtn}>
           <FontAwesomeIcon icon={faTimes} />
         </button>
         <p className="add-item-comment">
@@ -21,7 +22,7 @@ const DetailAside = ({ isOpen }) => {
         <p className="related-products">관련 제품</p>
         <ul className="related-products-list">
           <li className="related-products-item">
-            <img></img>
+            <img />
             <div className="related-products-item-contents">
               <p className="related-products-item-name">RYET 뤼에트</p>
               <span className="related-products-item-info">
@@ -32,7 +33,7 @@ const DetailAside = ({ isOpen }) => {
             </div>
           </li>
           <li className="related-products-item">
-            <img></img>
+            <img />
             <div className="related-products-item-contents">
               <p className="related-products-item-name">TRÅDFRI 트로드프리</p>
               <span className="related-products-item-info">리모컨</span>
@@ -41,7 +42,7 @@ const DetailAside = ({ isOpen }) => {
             </div>
           </li>
           <li className="related-products-item">
-            <img></img>
+            <img />
             <div className="related-products-item-contents">
               <p className="related-products-item-name">DEJSA 데이사</p>
               <span className="related-products-item-info">
@@ -51,7 +52,6 @@ const DetailAside = ({ isOpen }) => {
               <span className="related-products-item-price">49,900</span>
             </div>
           </li>
-          \{' '}
         </ul>
       </div>
     </aside>

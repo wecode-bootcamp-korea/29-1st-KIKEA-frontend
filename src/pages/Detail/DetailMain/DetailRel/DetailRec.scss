@@ -1,0 +1,23 @@
+.rec-wrap {
+  overflow: visible;
+  width: 53vw;
+  margin: auto;
+  margin-bottom: 200px;
+
+  .rec-container {
+    width: 53vw;
+
+    .rec-products {
+      font-size: 22px;
+      font-weight: bold;
+      padding: 86px 0;
+    }
+
+    .rec-products-list {
+      display: flex;
+      width: 100%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+    }
+  }
+}

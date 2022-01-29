@@ -3,8 +3,8 @@ import './ProductImg.scss';
 
 const ProductImg = ({ img }) => {
   return (
-    <div className="productImg-box">
-      <img src={img} className="productImg" alt="product-Img" />
+    <div className="product-img-box">
+      <img src={img} className="product-img" alt="product-img" />
     </div>
   );
 };

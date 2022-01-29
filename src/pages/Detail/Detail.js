@@ -11,6 +11,7 @@ const Detail = () => {
   const [productBox, setProductBox] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [descSideOpen, setDescSideOpen] = useState(false);
+  // const [isClose, setIsClose] = useState(false);
 
   const toggleAddBtn = () => {
     setIsOpen(!isOpen);
@@ -18,6 +19,10 @@ const Detail = () => {
 
   const toggleDescBtn = () => {
     setDescSideOpen(!descSideOpen);
+  };
+
+  const toggleCloseBtn = () => {
+    setIsOpen(isOpen);
   };
 
   useEffect(() => {
@@ -33,7 +38,11 @@ const Detail = () => {
       <div className="detail-page">
         <DetailNav />
         <div className="detail-container">
-          <DetailMain productBox={productBox} toggleDescBtn={toggleDescBtn} />
+          <DetailMain
+            productBox={productBox}
+            toggleDescBtn={toggleDescBtn}
+            toggleCloseBtn={toggleCloseBtn}
+          />
           <DetailSide isOpen={isOpen} toggleAddBtn={toggleAddBtn} />
           <DetailAside isOpen={isOpen} />
           <DetailDescSide descSideOpen={descSideOpen} />

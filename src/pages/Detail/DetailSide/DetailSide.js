@@ -35,7 +35,6 @@ const DetailSide = ({ toggleAddBtn }) => {
         </div>
         <hr />
         <div className="rec-wrap">
-          <i></i>
           <div className="rec">고양점 에 재고가 있습니다</div>
           <div className="rec-comment">다른 매장 재고 및 재입고 날짜 확인</div>
         </div>

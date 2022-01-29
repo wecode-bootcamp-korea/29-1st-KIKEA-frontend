@@ -35,6 +35,10 @@
       top: 0;
       right: 0;
       margin: 15px 35px 10px 0;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .add-item-comment {
