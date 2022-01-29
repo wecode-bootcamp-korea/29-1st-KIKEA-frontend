@@ -1,0 +1,22 @@
+.login-aside {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15vw;
+
+  .kikea-logo {
+    width: 200px;
+    margin-top: 40px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .login-aside-main {
+    margin-top: 100px;
+  }
+
+  .login-aside-footer {
+    margin-top: 100px;
+  }
+}
