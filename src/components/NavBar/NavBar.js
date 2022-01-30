@@ -1,16 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link, useNavigate } from 'react-router-dom';
-import TopBar from '../TopBar/TopBar';
-import Menu from '../Menu/Menu';
-import MenuChild from '../Menu/MenuChild';
-import LoginBar from '../Menu/LoginBar';
-import './Nav.scss';
+
+import Menu from '../Menu/Menu/Menu';
+import LoginBar from '../Menu/LoginBar/LoginBar';
 import 'font-awesome/css/font-awesome.min.css';
+import './NaviBar.scss';
 import {
   faBars,
-  faInfoCircle,
-  faPhoneAlt,
   faSearch,
   faWarehouse,
   faShoppingBag,
@@ -19,7 +15,7 @@ import {
   faTruck,
 } from '@fortawesome/free-solid-svg-icons';
 
-function Nav() {
+const NavBar = () => {
   const [isShownMenu, setIsShownMenu] = useState(false);
   const [isShownLoginBar, setIsShownLoginBar] = useState(false);
 
@@ -44,7 +40,6 @@ function Nav() {
         isShownLoginBar={isShownLoginBar}
         closeLoginBar={closeLoginBar}
       />
-      <TopBar />
       <div className="sidebar-nav-container">
         <section className="menu">
           <button className="side-bar-on-btn" onClick={showMenu}>
@@ -70,7 +65,6 @@ function Nav() {
                 <FontAwesomeIcon icon={faSearch} className="search-icon" />
               </button>
             </div>
-
             <div className="nav-icons-container">
               <ul className="nav-icons-list">
                 <li>
@@ -117,6 +111,6 @@ function Nav() {
       </div>
     </>
   );
-}
+};
 
-export default Nav;
+export default NavBar;

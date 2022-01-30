@@ -4,79 +4,88 @@
   box-sizing: border-box;
 
   .sidebar-nav-container {
-    padding-right: 20px;
+    width: 100%;
     display: flex;
+
     .menu {
+      height: 10vh;
+      width: 9vw;
       display: flex;
       justify-content: center;
-
-      height: 100%;
-      width: 125px;
-
+      background-color: white;
       position: fixed;
       left: 0;
 
       .side-bar-on-btn {
+        height: 40px;
         margin-top: 30px;
         background-color: white;
-        height: 40px;
         border: none;
         cursor: pointer;
       }
       .side-bar-on-btn:hover {
-        background-color: #f5f5f5;
-        border-radius: 50px;
         width: 35px;
         height: 35px;
+        background-color: #f5f5f5;
+        border-radius: 50px;
       }
       .side-bar-btn {
         font-size: 20px;
       }
     }
     .header-container {
-      margin-left: 125px;
+      width: 100%;
+      padding-right: 80px;
+      padding-left: 9vw;
+
       .main-nav {
-        display: flex;
-        align-items: center;
-        padding: 0px 50px 0px 0px;
-        border: 0.1m solid black;
-        height: 13vh;
+        height: 10vh;
         width: 100%;
+        display: flex;
+
         .nav-left {
+          display: flex;
+          align-items: center;
+          flex-grow: 1;
+
           .kikea-logo {
             cursor: pointer;
           }
         }
         .nav-center {
-          padding-bottom: 60px;
+          display: flex;
+          align-items: center;
+          height: 100%;
+          flex-grow: 16;
+
           .search-box {
-            height: 55px;
-            width: 710px;
+            line-height: 55px;
+            width: 100%;
             font-size: 17px;
             padding-left: 58px;
-            margin-left: 30px;
             background-color: #f5f5f5;
             border-radius: 30px;
             border: none;
             outline: none;
-            position: absolute;
-            margin-top: 40px;
+            position: relative;
           }
           .search-box:visited {
             background-color: white;
           }
           .search-btn {
-            position: relative;
-            margin-left: 53px;
-            margin-top: 60px;
             border: none;
             background-color: none;
             font-size: 18px;
+            position: absolute;
+            padding-left: 30px;
           }
         }
         .nav-icons-container {
-          width: 400px;
-          margin-left: 700px;
+          display: flex;
+          justify-content: right;
+          align-items: center;
+          height: 100%;
+          flex-grow: 1;
           .nav-icons-list {
             display: flex;
             align-items: center;
@@ -119,14 +128,12 @@
       }
       .all-products-container {
         width: 100%;
-        padding-right: 55px;
-        padding-bottom: 15px;
         .all-products-list {
-          border-bottom: 0.1em solid lightgray;
           display: flex;
+          border-bottom: 0.1em solid lightgray;
           .all-products-menu {
             font-size: 1em;
-            font-weight: 700;
+            font-weight: 900;
             margin-right: 20px;
             padding-bottom: 10px;
             cursor: pointer;

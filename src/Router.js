@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Detail from './pages/Detail/Detail';
 import Main from './pages/Main/Main';
-import Nav from './components/Nav/Nav';
+import NavBar from './components/NavBar/NavBar';
+import Nav from './components/Nav';
 
 function Router() {
   return (
@@ -11,6 +12,7 @@ function Router() {
         <Route path="/" element={<Main />} />
         <Route path="/detail" element={<Detail />} />
         <Route path="/nav" element={<Nav />} />
+        <Route path="/NavBar" element={<NavBar />} />
       </Routes>
     </BrowserRouter>
   );

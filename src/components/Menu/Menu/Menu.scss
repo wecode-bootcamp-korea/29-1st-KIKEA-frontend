@@ -1,7 +1,7 @@
 .side-bar-container-slide-in {
   overflow-y: scroll;
   overscroll-behavior-y: none;
-  width: 33vw;
+  width: 29vw;
   height: 110vh;
   z-index: 10;
   top: 0;
@@ -10,14 +10,14 @@
   transform: translateX(-100%);
   transition: transform 0.3s;
 
-  &.slide-in {
+  .slide-in {
     transform: translateX(0%);
   }
 }
 .side-bar-container-slide-out {
   overflow-y: scroll;
   overscroll-behavior-y: none;
-  width: 33vw;
+  width: 29vw;
   height: 110vh;
   z-index: 10;
   top: 0;
@@ -26,7 +26,7 @@
   transform: translateX(0%);
   transition: transform 0.3s;
 
-  &.slide-outs {
+  .slide-out {
     transform: translateX(-100%);
   }
 }
@@ -35,10 +35,11 @@
   align-items: center;
   padding: 45px 0 45px 65px;
   height: 50px;
-  width: 31vw;
+  width: 29vw;
   position: fixed;
   top: 0;
   background-color: white;
+
   .side-bar-off-btn {
     border: none;
     background-color: white;
@@ -57,6 +58,7 @@
   height: 100%;
   margin-top: 110px;
   padding-left: 150px;
+
   .side-bar-content {
     .side-bar-category {
       font-weight: bolder;
@@ -105,6 +107,7 @@
     }
     .choose-country-btn {
       margin-left: 15px;
+
       .choose-country-icon {
         margin-right: 5px;
       }
@@ -114,6 +117,7 @@
 
 .menu-list {
   padding-top: 13px;
+
   .menu-items {
     padding-top: 16px;
     padding-left: 3px;
