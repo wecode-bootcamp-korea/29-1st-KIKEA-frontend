@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faArrowCircleRight,
@@ -7,13 +7,30 @@ import {
 import './LoginBar.scss';
 
 const LoginBar = ({ closeLoginBar, isShownLoginBar }) => {
+  const loginBarRef = useRef();
+
+  useEffect(() => {
+    const checkIfClickedOutside = e => {
+      if (
+        isShownLoginBar &&
+        loginBarRef.current &&
+        !loginBarRef.current.contains(e.target)
+      ) {
+        closeLoginBar();
+      }
+    };
+    document.addEventListener('click', checkIfClickedOutside);
+    return () => {
+      document.removeEventListener('click', checkIfClickedOutside);
+    };
+  }, [isShownLoginBar, closeLoginBar]);
+
   return (
     <div
       className={
-        isShownLoginBar
-          ? 'login-bar-container-slide-out'
-          : 'login-bar-container-slide-in'
+        'login-bar-container-' + (isShownLoginBar ? 'slide-out' : 'slide-in')
       }
+      ref={loginBarRef}
     >
       <div className="login-signup-content">
         <div className="login-content-container">

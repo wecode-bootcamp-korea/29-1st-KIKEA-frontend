@@ -17,7 +17,7 @@
       left: 0;
 
       .side-bar-on-btn {
-        height: 40px;
+        height: 35px;
         margin-top: 30px;
         background-color: white;
         border: none;
@@ -69,15 +69,22 @@
             outline: none;
             position: relative;
           }
-          .search-box:visited {
-            background-color: white;
-          }
           .search-btn {
+            display: flex;
+            align-items: center;
             border: none;
             background-color: none;
             font-size: 18px;
             position: absolute;
             padding-left: 30px;
+            height: 0px;
+          }
+          .search-box:hover {
+            background-color: #dfdfdf;
+          }
+          .search-box:focus {
+            background-color: #dfdfdf;
+            outline: 1px solid #0158a3;
           }
         }
         .nav-icons-container {
@@ -86,9 +93,11 @@
           align-items: center;
           height: 100%;
           flex-grow: 1;
+
           .nav-icons-list {
             display: flex;
             align-items: center;
+
             .ware-house-btn {
               background-color: white;
               border: none;
@@ -128,9 +137,11 @@
       }
       .all-products-container {
         width: 100%;
+
         .all-products-list {
           display: flex;
           border-bottom: 0.1em solid lightgray;
+
           .all-products-menu {
             font-size: 1em;
             font-weight: 900;

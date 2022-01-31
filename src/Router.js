@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Detail from './pages/Detail/Detail';
 import Main from './pages/Main/Main';
-import NavBar from './components/NavBar/NavBar';
 import Nav from './components/Nav';
 
 function Router() {
@@ -11,8 +10,7 @@ function Router() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/detail" element={<Detail />} />
-        <Route path="/nav" element={<Nav />} />
-        <Route path="/NavBar" element={<NavBar />} />
+        <Route path="/Nav" element={<Nav />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import Menu from '../Menu/Menu/Menu';
 import LoginBar from '../Menu/LoginBar/LoginBar';
 import 'font-awesome/css/font-awesome.min.css';

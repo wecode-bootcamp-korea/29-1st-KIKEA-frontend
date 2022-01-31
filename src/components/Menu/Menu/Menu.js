@@ -1,18 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Menu.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 const Menu = ({ closeMenu, isShownMenu }) => {
   const [isShownList, setIsShownList] = useState(false);
+  const menuRef = useRef();
+
+  useEffect(() => {
+    const checkIfClickedOutside = e => {
+      if (
+        isShownMenu &&
+        menuRef.current &&
+        !menuRef.current.contains(e.target)
+      ) {
+        closeMenu();
+      }
+    };
+    document.addEventListener('click', checkIfClickedOutside);
+    return () => {
+      document.removeEventListener('click', checkIfClickedOutside);
+    };
+  }, [isShownMenu, closeMenu]);
 
   return (
     <div
       className={
-        isShownMenu
-          ? 'side-bar-container-slide-out'
-          : 'side-bar-container-slide-in'
+        'side-bar-container-' + (isShownMenu ? 'slide-out' : 'slide-in')
       }
+      ref={menuRef}
     >
       <div className="side-bar-nav">
         <button onClick={closeMenu} className="side-bar-off-btn" type="button">
@@ -76,16 +92,14 @@ const Menu = ({ closeMenu, isShownMenu }) => {
   );
 };
 
-function List() {
+const List = () => {
   return (
-    <>
-      <ul className="menu-list">
-        <li className="menu-items">가구</li>
-        <li className="menu-items">침대/매트리스</li>
-        <li className="menu-items">조명</li>
-      </ul>
-    </>
+    <ul className="menu-list">
+      <li className="menu-items">가구</li>
+      <li className="menu-items">침대/매트리스</li>
+      <li className="menu-items">조명</li>
+    </ul>
   );
-}
+};
 
 export default Menu;
