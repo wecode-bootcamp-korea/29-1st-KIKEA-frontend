@@ -15,10 +15,11 @@ const SignUpForm = () => {
     isNotFamily: false,
   });
 
-  const changeRadio = event => {
+  const changeRadio = ({ target }) => {
+    console.log('target');
+    console.log(target);
     let obj = {};
-    obj[event.target.value] = event.target.checked;
-    console.log(obj);
+    obj[target.value] = target.checked;
     setRadioGroup(obj);
   };
 
@@ -29,27 +30,18 @@ const SignUpForm = () => {
       [name]: value,
     });
   };
-
+  // catch(), 리절트 이용할 방법 생각
   const signUp = () => {
     fetch('http://10.58.1.126:8000/users/signup', {
       method: 'POST',
-      body: JSON.stringify({
-        email: inputState.email,
-        password: inputState.password,
-        name: inputState.name,
-        //address: inputState.address,
-        phone_number: inputState.phoneNumber,
-      }),
+      body: JSON.stringify({ ...inputState }),
     })
       .then(response => {
-        return response.json();
+        response.json();
       })
       .then(result => result.access_token);
   };
 
-  const touchInfo = event => {
-    console.log(event);
-  };
   return (
     <div className="signupform">
       <p className="kikeafamily-title">KIKEA Family에 가입하시겠어요?</p>
@@ -90,7 +82,6 @@ const SignUpForm = () => {
             placeholder="  "
             required
             autoComplete="off"
-            onEnded={touchInfo}
           />
           <label className="form-label">
             <span>이메일</span>
