@@ -1,41 +1,29 @@
 .filter-section-container {
+  padding-left: 9vw;
+
   .filter-btn-container {
+    padding: 6vh 0 3vh 0;
+    width: 82vw;
+    border-bottom: 0.1em solid lightgray;
+
     .filter-btn {
+      width: 10vh;
+      line-height: 4vh;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      margin-right: 20px;
+      cursor: pointer;
     }
-    .filter-btn-category {
+    .filter-btn:hover {
+      background-color: #dfdfdf;
     }
   }
-  .product-card-container {
-    height: 50vh;
-    border: 0.1em solid red;
-    .item-select-btn {
-      .checkbox-btn {
-      }
-    }
-    .card-img {
-      height: 10vh;
-    }
-    .product-name {
-    }
-    .product-type {
-    }
-    .price-review-container {
-      border: 0.1em solid green;
-      .price-review-wrapper {
-        .won-symbol {
-        }
-        .product-price {
-        }
-      }
-      .add-cart-btn {
-      }
-    }
-    .rating-container {
-      border: 0.1em solid blue;
-      .rating {
-      }
-      .review-nums {
-      }
-    }
+  .filter-btn-category {
+    padding-top: 5vh;
+  }
+  .product-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
