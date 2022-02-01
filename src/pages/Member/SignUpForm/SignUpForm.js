@@ -16,10 +16,7 @@ const SignUpForm = () => {
   });
 
   const changeRadio = ({ target }) => {
-    console.log('target');
-    console.log(target);
-    let obj = {};
-    obj[target.value] = target.checked;
+    let obj = { [target.value]: target.checked };
     setRadioGroup(obj);
   };
 
