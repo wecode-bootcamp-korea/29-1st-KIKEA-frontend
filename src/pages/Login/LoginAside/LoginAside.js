@@ -1,9 +1,20 @@
 import React from 'react';
 import './LoginAside.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowAltCircleLeft } from '@fortawesome/free-regular-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 const LoginAside = () => {
+  const navigate = useNavigate();
+
+  const goToMain = () => {
+    navigate('/');
+  };
   return (
     <div className="login-aside">
+      <div className="go-main">
+        <FontAwesomeIcon icon={faArrowAltCircleLeft} onClick={goToMain} />
+      </div>
       <div className="kikea-logo">
         <img alt="logo" src="/images/logo.jpg" />
       </div>
