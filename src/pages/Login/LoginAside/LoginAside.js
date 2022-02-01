@@ -8,7 +8,7 @@ const LoginAside = () => {
         <img alt="logo" src="/images/logo.jpg" />
       </div>
       <div className="login-aside-main">
-        <p>로그인</p>
+        <h1>로그인</h1>
         <p>
           <span>외워야 할 비밀번호가 많아 불편하셨죠?</span>
           <br />

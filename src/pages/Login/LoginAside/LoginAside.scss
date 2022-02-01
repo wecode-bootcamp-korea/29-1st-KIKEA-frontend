@@ -17,12 +17,31 @@
   }
 
   .login-aside-main {
+    display: flex;
+    flex-direction: column;
   }
-  .login-aside-main:nth-child(1) {
+
+  .login-aside-main > h1:nth-child(1) {
+    font-size: 35px;
     color: yellow;
+  }
+
+  .login-aside-main > p {
+    padding-top: 20px;
+  }
+
+  .login-aside-main span {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .login-aside-main > p:nth-child(3) {
+    font-weight: 500;
   }
 
   .login-aside-footer {
     padding-bottom: 40px;
+    font-size: 15px;
   }
 }
