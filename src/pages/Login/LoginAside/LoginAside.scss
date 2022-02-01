@@ -1,11 +1,15 @@
 .login-aside {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   padding-left: 15vw;
+  padding-right: 5vw;
+  background-color: #00a6d2;
 
   .kikea-logo {
-    width: 200px;
-    margin-top: 40px;
+    width: 130px;
+    padding-top: 40px;
 
     img {
       width: 100%;
@@ -13,10 +17,12 @@
   }
 
   .login-aside-main {
-    margin-top: 100px;
+  }
+  .login-aside-main:nth-child(1) {
+    color: yellow;
   }
 
   .login-aside-footer {
-    margin-top: 100px;
+    padding-bottom: 40px;
   }
 }

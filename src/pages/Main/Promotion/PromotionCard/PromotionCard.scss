@@ -1,0 +1,62 @@
+.promotioncard {
+  width: 22vw;
+  margin-right: 13px;
+  background-color: #0b79ba;
+
+  .promotioncard-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .promotioncard-description {
+    position: relative;
+    height: 300px;
+    padding-top: 20px;
+  }
+
+  .promotioncard-description p:nth-child(1) {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 10px 20px;
+    font-weight: 800;
+    font-size: 23px;
+  }
+
+  .promotioncard-description p:nth-child(2) {
+    margin-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+  }
+
+  .arrow-wrapper {
+    position: absolute;
+    top: 80%;
+    left: 1vw;
+
+    .arrow-span {
+      .arrwo-button {
+        height: 40px;
+        padding: 2px;
+        width: 40px;
+        align-items: center;
+        border-style: none;
+        background-color: black;
+        color: white;
+        border-radius: 64px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.promotioncard:nth-child(2) {
+  background-color: #f5deb2;
+}
+
+.promotioncard:nth-child(3) {
+  background-color: #e4ccc6;
+}
+.promotioncard:nth-child(4) {
+  background-color: #81aec6;
+}

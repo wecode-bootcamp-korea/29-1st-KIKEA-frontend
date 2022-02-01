@@ -1,0 +1,18 @@
+.productitem {
+  .productitem-item-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+
+    .productitem-item-flex {
+      width: 28vw;
+      margin: 10px;
+
+      .productitem-item-flex-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
