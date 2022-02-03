@@ -13,11 +13,43 @@
       padding: 86px 0;
     }
 
-    .rec-products-list {
+    .rec-products-list-wrap {
       display: flex;
-      width: 100%;
-      overflow-x: scroll;
-      overflow-y: hidden;
+      flex-direction: row;
+      position: relative;
+      align-items: center;
+
+      .btn-wrap {
+        display: flex;
+        justify-content: space-between;
+
+        position: absolute;
+        z-index: 999;
+        width: 100%;
+
+        .slide-prev-icon {
+          border: none;
+          background-color: rgb(242, 242, 242);
+          border-radius: 100%;
+          padding: 10px;
+          width: 30px;
+          height: 30px;
+        }
+
+        .slide-next-icon {
+          border: none;
+          background-color: rgb(242, 242, 242);
+          border-radius: 100%;
+          padding: 10px;
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      .rec-products-list {
+        overflow-y: hidden;
+        display: flex;
+      }
     }
   }
 }

@@ -4,7 +4,6 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import './DetailAside.scss';
 
 const DetailAside = ({ isOpen, toggleCloseBtn }) => {
-  console.log(toggleCloseBtn);
   return (
     <aside className={isOpen ? 'add-item-slide-in' : 'add-item-slide-out'}>
       <div className="aside-top">

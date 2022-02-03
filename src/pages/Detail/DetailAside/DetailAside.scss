@@ -1,22 +1,25 @@
 .add-item-slide-out {
   position: fixed;
   display: none;
+  z-index: 999;
   width: 40vw;
-  right: -40vw;
-  z-index: 1;
+  right: 0;
+  transform: translate(0, 0);
+  animation-duration: 0.5s;
+  animation-name: slide-out;
 }
 
 .add-item-slide-in {
   position: fixed;
   inset: 0;
-  z-index: 1;
+  z-index: 999;
   background-color: white;
   display: flex;
   flex-direction: column;
   width: 30vw;
   top: 0px;
   right: 0px;
-  transform: translateX(240%);
+  transform: translate(240%, 0);
   animation-duration: 0.5s;
   animation-name: slide;
 
@@ -82,3 +85,31 @@
     margin-left: 0;
   }
 }
+
+@keyframes slide-out {
+  from {
+    margin-left: -300px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+// @keyframes slide {
+//   0% {
+//     transform: translate(240%, 0);
+//   }
+//   100% {
+//     transform: translate(0, 0);
+//   }
+// }
+
+// @keyframes slide-out {
+//   0% {
+//     transform: translate(-240%, 0);
+//   }
+//   100% {
+//     transform: translate(0, 0);
+//     display: none;
+//   }
+// }

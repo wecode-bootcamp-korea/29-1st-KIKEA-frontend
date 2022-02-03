@@ -3,7 +3,7 @@ import './DetailSide.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 
-const DetailSide = ({ toggleAddBtn }) => {
+const DetailSide = ({ toggleAddBtn, productBox }) => {
   return (
     <div className="side-container">
       <div className="side-product-box">
@@ -19,6 +19,35 @@ const DetailSide = ({ toggleAddBtn }) => {
         </p>
         <div className="side-product-review">★★★★</div>
         <span className="side-product-review-value">(8)</span>
+        <div className="side-product-color-value-container">
+          <div className="side-product-color-value-comment">제품 색상</div>
+          <div className="side-product-color-value">
+            {productBox[0]?.color.map(({ id, colorValue }) => {
+              return (
+                <div className="side-product-color-box">
+                  <div className="side-product-color" key={id}>
+                    {colorValue}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div className="side-product-color-list-wrap">
+          {productBox[0]?.color.map(({ id, colorValue, mainSrc }) => {
+            return (
+              <div className="side-product-color-box">
+                <img
+                  key={colorValue}
+                  id={id}
+                  src={mainSrc}
+                  alt="side-product-color-img"
+                  className="side-product-color-img"
+                />
+              </div>
+            );
+          })}
+        </div>
         <div className="btn-wrap">
           <button className="buying-btn" onClick={toggleAddBtn}>
             구매하기
