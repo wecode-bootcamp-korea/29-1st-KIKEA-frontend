@@ -1,10 +1,10 @@
 import React from 'react';
+import SearchBox from './SearchBox/SearchBox';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import 'font-awesome/css/font-awesome.min.css';
 import './NaviBar.scss';
 import {
   faBars,
-  faSearch,
   faWarehouse,
   faShoppingBag,
   faHeart,
@@ -26,18 +26,11 @@ const NavBar = ({ showMenu, showLoginBar }) => {
             <img
               className="kikea-logo"
               alt="kikea"
-              src="https://www.ikea.com/kr/ko/static/ikea-logo.f7d9229f806b59ec64cb.svg"
+              src="/Users/moonpc/Desktop/project/29-1st-KIKEA-frontend/public/images/kikeaLogo.png"
             />
           </div>
           <div className="nav-center">
-            <input
-              className="search-box"
-              type="text"
-              placeholder="검색어 입력"
-            />
-            <button className="search-btn">
-              <FontAwesomeIcon icon={faSearch} className="search-icon" />
-            </button>
+            <SearchBox />
           </div>
           <div className="nav-icons-container">
             <ul className="nav-icons-list">

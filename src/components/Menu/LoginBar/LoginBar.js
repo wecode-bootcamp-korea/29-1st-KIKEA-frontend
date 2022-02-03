@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faArrowCircleRight,
@@ -8,6 +9,15 @@ import './LoginBar.scss';
 
 const LoginBar = ({ closeLoginBar, isShownLoginBar }) => {
   const loginBarRef = useRef();
+  const navigate = useNavigate();
+
+  const toLogin = e => {
+    navigate('/login');
+  };
+
+  const toMember = e => {
+    navigate('/member');
+  };
 
   useEffect(() => {
     const checkIfClickedOutside = e => {
@@ -43,7 +53,11 @@ const LoginBar = ({ closeLoginBar, isShownLoginBar }) => {
           </button>
           <div className="login-content">
             <span className="login-message">Hej</span>
-            <button type="button" className="to-login-page-btn">
+            <button
+              type="button"
+              className="to-login-page-btn"
+              onclick={toLogin}
+            >
               로그인
             </button>
           </div>
@@ -57,7 +71,7 @@ const LoginBar = ({ closeLoginBar, isShownLoginBar }) => {
                 가입해보세요,&nbsp;&nbsp;가입은 무료입니다!
               </p>
             </div>
-            <button type="button" className="signup-btn">
+            <button type="button" className="signup-btn " onclick={toMember}>
               <FontAwesomeIcon
                 icon={faArrowCircleRight}
                 className="signup-icon"
@@ -76,7 +90,7 @@ const LoginBar = ({ closeLoginBar, isShownLoginBar }) => {
                 받아보세요
               </p>
             </div>
-            <button type="button" className="signup-btn">
+            <button type="button" className="signup-btn" onclick={toMember}>
               <FontAwesomeIcon
                 icon={faArrowCircleRight}
                 className="signup-icon"
@@ -87,7 +101,9 @@ const LoginBar = ({ closeLoginBar, isShownLoginBar }) => {
       </div>
       <div className="other-service-content">
         <ul className="other-service-list">
-          <li className="other-service-items">로그인</li>
+          <li className="other-service-items" onclick={toLogin}>
+            로그인
+          </li>
           <li className="other-service-items">위시리스트</li>
           <li className="other-service-items">플래너</li>
           <li className="other-service-items">배송 조회</li>
