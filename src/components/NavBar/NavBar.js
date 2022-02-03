@@ -22,11 +22,13 @@ const NavBar = ({ showMenu, showLoginBar }) => {
   const handleInput = e => {
     setSearchInput(e.target.value);
   };
-
+  const clearSearch = () => {
+    setSearchInput('');
+  };
   // const filteredSearchData = searchData.filter(data => {
   //   return searchData.name.toLowerCase().includes(searchInput.toLowerCase());
   // });
-
+  console.log(searchInput);
   return (
     <div className="sidebar-nav-container">
       <section className="menu">
@@ -49,6 +51,7 @@ const NavBar = ({ showMenu, showLoginBar }) => {
               showFilter={showFilter}
               handleInput={handleInput}
               searchInput={searchInput}
+              clearSearch={clearSearch}
               // searchData={filteredSearchData}
             />
             {filterVisible && <SearchFilter />}

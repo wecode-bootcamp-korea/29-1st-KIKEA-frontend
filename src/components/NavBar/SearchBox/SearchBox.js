@@ -4,15 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import 'font-awesome/css/font-awesome.min.css';
 import { faSearch, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
-const SearchBox = ({
-  showFilter,
-  handleInput,
-  setSearchInput,
-  searchInput,
-}) => {
-  const clearSearch = e => {
-    setSearchInput('');
-  };
+const SearchBox = ({ showFilter, handleInput, searchInput, clearSearch }) => {
   return (
     <div className="search-box-container">
       <input
