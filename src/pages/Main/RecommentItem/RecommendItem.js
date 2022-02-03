@@ -3,7 +3,7 @@ import './RecommendItem.scss';
 
 const RecommendItem = () => {
   return (
-    <div className="recommendItem">
+    <div className="recommenditem">
       <div className="recommendtaion-title">추천 제품</div>
       <div className="recommendtaion-item-wrapper">
         {MOCKDATA.map(item => (
