@@ -1,0 +1,16 @@
+.detail-page-container {
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-y: hidden;
+
+  .detail-page {
+    margin-left: 50px;
+    overflow-x: hidden;
+
+    .detail-container {
+      display: flex;
+      width: 100vw;
+      margin-top: 20px;
+    }
+  }
+}
