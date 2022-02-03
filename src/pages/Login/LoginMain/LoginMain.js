@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './LoginMain.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-regular-svg-icons';
@@ -78,7 +78,6 @@ const LoginMain = () => {
             />
           </span>
         </div>
-        <h1 />
         <p>
           <span>비밀번호 찾기</span>
         </p>
