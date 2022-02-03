@@ -1,19 +1,38 @@
 import React from 'react';
 import './ProductItem.scss';
 
-const ProductItem = () => {
+const ProductItem = ({ item }) => {
   return (
     <div className="productitem">
       <div className="productitem-item-wrapper">
-        {PRODUCTS.map(({ description, img, id }) => (
-          <div className="productitem-item-flex" key={id}>
-            <img
-              alt={description}
-              src={img}
-              className="productitem-item-flex-img"
-            />
-          </div>
-        ))}
+        {(item.result &&
+          item.result.map(({ description, image, id }) => (
+            <div className="productitem-item-flex" key={id}>
+              <img
+                alt={id}
+                src={image[0]}
+                className="productitem-item-flex-img"
+              />
+            </div>
+          ))) ||
+          (item &&
+            item.map(({ subcategory_list }) =>
+              subcategory_list.map(({ type_list }) =>
+                type_list.map(({ product_list }) =>
+                  product_list.map(
+                    ({ id, name, description, default_image }) => (
+                      <div className="productitem-item-flex" key={id}>
+                        <img
+                          alt={description}
+                          src={default_image}
+                          className="productitem-item-flex-img"
+                        />
+                      </div>
+                    )
+                  )
+                )
+              )
+            ))}
       </div>
     </div>
   );

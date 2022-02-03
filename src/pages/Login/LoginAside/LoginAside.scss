@@ -1,0 +1,57 @@
+.login-aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 15vw;
+  padding-right: 3vw;
+  background-color: #00a6d2;
+
+  .go-main {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    font-size: 25px;
+    color: white;
+  }
+
+  .kikea-logo {
+    width: 110px;
+    padding-top: 40px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .login-aside-main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-aside-main > h1:nth-child(1) {
+    font-size: 30px;
+    font-weight: 700;
+    color: yellow;
+  }
+
+  .login-aside-main > p {
+    padding-top: 20px;
+  }
+
+  .login-aside-main span {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+
+  .login-aside-main > p:nth-child(3) {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .login-aside-footer {
+    padding-bottom: 40px;
+    font-size: 12px;
+  }
+}
