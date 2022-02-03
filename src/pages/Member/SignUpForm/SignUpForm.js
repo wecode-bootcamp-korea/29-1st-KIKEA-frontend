@@ -32,11 +32,7 @@ const SignUpForm = () => {
     fetch('http://10.58.1.126:8000/users/signup', {
       method: 'POST',
       body: JSON.stringify({ ...inputState }),
-    })
-      .then(response => {
-        response.json();
-      })
-      .then(result => result.access_token);
+    });
   };
 
   return (
