@@ -1,0 +1,44 @@
+.search-filter-container {
+  overflow-y: auto;
+  width: 100%;
+  overscroll-behavior-y: none;
+  height: 32vh;
+  background-color: white;
+  border: 0.1em solid #dfdfdf;
+  border-radius: 20px;
+  margin-top: 1vh;
+  padding: 20px 30px 30px;
+
+  .product-items {
+    display: flex;
+    margin-bottom: 1.5vh;
+    .product-img {
+      width: 4vw;
+      height: 5vh;
+
+      .img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .product-description {
+      padding-left: 10px;
+      margin: auto 0;
+      .product-name {
+        font-weight: bold;
+      }
+      .product-class {
+        color: grey;
+      }
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 20px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+}
