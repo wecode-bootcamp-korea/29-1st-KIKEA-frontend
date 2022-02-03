@@ -48,6 +48,8 @@
           flex-grow: 1;
 
           .kikea-logo {
+            width: 6.5vw;
+            height: 5.5vh;
             cursor: pointer;
           }
         }
@@ -61,50 +63,11 @@
           align-items: center;
           height: 100%;
           flex-grow: 1;
-
-          .nav-icons-list {
-            display: flex;
-            align-items: center;
-
-            .ware-house-btn {
-              background-color: white;
-              border: none;
-              margin-left: 10px;
-              width: 75px;
-              text-align: left;
-            }
-            .btn-span {
-              font-size: 12px;
-              cursor: pointer;
-            }
-            .btn-span-two {
-              font-weight: bold;
-              letter-spacing: 0.1em;
-              cursor: pointer;
-            }
-            .btn-span-two:hover {
-              text-decoration: underline;
-            }
-            .icon {
-              font-size: 20px;
-              cursor: pointer;
-            }
-            .ware-house-icon {
-              margin-left: 10px;
-            }
-            .truck-icon {
-              margin-left: 100px;
-            }
-            .user-icon,
-            .heart-icon,
-            .bag-icon {
-              margin-left: 30px;
-            }
-          }
         }
       }
       .all-products-container {
         width: 100%;
+        padding-bottom: 1vh;
 
         .all-products-list {
           display: flex;
@@ -114,7 +77,7 @@
             font-size: 1em;
             font-weight: 900;
             margin-right: 20px;
-            padding-bottom: 10px;
+            padding-bottom: 1vh;
             cursor: pointer;
           }
           .all-products-menu:hover {

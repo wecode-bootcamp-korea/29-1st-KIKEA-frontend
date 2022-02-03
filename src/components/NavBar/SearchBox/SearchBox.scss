@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   height: 100%;
-
+  position: relative;
   .search-box {
     line-height: 7vh;
     width: 100%;
@@ -24,11 +24,25 @@
     padding-left: 30px;
     height: 0px;
   }
+  .delete-btn {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: none;
+    font-size: 18px;
+    position: absolute;
+    padding-right: 15px;
+    right: 0;
+    height: 0px;
+    cursor: pointer;
+  }
+  .delete-icon {
+  }
   .search-box:hover {
     background-color: #dfdfdf;
   }
   .search-box:focus {
     background-color: #dfdfdf;
-    outline: 1px solid #0158a3;
+    outline: 1px solid grey;
   }
 }

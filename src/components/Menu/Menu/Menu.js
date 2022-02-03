@@ -37,11 +37,7 @@ const Menu = ({ closeMenu, isShownMenu }) => {
             className="close-side-bar-btn"
           />
         </button>
-        <img
-          className="kikea-logo"
-          alt="kikea"
-          src="https://www.ikea.com/kr/ko/static/ikea-logo.f7d9229f806b59ec64cb.svg"
-        />
+        <img className="kikea-logo" alt="kikea" src="/images/logo.jpg" />
       </div>
       <div className="side-bar-content-container">
         <div className="side-bar-content">
