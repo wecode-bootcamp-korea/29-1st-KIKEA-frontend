@@ -4,7 +4,7 @@ import DetailMain from './DetailMain/DetailMain';
 import DetailSide from './DetailSide/DetailSide';
 import DetailAside from './DetailAside/DetailAside';
 import DetailDescSide from './DetailDescSide/DetailDescSide';
-import './Detail.scss';
+import './DetailC.scss';
 
 const Detail = () => {
   const [productBox, setProductBox] = useState([]);
