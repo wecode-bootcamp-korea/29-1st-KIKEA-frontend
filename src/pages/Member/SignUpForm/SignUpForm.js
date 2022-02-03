@@ -7,7 +7,7 @@ const SignUpForm = () => {
     password: '',
     name: '',
     address: '',
-    phoneNumber: '',
+    phone_number: '',
   });
 
   const [radioGroup, setRadioGroup] = useState({
@@ -29,7 +29,7 @@ const SignUpForm = () => {
   };
   // catch(), 리절트 이용할 방법 생각
   const signUp = () => {
-    fetch('http://10.58.1.126:8000/users/signup', {
+    fetch('http://192.168.0.69:8000/users/signup', {
       method: 'POST',
       body: JSON.stringify({ ...inputState }),
     });
