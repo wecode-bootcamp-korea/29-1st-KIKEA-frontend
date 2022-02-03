@@ -15,7 +15,7 @@ const ProductSuggestion = () => {
           </span>
         </div>
         <div className="btn-container">
-          <button className="see-details-btn">모든 소파베드 보러가기</button>
+          <button className="see-details-btn">모든 상품 보러가기</button>
         </div>
       </div>
       <div className="suggestion-img-container">
