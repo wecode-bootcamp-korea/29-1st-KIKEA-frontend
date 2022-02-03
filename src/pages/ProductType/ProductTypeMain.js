@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ProductCategory from './ProductCategory/ProductCategory';
 import ProductSuggestion from './ProductSuggestion/ProductSuggestion';
 import ProductFilter from './ProductFilter/ProductFilter';
+import Nav from '../../components/Nav';
 import './ProductTypeMain.scss';
 const ProductTypeMain = () => {
   const [productData, setProductData] = useState('');
@@ -16,6 +17,7 @@ const ProductTypeMain = () => {
   console.log(productData.categories);
   return (
     <>
+      <Nav />
       <ProductCategory productData={productData} />
       <ProductSuggestion />
       <ProductFilter productData={productData} />
