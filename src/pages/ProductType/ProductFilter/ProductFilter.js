@@ -3,7 +3,7 @@ import './ProductFilter.scss';
 
 import ProductCard from './ProductCard/ProductCard';
 
-const ProductFilter = () => {
+const ProductFilter = ({ productData }) => {
   return (
     <div className="filter-section-container">
       <div className="filter-btn-container">
@@ -34,9 +34,16 @@ const ProductFilter = () => {
       </div>
       <div className="filter-btn-category" />
       <div className="product-card-wrapper">
-        {PRODUCTDATA.map(kikea => {
-          return <ProductCard key={kikea.id} kikea={kikea} />;
-        })}
+        {productData.categories &&
+          productData.categories.map(kikea => {
+            return (
+              <ProductCard
+                // productData={productData}
+                key={kikea.id}
+                kikea={kikea}
+              />
+            );
+          })}
       </div>
     </div>
   );

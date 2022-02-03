@@ -1,7 +1,7 @@
 import React from 'react';
 import './ProductCategory.scss';
 
-const ProductCategory = () => {
+const ProductCategory = ({ productData }) => {
   return (
     <div className="product-category-container">
       <div clasName="category-path">
@@ -9,16 +9,17 @@ const ProductCategory = () => {
       </div>
       <h1 className="category-title">소파</h1>
       <div className="product-category-wrapper">
-        {CATEGORYDATA.map(kikea => (
-          <div className="product-category" key={kikea.id}>
-            <img
-              className="product-category-img"
-              src={kikea.img}
-              alt={kikea.description}
-            />
-            <p className="product-category-name">{kikea.categoryName}</p>
-          </div>
-        ))}
+        {productData.categories &&
+          productData.categories.map(kikea => (
+            <div className="product-category" key={kikea.id}>
+              <img
+                className="product-category-img"
+                src={kikea.img}
+                alt={kikea.description}
+              />
+              <p className="product-category-name">{kikea.categoryName}</p>
+            </div>
+          ))}
       </div>
     </div>
   );

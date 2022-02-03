@@ -41,7 +41,10 @@ const ProductCard = ({ kikea }) => {
           <p className="won-symbol">
             ₩{' '}
             <span className="product-price">
-              {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+              {
+                price
+                // .toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+              }
             </span>
           </p>
         </div>
