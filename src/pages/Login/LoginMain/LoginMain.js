@@ -25,6 +25,14 @@ const LoginMain = () => {
     navigate('/member');
   };
 
+  const signIn = () => {
+    console.log('로그인');
+    fetch('http://192.168.0.69:8000/users/signin', {
+      method: 'POST',
+      body: JSON.stringify({ ...inputState }),
+    });
+  };
+
   const loginSubmit = event => {
     event.preventDefault();
   };
@@ -81,7 +89,9 @@ const LoginMain = () => {
         <p>
           <span>비밀번호 찾기</span>
         </p>
-        <button className="login-button">로그인</button>
+        <button className="login-button " onClick={signIn}>
+          로그인
+        </button>
       </form>
 
       <h4>KIKEA 계정이 없으신가요? 지금 바로 만들어보세요:</h4>
