@@ -19,34 +19,53 @@
       .slide-prev-icon {
         position: absolute;
         border: none;
-        background-color: rgb(242, 242, 242);
+        background-color: black;
         border-radius: 100%;
         padding: 10px;
         width: 30px;
         height: 30px;
         z-index: 9;
         left: 0;
-        top: 40%;
+        top: 150px;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+
+        .prev-icon {
+          color: white;
+        }
       }
 
       .slide-next-icon {
         position: absolute;
         border: none;
-        background-color: rgb(242, 242, 242);
+        background-color: black;
         border-radius: 100%;
         padding: 10px;
         width: 30px;
         height: 30px;
         z-index: 9;
         right: 0;
-        top: 40%;
+        top: 150px;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+
+        .next-icon {
+          color: white;
+        }
       }
+
       .rec-products-list-wrap {
         display: flex;
         flex-direction: row;
         align-items: center;
         position: relative;
         overflow-y: hidden;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
 
         .rec-products-list {
           display: flex;
