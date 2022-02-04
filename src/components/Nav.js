@@ -7,28 +7,30 @@ import LoginBar from './Menu/LoginBar/LoginBar';
 import './Nav.scss';
 
 const Nav = () => {
-  const [isShownMenu, setIsShownMenu] = useState(false);
-  const [isShownLoginBar, setIsShownLoginBar] = useState(false);
+  const [menuVisible, setMenuVisible] = useState(false);
+  const [loginBarVisible, setLoginBarVisible] = useState(false);
 
   const closeMenu = e => {
-    setIsShownMenu(false);
+    setMenuVisible(false);
   };
+
   const showMenu = e => {
-    setIsShownMenu(true);
+    setMenuVisible(true);
   };
 
   const closeLoginBar = e => {
-    setIsShownLoginBar(false);
+    setLoginBarVisible(false);
   };
+
   const showLoginBar = e => {
-    setIsShownLoginBar(true);
+    setLoginBarVisible(true);
   };
 
   return (
     <>
-      <Menu isShownMenu={isShownMenu} closeMenu={closeMenu} />
+      <Menu menuVisible={menuVisible} closeMenu={closeMenu} />
       <LoginBar
-        isShownLoginBar={isShownLoginBar}
+        loginBarVisible={loginBarVisible}
         closeLoginBar={closeLoginBar}
       />
       <TopBar />

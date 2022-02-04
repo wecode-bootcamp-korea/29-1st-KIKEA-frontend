@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 import './LoginBar.scss';
 
-const LoginBar = ({ closeLoginBar, isShownLoginBar }) => {
+const LoginBar = ({ closeLoginBar, loginBarVisible }) => {
   const loginBarRef = useRef();
   const navigate = useNavigate();
 
@@ -19,7 +19,7 @@ const LoginBar = ({ closeLoginBar, isShownLoginBar }) => {
   useEffect(() => {
     const checkIfClickedOutside = e => {
       if (
-        isShownLoginBar &&
+        loginBarVisible &&
         loginBarRef.current &&
         !loginBarRef.current.contains(e.target)
       ) {
@@ -30,12 +30,12 @@ const LoginBar = ({ closeLoginBar, isShownLoginBar }) => {
     return () => {
       document.removeEventListener('click', checkIfClickedOutside);
     };
-  }, [isShownLoginBar, closeLoginBar]);
+  }, [loginBarVisible, closeLoginBar]);
 
   return (
     <div
       className={
-        'login-bar-container-' + (isShownLoginBar ? 'slide-out' : 'slide-in')
+        'login-bar-container-' + (loginBarVisible ? 'slide-out' : 'slide-in')
       }
       ref={loginBarRef}
     >

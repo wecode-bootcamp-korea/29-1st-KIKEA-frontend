@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router';
 import './Menu.scss';
+import TypeList from './List/List';
+import { useNavigate } from 'react-router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
-const Menu = ({ closeMenu, isShownMenu }) => {
-  const [isShownList, setIsShownList] = useState(false);
+const Menu = ({ closeMenu, menuVisible }) => {
+  const [typeListVisible, setTypeListVisible] = useState(false);
 
   const navigate = useNavigate();
 
@@ -14,27 +15,28 @@ const Menu = ({ closeMenu, isShownMenu }) => {
   const toMain = () => {
     navigate('/');
   };
+
   useEffect(() => {
     const checkIfClickedOutside = e => {
       if (
-        isShownMenu &&
+        menuVisible &&
         menuRef.current &&
         !menuRef.current.contains(e.target)
       ) {
         closeMenu();
-        setIsShownList(false);
+        setTypeListVisible(false);
       }
     };
     document.addEventListener('click', checkIfClickedOutside);
     return () => {
       document.removeEventListener('click', checkIfClickedOutside);
     };
-  }, [isShownMenu, closeMenu]);
+  }, [menuVisible, closeMenu]);
 
   return (
     <div
       className={
-        'side-bar-container-' + (isShownMenu ? 'slide-out' : 'slide-in')
+        'side-bar-container-' + (menuVisible ? 'slide-out' : 'slide-in')
       }
       ref={menuRef}
     >
@@ -57,12 +59,12 @@ const Menu = ({ closeMenu, isShownMenu }) => {
           <h1
             className="side-bar-category"
             onClick={() => {
-              setIsShownList(!isShownList);
+              setTypeListVisible(!typeListVisible);
             }}
           >
             모든 제품
           </h1>
-          {isShownList && <TypeList />}
+          {typeListVisible && <TypeList />}
           <p className="side-bar-category side-bar-category-last">
             온라인 쇼룸
           </p>
@@ -102,48 +104,3 @@ const Menu = ({ closeMenu, isShownMenu }) => {
 };
 
 export default Menu;
-
-const TypeList = () => {
-  const [furnitureListVisible, setFurnitureListVisible] = useState(false);
-  const [lightsListVisible, setLightsListVisible] = useState(false);
-
-  return (
-    <ul className="menu-list">
-      <li
-        className="menu-items"
-        onClick={() => {
-          setFurnitureListVisible(!furnitureListVisible);
-        }}
-      >
-        가구
-      </li>
-      {furnitureListVisible && <FurnitureList />}
-      <li
-        className="menu-items"
-        onClick={() => {
-          setLightsListVisible(!lightsListVisible);
-        }}
-      >
-        조명
-      </li>
-      {lightsListVisible && <LightsList />}
-    </ul>
-  );
-};
-
-const FurnitureList = () => {
-  return (
-    <ul className="type-list">
-      <li className="type-list-items">침대</li>
-      <li className="type-list-items">소파</li>
-    </ul>
-  );
-};
-
-const LightsList = () => {
-  return (
-    <ul className="type-list">
-      <li className="type-list-items">일반조명</li>
-    </ul>
-  );
-};
