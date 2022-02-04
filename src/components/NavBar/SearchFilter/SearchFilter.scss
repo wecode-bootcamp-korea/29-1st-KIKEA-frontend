@@ -8,10 +8,11 @@
   border-radius: 20px;
   margin-top: 1vh;
   padding: 20px 30px 30px;
-
+  z-index: 10;
+  position: absolute;
   .product-items {
     display: flex;
-    margin-bottom: 1.5vh;
+    margin-bottom: 3vh;
     .product-img {
       width: 4vw;
       height: 5vh;
@@ -28,6 +29,8 @@
         font-weight: bold;
       }
       .product-class {
+        padding-top: 1vh;
+        font-size: 0.85rem;
         color: grey;
       }
     }
@@ -41,4 +44,15 @@
 ::-webkit-scrollbar-track {
   border-radius: 20px;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(49, 49, 49, 0.2);
 }

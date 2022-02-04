@@ -39,12 +39,7 @@ const NavBar = ({ showMenu, showLoginBar }) => {
       <section className="header-container">
         <div className="main-nav">
           <div className="nav-left">
-            <img
-              className="kikea-logo"
-              alt="kikea"
-              src="/images/logo.jpg"
-              onClick={closeFilter}
-            />
+            <img className="kikea-logo" alt="kikea" src="/images/logo.jpg" />
           </div>
           <div className="nav-center">
             <SearchBox
@@ -54,7 +49,7 @@ const NavBar = ({ showMenu, showLoginBar }) => {
               clearSearch={clearSearch}
               // searchData={filteredSearchData}
             />
-            {filterVisible && <SearchFilter />}
+            {filterVisible && <SearchFilter closeFilter={closeFilter} />}
           </div>
           <div className="nav-icons-container">
             <NavIcons showLoginBar={showLoginBar} />

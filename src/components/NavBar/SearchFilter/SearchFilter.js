@@ -1,44 +1,19 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import SearchCard from './SearchCard';
 import './SearchFilter.scss';
 
-const SearchFilter = ({ filterVisible, closeFilter }) => {
+const SearchFilter = ({ closeFilter }) => {
   const searchFilterRef = useRef();
 
-  useEffect(() => {
-    const checkIfClickedOutside = e => {
-      if (
-        filterVisible &&
-        searchFilterRef.current &&
-        !searchFilterRef.current.contains(e.target)
-      ) {
-        // setFilterVisible(false);
-        closeFilter();
-      }
-    };
-    document.addEventListener('click', checkIfClickedOutside);
-    return () => {
-      document.removeEventListener('click', checkIfClickedOutside);
-    };
-  }, [filterVisible, closeFilter]);
-
   return (
-    <div className="search-filter-container" ref={searchFilterRef}>
-      {SEARCHDATA.map(kikea => {
-        return (
-          <SearchCard key={kikea.id} kikea={kikea} />
-          // <div className="product-items" key={kikea.id}>
-          //   <div className="product-img">
-          //     <img src={kikea.img} alt="product" className="img" />
-          //   </div>
-          //   <div className="product-description">
-          //     <p className="product-name">{kikea.name}</p>
-          //     <p className="product-class">{kikea.class}</p>
-          //   </div>
-          // </div>
-        );
-      })}
-    </div>
+    <>
+      <div className="overlay" onClick={closeFilter} />
+      <div className="search-filter-container" ref={searchFilterRef}>
+        {SEARCHDATA.map(kikea => {
+          return <SearchCard key={kikea.id} kikea={kikea} />;
+        })}
+      </div>
+    </>
   );
 };
 
