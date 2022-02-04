@@ -1,0 +1,17 @@
+.cart-main-container {
+  width: 55vw;
+
+  .cart-box-top {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+
+    .cart-comment {
+      font-size: 23px;
+      font-weight: 800;
+    }
+
+    .cart-etc {
+    }
+  }
+}
