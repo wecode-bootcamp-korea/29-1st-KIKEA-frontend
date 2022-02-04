@@ -57,22 +57,8 @@
       }
 
       .side-product-color-value {
-        display: flex;
         margin-top: 20px;
         font-size: 13px;
-
-        .side-product-color-box {
-          margin: 13px 0 0 0;
-
-          .side-product-color {
-            display: inline;
-            font-weight: 700;
-            margin-right: 7px;
-            padding: 10px;
-            border: 0.1px solid #bbbbbb;
-            border-radius: 10px;
-          }
-        }
       }
     }
 
@@ -113,7 +99,7 @@
         width: 75%;
         border: none;
         padding: 20px;
-        background-color: rgb(68, 68, 221);
+        background-color: #0058a3;
         color: white;
         font-weight: bold;
         font-size: 15px;
