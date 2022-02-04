@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router';
 import SearchBox from './SearchBox/SearchBox';
 import SearchFilter from './SearchFilter/SearchFilter';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,25 +11,37 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 const NavBar = ({ showMenu, showLoginBar }) => {
   const [filterVisible, setFilterVisible] = useState(false);
   const [searchInput, setSearchInput] = useState('');
-  // const [searchData, setSearchData] = useState([];)
+  const [searchData, setSearchData] = useState([]);
+  const navigate = useNavigate();
+
+  const toMain = () => {
+    navigate('/');
+  };
 
   const showFilter = () => {
     setFilterVisible(true);
-  };
-  const closeFilter = () => {
-    setFilterVisible(false);
   };
 
   const handleInput = e => {
     setSearchInput(e.target.value);
   };
+
   const clearSearch = () => {
     setSearchInput('');
   };
-  // const filteredSearchData = searchData.filter(data => {
-  //   return searchData.name.toLowerCase().includes(searchInput.toLowerCase());
-  // });
-  console.log(searchInput);
+
+  const filteredSearchData = searchData.filter(kikea => {
+    return kikea.name.toLowerCase().includes(searchInput.toLowerCase());
+  });
+
+  useEffect(() => {
+    fetch('/data/data.json')
+      .then(res => res.json())
+      .then(data => {
+        setSearchData(data);
+      });
+  }, []);
+
   return (
     <div className="sidebar-nav-container">
       <section className="menu">
@@ -39,7 +52,12 @@ const NavBar = ({ showMenu, showLoginBar }) => {
       <section className="header-container">
         <div className="main-nav">
           <div className="nav-left">
-            <img className="kikea-logo" alt="kikea" src="/images/logo.jpg" />
+            <img
+              className="kikea-logo"
+              alt="kikea"
+              src="/images/logo.jpg"
+              onClick={toMain}
+            />
           </div>
           <div className="nav-center">
             <SearchBox
@@ -47,9 +65,14 @@ const NavBar = ({ showMenu, showLoginBar }) => {
               handleInput={handleInput}
               searchInput={searchInput}
               clearSearch={clearSearch}
-              // searchData={filteredSearchData}
             />
-            {filterVisible && <SearchFilter closeFilter={closeFilter} />}
+            {filterVisible && (
+              <SearchFilter
+                searchData={filteredSearchData}
+                setSearchInput={setSearchInput}
+                setFilterVisible={setFilterVisible}
+              />
+            )}
           </div>
           <div className="nav-icons-container">
             <NavIcons showLoginBar={showLoginBar} />
@@ -60,7 +83,7 @@ const NavBar = ({ showMenu, showLoginBar }) => {
             <li onClick={showMenu} className="all-products-menu">
               모든 제품
             </li>
-            <li className="all-products-menu">쇼룸</li>
+            <li className="all-products-menu">온라인 쇼룸</li>
           </ul>
         </div>
       </section>

@@ -2,7 +2,7 @@
   overflow-y: scroll;
   overscroll-behavior-y: none;
   width: 29vw;
-  height: 110vh;
+  height: 100%;
   z-index: 20;
   top: 0;
   position: fixed;
@@ -18,7 +18,7 @@
   overflow-y: scroll;
   overscroll-behavior-y: none;
   width: 29vw;
-  height: 110vh;
+  height: 100%;
   z-index: 20;
   top: 0;
   position: fixed;
@@ -116,18 +116,28 @@
 }
 
 .menu-list {
-  padding-top: 13px;
-
   .menu-items {
-    padding-top: 16px;
-    padding-left: 3px;
-    font-weight: 700;
+    font-size: 1.25rem;
+    padding-top: 4vh;
+    padding-left: 1vw;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.type-list {
+  padding-top: 1vh;
+
+  .type-list-items {
+    padding-top: 2vh;
+    padding-left: 2vw;
     cursor: pointer;
   }
 }
 .side-bar-category:hover,
 .product-list-content:hover,
 .service-list-content:hover,
-.menu-items:hover {
+.menu-items:hover,
+.type-list-items:hover {
   text-decoration: underline;
 }

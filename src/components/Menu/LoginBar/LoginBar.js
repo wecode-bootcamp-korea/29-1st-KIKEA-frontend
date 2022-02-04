@@ -1,10 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faArrowCircleRight,
-  faTimesCircle,
-} from '@fortawesome/free-solid-svg-icons';
+import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 import './LoginBar.scss';
 
 const LoginBar = ({ closeLoginBar, isShownLoginBar }) => {
@@ -44,15 +41,12 @@ const LoginBar = ({ closeLoginBar, isShownLoginBar }) => {
     >
       <div className="login-signup-content">
         <div className="login-content-container">
-          <button
-            onClick={closeLoginBar}
-            type="button"
-            className="close-login-btn"
-          >
-            <FontAwesomeIcon icon={faTimesCircle} className="faTimesCircle" />
-          </button>
           <div className="login-content">
-            <span className="login-message">Hej</span>
+            <span className="login-message">
+              Hej
+              <span className="user-name" />
+            </span>
+
             <button
               type="button"
               className="to-login-page-btn"

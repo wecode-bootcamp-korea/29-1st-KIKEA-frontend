@@ -1,12 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router';
 import './Menu.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 const Menu = ({ closeMenu, isShownMenu }) => {
   const [isShownList, setIsShownList] = useState(false);
+
+  const navigate = useNavigate();
+
   const menuRef = useRef();
 
+  const toMain = () => {
+    navigate('/');
+  };
   useEffect(() => {
     const checkIfClickedOutside = e => {
       if (
@@ -15,6 +22,7 @@ const Menu = ({ closeMenu, isShownMenu }) => {
         !menuRef.current.contains(e.target)
       ) {
         closeMenu();
+        setIsShownList(false);
       }
     };
     document.addEventListener('click', checkIfClickedOutside);
@@ -37,7 +45,12 @@ const Menu = ({ closeMenu, isShownMenu }) => {
             className="close-side-bar-btn"
           />
         </button>
-        <img className="kikea-logo" alt="kikea" src="/images/logo.jpg" />
+        <img
+          className="kikea-logo"
+          alt="kikea"
+          src="/images/logo.jpg"
+          onClick={toMain}
+        />
       </div>
       <div className="side-bar-content-container">
         <div className="side-bar-content">
@@ -49,7 +62,7 @@ const Menu = ({ closeMenu, isShownMenu }) => {
           >
             모든 제품
           </h1>
-          {isShownList === true ? <List /> : null}
+          {isShownList && <TypeList />}
           <p className="side-bar-category side-bar-category-last">
             온라인 쇼룸
           </p>
@@ -88,14 +101,49 @@ const Menu = ({ closeMenu, isShownMenu }) => {
   );
 };
 
-const List = () => {
+export default Menu;
+
+const TypeList = () => {
+  const [furnitureListVisible, setFurnitureListVisible] = useState(false);
+  const [lightsListVisible, setLightsListVisible] = useState(false);
+
   return (
     <ul className="menu-list">
-      <li className="menu-items">가구</li>
-      <li className="menu-items">침대/매트리스</li>
-      <li className="menu-items">조명</li>
+      <li
+        className="menu-items"
+        onClick={() => {
+          setFurnitureListVisible(!furnitureListVisible);
+        }}
+      >
+        가구
+      </li>
+      {furnitureListVisible && <FurnitureList />}
+      <li
+        className="menu-items"
+        onClick={() => {
+          setLightsListVisible(!lightsListVisible);
+        }}
+      >
+        조명
+      </li>
+      {lightsListVisible && <LightsList />}
     </ul>
   );
 };
 
-export default Menu;
+const FurnitureList = () => {
+  return (
+    <ul className="type-list">
+      <li className="type-list-items">침대</li>
+      <li className="type-list-items">소파</li>
+    </ul>
+  );
+};
+
+const LightsList = () => {
+  return (
+    <ul className="type-list">
+      <li className="type-list-items">일반조명</li>
+    </ul>
+  );
+};
