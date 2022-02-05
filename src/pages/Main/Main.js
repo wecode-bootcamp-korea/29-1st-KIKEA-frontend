@@ -3,6 +3,7 @@ import './Main.scss';
 import Promotion from './Promotion/Promotion';
 import MainProduct from './MainProduct/MainProduct';
 import RecommendItem from './RecommentItem/RecommendItem';
+import Footer from '../../components/Footer/Footer';
 
 const Main = () => {
   return (
@@ -13,6 +14,7 @@ const Main = () => {
         <RecommendItem />
         <MainProduct />
       </main>
+      <Footer />
     </>
   );
 };
