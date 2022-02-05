@@ -8,8 +8,8 @@ import { faTimesCircle, faGlobe } from '@fortawesome/free-solid-svg-icons';
 const Menu = ({ closeMenu, menuVisible }) => {
   const [typeListVisible, setTypeListVisible] = useState(false);
 
-  const navigate = useNavigate();
   const menuRef = useRef();
+  const navigate = useNavigate();
 
   const toMain = () => {
     navigate('/');
