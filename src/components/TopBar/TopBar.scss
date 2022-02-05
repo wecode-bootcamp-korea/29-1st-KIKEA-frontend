@@ -1,12 +1,16 @@
 .message-container {
   display: flex;
-  justify-content: space-between;
-  padding: 10px 460px;
+  justify-content: center;
+  flex-wrap: wrap;
   background-color: black;
 
   .message-content {
-    cursor: pointer;
+    min-width: 10vw;
+    max-width: 10vw;
+    margin: 1.3vh 3vw;
+    text-align: center;
     color: white;
+    cursor: pointer;
 
     .message-text {
       font-size: 13px;
