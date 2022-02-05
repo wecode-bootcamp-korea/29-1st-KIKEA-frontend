@@ -9,7 +9,6 @@ const Menu = ({ closeMenu, menuVisible }) => {
   const [typeListVisible, setTypeListVisible] = useState(false);
 
   const navigate = useNavigate();
-
   const menuRef = useRef();
 
   const toMain = () => {
