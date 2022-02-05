@@ -3,11 +3,12 @@ import './Main.scss';
 import Promotion from './Promotion/Promotion';
 import MainProduct from './MainProduct/MainProduct';
 import RecommendItem from './RecommentItem/RecommendItem';
+import Nav from '../../components/Nav';
 
 const Main = () => {
   return (
     <>
-      <nav />
+      <Nav />
       <main className="main">
         <Promotion />
         <RecommendItem />
