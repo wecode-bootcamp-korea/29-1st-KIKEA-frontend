@@ -16,6 +16,7 @@ function Router() {
         <Route path="/member" element={<Member />} />
         <Route path="/login" element={<Login />} />
         <Route path="/nav" element={<Nav />} />
+        <Route path="/type" element={<ProductTypeMain />} />
       </Routes>
     </BrowserRouter>
   );

@@ -14,7 +14,7 @@ const ProductTypeMain = () => {
         setProductData(data);
       });
   }, []);
-  console.log(productData.categories);
+
   return (
     <>
       <Nav />

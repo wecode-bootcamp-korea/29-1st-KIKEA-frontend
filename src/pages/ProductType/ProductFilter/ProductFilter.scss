@@ -1,9 +1,10 @@
 .filter-section-container {
   padding-left: 9vw;
+  padding-right: 80px;
 
   .filter-btn-container {
     padding: 6vh 0 3vh 0;
-    width: 82vw;
+    width: 100%;
     border-bottom: 0.1em solid lightgray;
 
     .filter-btn {
@@ -22,8 +23,9 @@
   .filter-btn-category {
     padding-top: 5vh;
   }
-  .product-card-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-  }
+}
+.product-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 9vw;
 }
