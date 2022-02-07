@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './SignUpForm.scss';
 
 const SignUpForm = () => {
@@ -9,6 +10,8 @@ const SignUpForm = () => {
     address: '',
     phone_number: '',
   });
+
+  const navigate = useNavigate();
 
   const [radioGroup, setRadioGroup] = useState({
     isFamily: false,
@@ -27,12 +30,29 @@ const SignUpForm = () => {
       [name]: value,
     });
   };
+
+  const isValid = () => {
+    if (!inputState.email.includes('@'))
+      return alert('이메일 형식이 맞지 않습니다.');
+    let reg = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+    if (!reg.test(inputState.password))
+      return alert(
+        '비밀번호는 하나 이상의 문자, 숫자, 특수 문자가 필요합니다.'
+      );
+    if (!inputState.name && !inputState.phone_number && !inputState.address)
+      return alert('정보를 입력하세요.');
+    return true;
+  };
   // catch(), 리절트 이용할 방법 생각
   const signUp = () => {
-    fetch('http://192.168.0.69:8000/users/signup', {
-      method: 'POST',
-      body: JSON.stringify({ ...inputState }),
-    });
+    if (isValid()) {
+      fetch('http://10.58.5.10:8000/users/signup', {
+        method: 'POST',
+        body: JSON.stringify({ ...inputState }),
+      })
+        .then(res => res.json())
+        .then(console.log);
+    }
   };
 
   return (
@@ -111,7 +131,7 @@ const SignUpForm = () => {
           <input
             className="member-phoneNumber"
             type="text"
-            name="phoneNumber"
+            name="phone_number"
             placeholder="  "
             onChange={changeInfo}
             required
