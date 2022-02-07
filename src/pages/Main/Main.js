@@ -4,11 +4,12 @@ import Promotion from './Promotion/Promotion';
 import MainProduct from './MainProduct/MainProduct';
 import RecommendItem from './RecommentItem/RecommendItem';
 import Footer from '../../components/Footer/Footer';
+import Nav from '../../components/Nav';
 
 const Main = () => {
   return (
     <>
-      <nav />
+      <Nav />
       <main className="main">
         <Promotion />
         <RecommendItem />

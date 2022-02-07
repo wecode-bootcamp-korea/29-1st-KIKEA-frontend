@@ -6,6 +6,7 @@ import ProductTypeMain from './pages/ProductType/ProductTypeMain';
 import Member from './pages/Member/Member';
 import DetailC from './pages/Detail/DetailC';
 
+
 function Router() {
   return (
     <BrowserRouter>
@@ -15,6 +16,7 @@ function Router() {
         <Route path="/detail" element={<DetailC />} />
         <Route path="/member" element={<Member />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/nav" element={<Nav />} />
       </Routes>
     </BrowserRouter>
   );

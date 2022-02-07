@@ -1,13 +1,10 @@
 import React, { useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faArrowCircleRight,
-  faTimesCircle,
-} from '@fortawesome/free-solid-svg-icons';
+import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 import './LoginBar.scss';
 
-const LoginBar = ({ closeLoginBar, isShownLoginBar }) => {
+const LoginBar = ({ closeLoginBar, loginBarVisible }) => {
   const loginBarRef = useRef();
   const navigate = useNavigate();
 
@@ -22,7 +19,7 @@ const LoginBar = ({ closeLoginBar, isShownLoginBar }) => {
   useEffect(() => {
     const checkIfClickedOutside = e => {
       if (
-        isShownLoginBar &&
+        loginBarVisible &&
         loginBarRef.current &&
         !loginBarRef.current.contains(e.target)
       ) {
@@ -33,30 +30,27 @@ const LoginBar = ({ closeLoginBar, isShownLoginBar }) => {
     return () => {
       document.removeEventListener('click', checkIfClickedOutside);
     };
-  }, [isShownLoginBar, closeLoginBar]);
+  }, [loginBarVisible, closeLoginBar]);
 
   return (
     <div
       className={
-        'login-bar-container-' + (isShownLoginBar ? 'slide-out' : 'slide-in')
+        'login-bar-container-' + (loginBarVisible ? 'slide-out' : 'slide-in')
       }
       ref={loginBarRef}
     >
       <div className="login-signup-content">
         <div className="login-content-container">
-          <button
-            onClick={closeLoginBar}
-            type="button"
-            className="close-login-btn"
-          >
-            <FontAwesomeIcon icon={faTimesCircle} className="faTimesCircle" />
-          </button>
           <div className="login-content">
-            <span className="login-message">Hej</span>
+            <span className="login-message">
+              Hej
+              <span className="user-name" />
+            </span>
+
             <button
               type="button"
               className="to-login-page-btn"
-              onclick={toLogin}
+              onClick={toLogin}
             >
               로그인
             </button>
@@ -71,7 +65,7 @@ const LoginBar = ({ closeLoginBar, isShownLoginBar }) => {
                 가입해보세요,&nbsp;&nbsp;가입은 무료입니다!
               </p>
             </div>
-            <button type="button" className="signup-btn " onclick={toMember}>
+            <button type="button" className="signup-btn " onClick={toMember}>
               <FontAwesomeIcon
                 icon={faArrowCircleRight}
                 className="signup-icon"
@@ -90,7 +84,7 @@ const LoginBar = ({ closeLoginBar, isShownLoginBar }) => {
                 받아보세요
               </p>
             </div>
-            <button type="button" className="signup-btn" onclick={toMember}>
+            <button type="button" className="signup-btn" onClick={toMember}>
               <FontAwesomeIcon
                 icon={faArrowCircleRight}
                 className="signup-icon"
@@ -101,7 +95,7 @@ const LoginBar = ({ closeLoginBar, isShownLoginBar }) => {
       </div>
       <div className="other-service-content">
         <ul className="other-service-list">
-          <li className="other-service-items" onclick={toLogin}>
+          <li className="other-service-items" onClick={toLogin}>
             로그인
           </li>
           <li className="other-service-items">위시리스트</li>

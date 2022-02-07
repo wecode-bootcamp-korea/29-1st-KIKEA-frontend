@@ -1,9 +1,8 @@
 .login-bar-container-slide-in {
-  overflow-y: scroll;
   overscroll-behavior-y: none;
   width: 36vw;
   height: 110vh;
-  z-index: 10;
+  z-index: 20;
   top: 0;
   right: 0;
   position: fixed;
@@ -21,7 +20,7 @@
   overscroll-behavior-y: none;
   width: 36vw;
   height: 110vh;
-  z-index: 10;
+  z-index: 20;
   top: 0;
   right: 0;
   position: fixed;
@@ -39,25 +38,19 @@
 
     .login-content-container {
       height: 50%;
-      padding: 30px 60px 30px 50px;
-      border-bottom: 1px solid white;
+      padding: 15vh 6vh 5vh;
 
-      .close-login-btn {
-        position: relative;
-        margin-left: 355px;
-        font-size: 28px;
-        cursor: pointer;
-        background-color: #0158a3;
-        border: none;
-      }
       .login-content {
-        padding-top: 60px;
         display: flex;
         justify-content: space-between;
 
         .login-message {
           color: white;
           font-size: 40px;
+
+          .user-name {
+            padding-left: 2vw;
+          }
         }
         .to-login-page-btn {
           width: 80px;
@@ -75,12 +68,14 @@
     .signup-content-container {
       .signup-content-wrapper {
         display: flex;
-        border-bottom: 1px solid white;
+        border-top: 1px solid white;
+
         .signup-content {
           height: 25%;
           width: 70%;
           padding: 20px 50px;
           color: white;
+
           .signup-message {
             font-size: 17px;
           }
@@ -111,6 +106,9 @@
     .other-service-items {
       padding-bottom: 30px;
       cursor: pointer;
+    }
+    .other-service-items:hover {
+      text-decoration: underline;
     }
   }
 }

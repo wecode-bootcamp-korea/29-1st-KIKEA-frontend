@@ -1,32 +1,41 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Menu.scss';
+import TypeList from './List/List';
+import { useNavigate } from 'react-router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
-const Menu = ({ closeMenu, isShownMenu }) => {
-  const [isShownList, setIsShownList] = useState(false);
+const Menu = ({ closeMenu, menuVisible }) => {
+  const [typeListVisible, setTypeListVisible] = useState(false);
+
+  const navigate = useNavigate();
   const menuRef = useRef();
+
+  const toMain = () => {
+    navigate('/');
+  };
 
   useEffect(() => {
     const checkIfClickedOutside = e => {
       if (
-        isShownMenu &&
+        menuVisible &&
         menuRef.current &&
         !menuRef.current.contains(e.target)
       ) {
         closeMenu();
+        setTypeListVisible(false);
       }
     };
     document.addEventListener('click', checkIfClickedOutside);
     return () => {
       document.removeEventListener('click', checkIfClickedOutside);
     };
-  }, [isShownMenu, closeMenu]);
+  }, [menuVisible, closeMenu]);
 
   return (
     <div
       className={
-        'side-bar-container-' + (isShownMenu ? 'slide-out' : 'slide-in')
+        'side-bar-container-' + (menuVisible ? 'slide-out' : 'slide-in')
       }
       ref={menuRef}
     >
@@ -40,7 +49,8 @@ const Menu = ({ closeMenu, isShownMenu }) => {
         <img
           className="kikea-logo"
           alt="kikea"
-          src="https://www.ikea.com/kr/ko/static/ikea-logo.f7d9229f806b59ec64cb.svg"
+          src="/images/logo.jpg"
+          onClick={toMain}
         />
       </div>
       <div className="side-bar-content-container">
@@ -48,12 +58,12 @@ const Menu = ({ closeMenu, isShownMenu }) => {
           <h1
             className="side-bar-category"
             onClick={() => {
-              setIsShownList(!isShownList);
+              setTypeListVisible(!typeListVisible);
             }}
           >
             모든 제품
           </h1>
-          {isShownList === true ? <List /> : null}
+          {typeListVisible && <TypeList />}
           <p className="side-bar-category side-bar-category-last">
             온라인 쇼룸
           </p>
@@ -89,16 +99,6 @@ const Menu = ({ closeMenu, isShownMenu }) => {
         </div>
       </div>
     </div>
-  );
-};
-
-const List = () => {
-  return (
-    <ul className="menu-list">
-      <li className="menu-items">가구</li>
-      <li className="menu-items">침대/매트리스</li>
-      <li className="menu-items">조명</li>
-    </ul>
   );
 };
 
