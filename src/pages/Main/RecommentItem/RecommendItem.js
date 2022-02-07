@@ -11,7 +11,7 @@ const RecommendItem = () => {
       slide.scrollLeft = 0;
     }
   };
-  useEffect(() => setInterval(nextClick, 2000), []);
+  useEffect(() => setInterval(nextClick, 3000), []);
   return (
     <div className="recommenditem">
       <div className="recommendtaion-title">추천 제품</div>
