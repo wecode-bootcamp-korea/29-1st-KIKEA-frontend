@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './CartSide.scss';
 
-const CartSide = () => {
+const CartSide = ({ cartBox }) => {
+  const [total, setTotal] = useState();
+
+  useEffect(() => {
+    if (cartBox) {
+      getTotal(cartBox);
+    }
+  }, [cartBox]);
+
+  const getTotal = cartItems => {
+    let totalPrice = 0;
+    cartItems.map(cartItem => (totalPrice += Number(cartItem.price)));
+    setTotal(totalPrice);
+  };
+
   return (
     <div className="side-container">
       <div className="side-order-box">
@@ -14,7 +28,7 @@ const CartSide = () => {
         </div>
         <div className="order-all-price-box">
           <span className="order-all-price-comment">총 주문금액</span>
-          <span className="order-all-price">₩ 1,009,000</span>
+          <span className="order-all-price">₩ {total?.toLocaleString()}</span>
         </div>
       </div>
       <div className="side-login-box">

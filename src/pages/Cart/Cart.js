@@ -11,6 +11,7 @@ const Cart = () => {
       .then(res => res.json())
       .then(data => {
         setCartBox(data);
+        console.log(cartBox);
       });
   }, []);
 
@@ -20,8 +21,8 @@ const Cart = () => {
 
   return (
     <div className="cart">
-      <CartMain cartBox={cartBox} onRemove={onRemove} />
-      <CartSide />
+      <CartMain cartBox={cartBox} setCartBox={setCartBox} onRemove={onRemove} />
+      <CartSide cartBox={cartBox} />
     </div>
   );
 };

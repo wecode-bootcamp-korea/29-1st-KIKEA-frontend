@@ -1,7 +1,18 @@
 import React from 'react';
 import './CartBox.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 
-const CartBox = ({ prod, onRemove }) => {
+const CartBox = ({
+  id,
+  name,
+  type,
+  price,
+  quantity,
+  onRemove,
+  handleAdd,
+  handleMinus,
+}) => {
   return (
     <div className="cart-box-container">
       <div className="cart-box">
@@ -13,19 +24,28 @@ const CartBox = ({ prod, onRemove }) => {
         <div className="cart-products-container">
           <div className="cart-products-box">
             <div className="cart-product-info">
-              <div className="cart-product-name">{prod.name}</div>
-              <div className="cart-product-type">{prod.type}</div>
+              <div className="cart-product-name">{name}</div>
+              <div className="cart-product-type">{type}</div>
             </div>
-            <div className="cart-product-price">₩{prod.price}</div>
+            <div className="cart-product-price">₩{price}</div>
           </div>
-          <div className="cart-product-btn-box">
-            <select className="cart-product-value-select">
-              <option>0</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-            </select>
-            <button className="delete-btn" onClick={() => onRemove(prod.id)}>
+          <div className="cart-product-btn-box ">
+            <div className="cart-product-qty-box">
+              <button
+                className="cart-product-minus-btn"
+                onClick={() => handleMinus(id)}
+              >
+                <FontAwesomeIcon icon={faMinus} className="cart-minus-icon" />
+              </button>
+              <div className="cart-product-qty">{quantity}</div>
+              <button
+                className="cart-product-add-btn"
+                onClick={() => handleAdd(id)}
+              >
+                <FontAwesomeIcon icon={faPlus} className="cart-prev-icon" />
+              </button>
+            </div>
+            <button className="delete-btn" onClick={() => onRemove(id)}>
               삭제
             </button>
             <button className="add-wishlist">위시리스트 저장</button>
