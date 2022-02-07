@@ -5,8 +5,8 @@ import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 import './LoginBar.scss';
 
 const LoginBar = ({ closeLoginBar, loginBarVisible }) => {
-  const navigate = useNavigate();
   const loginBarRef = useRef();
+  const navigate = useNavigate();
 
   const toLogin = e => {
     navigate('/login');
