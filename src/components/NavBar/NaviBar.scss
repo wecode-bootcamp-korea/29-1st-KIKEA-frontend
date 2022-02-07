@@ -24,8 +24,8 @@
         cursor: pointer;
       }
       .side-bar-on-btn:hover {
-        width: 35px;
         height: 35px;
+        width: 35px;
         background-color: #f5f5f5;
         border-radius: 50px;
       }
@@ -48,12 +48,15 @@
           flex-grow: 1;
 
           .kikea-logo {
+            height: 5.5vh;
+            width: 6.5vw;
             cursor: pointer;
           }
         }
         .nav-center {
           flex-grow: 16;
           padding: 0.5vw;
+          position: relative;
         }
         .nav-icons-container {
           display: flex;
@@ -61,50 +64,11 @@
           align-items: center;
           height: 100%;
           flex-grow: 1;
-
-          .nav-icons-list {
-            display: flex;
-            align-items: center;
-
-            .ware-house-btn {
-              background-color: white;
-              border: none;
-              margin-left: 10px;
-              width: 75px;
-              text-align: left;
-            }
-            .btn-span {
-              font-size: 12px;
-              cursor: pointer;
-            }
-            .btn-span-two {
-              font-weight: bold;
-              letter-spacing: 0.1em;
-              cursor: pointer;
-            }
-            .btn-span-two:hover {
-              text-decoration: underline;
-            }
-            .icon {
-              font-size: 20px;
-              cursor: pointer;
-            }
-            .ware-house-icon {
-              margin-left: 10px;
-            }
-            .truck-icon {
-              margin-left: 100px;
-            }
-            .user-icon,
-            .heart-icon,
-            .bag-icon {
-              margin-left: 30px;
-            }
-          }
         }
       }
       .all-products-container {
         width: 100%;
+        padding-bottom: 6.5vh;
 
         .all-products-list {
           display: flex;
@@ -114,7 +78,7 @@
             font-size: 1em;
             font-weight: 900;
             margin-right: 20px;
-            padding-bottom: 10px;
+            padding-bottom: 1vh;
             cursor: pointer;
           }
           .all-products-menu:hover {
