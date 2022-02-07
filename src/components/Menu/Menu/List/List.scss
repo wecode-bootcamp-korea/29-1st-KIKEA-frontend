@@ -1,0 +1,24 @@
+.menu-list {
+  .menu-items {
+    font-size: 1.25rem;
+    padding-top: 4vh;
+    padding-left: 1vw;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.type-list {
+  padding-top: 2vh;
+
+  .type-list-items {
+    padding-top: 2vh;
+    padding-left: 1vw;
+    cursor: pointer;
+  }
+}
+
+.menu-items:hover,
+.type-list-items:hover {
+  text-decoration: underline;
+}

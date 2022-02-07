@@ -1,0 +1,31 @@
+.product-items {
+  display: flex;
+  margin-bottom: 3vh;
+  cursor: pointer;
+
+  .product-img {
+    width: 4vw;
+    height: 5vh;
+
+    .img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .product-description {
+    padding-left: 10px;
+    margin: auto 0;
+
+    .product-name {
+      font-weight: bold;
+    }
+    .product-name:hover {
+      text-decoration: underline;
+    }
+    .product-class {
+      padding-top: 1vh;
+      font-size: 0.85rem;
+      color: grey;
+    }
+  }
+}

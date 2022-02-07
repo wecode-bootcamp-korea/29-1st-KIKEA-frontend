@@ -5,17 +5,17 @@ import Main from './pages/Main/Main';
 import ProductTypeMain from './pages/ProductType/ProductTypeMain';
 import DetailC from './pages/Detail/DetailC';
 import Member from './pages/Member/Member';
+import Nav from './components/Nav';
 
 function Router() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Main />} />
-        {/* <Route path="/detail" element={<Detail />} /> */}
-        <Route path="/productTypeMain" element={<ProductTypeMain />} />
         <Route path="/detail" element={<DetailC />} />
         <Route path="/member" element={<Member />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/nav" element={<Nav />} />
       </Routes>
     </BrowserRouter>
   );
