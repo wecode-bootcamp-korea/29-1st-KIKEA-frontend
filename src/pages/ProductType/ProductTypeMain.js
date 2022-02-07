@@ -8,7 +8,7 @@ const ProductTypeMain = () => {
   const [productData, setProductData] = useState('');
 
   useEffect(() => {
-    fetch('http://10.158.55.10:8000/products/category')
+    fetch('http://10.58.5.10:8000/products/category')
       .then(res => res.json())
       .then(data => {
         setProductData(data);

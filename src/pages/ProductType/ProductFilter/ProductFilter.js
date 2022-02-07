@@ -36,10 +36,9 @@ const ProductFilter = ({ productData }) => {
         <div className="filter-btn-category" />
       </div>
       <div className="product-card-wrapper">
-        {productData.category &&
-          productData.category.map(kikea => {
-            return <ProductCard key={kikea.id} kikea={kikea} />;
-          })}
+        {productData.categories?.map(kikea => {
+          return <ProductCard key={kikea.id} kikea={kikea} />;
+        })}
       </div>
     </>
   );
