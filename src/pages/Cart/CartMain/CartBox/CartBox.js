@@ -1,7 +1,7 @@
 import React from 'react';
 import './CartBox.scss';
 
-const CartBox = ({ name, type, price }) => {
+const CartBox = ({ prod, onRemove }) => {
   return (
     <div className="cart-box-container">
       <div className="cart-box">
@@ -13,10 +13,10 @@ const CartBox = ({ name, type, price }) => {
         <div className="cart-products-container">
           <div className="cart-products-box">
             <div className="cart-product-info">
-              <div className="cart-product-name">{name}</div>
-              <div className="cart-product-type">{type}</div>
+              <div className="cart-product-name">{prod.name}</div>
+              <div className="cart-product-type">{prod.type}</div>
             </div>
-            <div className="cart-product-price">₩{price}</div>
+            <div className="cart-product-price">₩{prod.price}</div>
           </div>
           <div className="cart-product-btn-box">
             <select className="cart-product-value-select">
@@ -25,7 +25,9 @@ const CartBox = ({ name, type, price }) => {
               <option>2</option>
               <option>3</option>
             </select>
-            <button className="delete-btn">삭제</button>
+            <button className="delete-btn" onClick={() => onRemove(prod.id)}>
+              삭제
+            </button>
             <button className="add-wishlist">위시리스트 저장</button>
           </div>
         </div>

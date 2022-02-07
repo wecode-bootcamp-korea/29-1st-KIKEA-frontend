@@ -14,9 +14,13 @@ const Cart = () => {
       });
   }, []);
 
+  const onRemove = id => {
+    setCartBox(cartBox.filter(prod => prod.id !== id));
+  };
+
   return (
     <div className="cart">
-      <CartMain cartBox={cartBox} />
+      <CartMain cartBox={cartBox} onRemove={onRemove} />
       <CartSide />
     </div>
   );
