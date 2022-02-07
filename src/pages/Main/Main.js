@@ -19,11 +19,4 @@ const Main = () => {
   );
 };
 
-const MAINMENU = [
-  { id: 1, name: '모든 공간' },
-  { id: 2, name: '가구' },
-  { id: 3, name: '조명' },
-  { id: 4, name: '기타' },
-];
-
 export default Main;

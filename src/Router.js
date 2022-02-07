@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login/Login';
 import Main from './pages/Main/Main';
 import ProductTypeMain from './pages/ProductType/ProductTypeMain';
-import DetailC from './pages/Detail/DetailC';
 import Member from './pages/Member/Member';
+import DetailC from './pages/Detail/DetailC';
 
 function Router() {
   return (
