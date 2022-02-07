@@ -24,6 +24,8 @@ const LoginBar = ({ closeLoginBar, loginBarVisible }) => {
         !loginBarRef.current.contains(e.target)
       ) {
         closeLoginBar();
+        console.log('window');
+        console.log(window);
       }
     };
     document.addEventListener('click', checkIfClickedOutside);

@@ -13,13 +13,17 @@ import {
 const NavIcons = ({ showLoginBar }) => {
   return (
     <ul className="nav-icons-list">
-      <li>
-        <FontAwesomeIcon className="ware-house-icon icon" icon={faWarehouse} />
-      </li>
-      <button type="button" className="ware-house-btn">
+      <div type="button" className="ware-house-btn">
         <span className="btn-span">매장 정보 확인</span>
-        <p className="btn-span-two">매장 선택</p>
-      </button>
+        <p className="btn-span-two">
+          {' '}
+          <FontAwesomeIcon
+            className="ware-house-icon icon"
+            icon={faWarehouse}
+          />
+          &nbsp;매장 선택
+        </p>
+      </div>
       <li className="nav-icon-list">
         <FontAwesomeIcon className="truck-icon icon" icon={faTruck} />
       </li>

@@ -4,17 +4,21 @@
   font-size: 16px;
 
   .ware-house-btn {
-    width: 75px;
     background-color: white;
     border: none;
-    margin-left: 10px;
-    text-align: left;
+    font-size: 12px;
+
+    span {
+      padding-left: 18px;
+      font-size: 10px;
+    }
   }
   .btn-span {
     font-size: 12px;
     cursor: pointer;
   }
   .btn-span-two {
+    margin-top: 3px;
     font-weight: bold;
     letter-spacing: 0.1em;
     cursor: pointer;
@@ -24,9 +28,6 @@
   }
   .icon {
     cursor: pointer;
-  }
-  .ware-house-icon {
-    margin-left: 10px;
   }
   .truck-icon {
     margin-left: 100px;

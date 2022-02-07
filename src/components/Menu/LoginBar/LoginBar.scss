@@ -18,7 +18,7 @@
 .login-bar-container-slide-out {
   overflow-y: scroll;
   overscroll-behavior-y: none;
-  width: 36vw;
+  width: 450px;
   height: 110vh;
   z-index: 20;
   top: 0;
@@ -27,14 +27,14 @@
   background: white;
   transform: translateX(0%);
   transition: transform 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 9999px;
 
   &.slide-out {
     transform: translateX(100%);
   }
 
   .login-signup-content {
-    height: 45%;
-    background-color: #0158a3;
+    background-color: #02a8cf;
 
     .login-content-container {
       height: 50%;
@@ -73,16 +73,18 @@
         .signup-content {
           height: 25%;
           width: 70%;
-          padding: 20px 50px;
+          padding: 20px 40px;
           color: white;
 
           .signup-message {
-            font-size: 17px;
+            font-size: 14px;
           }
           .signup-text {
             width: 320px;
-            font-size: 14px;
+            font-size: 11px;
             margin-top: 15px;
+            padding-right: 25px;
+            line-height: 1.5;
           }
         }
       }
@@ -91,17 +93,19 @@
         height: 45px;
         margin-top: 25px;
         margin-left: 50px;
-        background-color: #0158a3;
+        background-color: #02a8cf;
+        color: white;
         border: none;
         cursor: pointer;
       }
       .signup-icon {
-        font-size: 40px;
+        font-size: 30px;
       }
     }
   }
   .other-service-content {
     padding: 50px;
+    font-size: 13px;
 
     .other-service-items {
       padding-bottom: 30px;

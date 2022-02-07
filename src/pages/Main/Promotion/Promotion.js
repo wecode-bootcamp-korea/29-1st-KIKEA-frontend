@@ -41,13 +41,6 @@ const DATA = [
       '싱그러운 분위기를 주는 신제품으로 우리 집을 새삶스럽게 변화시켜보세요! 한 해의 시작이 더 활기차고 생기 있어질 거예요.',
     img: 'https://images.unsplash.com/photo-1628752660419-ad1c751abe72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aWtlYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60',
   },
-  {
-    id: 4,
-    title: 'IKEA with 신한카드',
-    description:
-      '늘 원하는 물건을 찾기 어려우신가요? 바구니와 수납함을 활용해 욕실 서랍을 깔끔하게 정리해 보세요. 분주한 아침 시간이 평온해질 거예요.',
-    img: 'https://images.unsplash.com/photo-1621764641815-d00227ed9376?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGlrZWF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
-  },
 ];
 
 export default Promotion;
