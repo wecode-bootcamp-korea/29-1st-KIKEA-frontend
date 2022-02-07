@@ -12,12 +12,12 @@
     "color": [
       {
         "id": 1,
-        "colorValue": "grey",
+        "colorValue": "사바나 그레이",
         "mainSrc": "https://www.ikea.com/kr/ko/images/products/taellbyn-table-lamp-nickel-plated-opal-white-glass__0779136_pe759268_s5.jpg?f=xl"
       },
       {
         "id": 2,
-        "colorValue": "blue",
+        "colorValue": "임페리얼 블루",
         "mainSrc": "https://www.ikea.com/kr/ko/images/products/snoebyar-table-lamp-grey-turquoise-ceramic-grey__0952098_pe801573_s5.jpg?f=xl"
       }
     ],
