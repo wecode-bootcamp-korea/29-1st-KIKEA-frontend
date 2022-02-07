@@ -19,12 +19,12 @@
   width: 30vw;
   top: 0px;
   right: 0px;
-  transform: translate(240%, 0);
+  transform: translate(230%, 0);
   animation-duration: 0.5s;
   animation-name: slide;
 
   .aside-top {
-    background-color: rgb(68, 68, 221);
+    background-color: #0058a3;
     padding: 70px 40px 55px 30px;
     border-top-left-radius: 8px;
 
@@ -37,7 +37,7 @@
       border-radius: 50%;
       top: 0;
       right: 0;
-      margin: 15px 35px 10px 0;
+      margin: 15px 25px 10px 0;
 
       &:hover {
         cursor: pointer;
