@@ -6,6 +6,7 @@ import ProductTypeMain from './pages/ProductType/ProductTypeMain';
 import DetailC from './pages/Detail/DetailC';
 import Member from './pages/Member/Member';
 import Nav from './components/Nav';
+import Order from './pages/Order/Order';
 
 function Router() {
   return (
@@ -16,6 +17,7 @@ function Router() {
         <Route path="/member" element={<Member />} />
         <Route path="/login" element={<Login />} />
         <Route path="/nav" element={<Nav />} />
+        <Route path="/order" element={<Order />} />
       </Routes>
     </BrowserRouter>
   );
