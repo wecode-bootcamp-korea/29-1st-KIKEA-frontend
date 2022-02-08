@@ -29,6 +29,7 @@ const SignUpForm = () => {
   };
   // catch(), 리절트 이용할 방법 생각
   const signUp = () => {
+    console.log(inputState);
     fetch('http://192.168.0.69:8000/users/signup', {
       method: 'POST',
       body: JSON.stringify({ ...inputState }),
@@ -111,7 +112,7 @@ const SignUpForm = () => {
           <input
             className="member-phoneNumber"
             type="text"
-            name="phoneNumber"
+            name="phone_number"
             placeholder="  "
             onChange={changeInfo}
             required

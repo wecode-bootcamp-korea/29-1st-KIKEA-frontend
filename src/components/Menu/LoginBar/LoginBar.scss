@@ -68,6 +68,8 @@
     .signup-content-container {
       .signup-content-wrapper {
         display: flex;
+        align-items: center;
+        justify-content: space-between;
         border-top: 1px solid white;
 
         .signup-content {
@@ -91,8 +93,7 @@
       .signup-btn {
         position: relative;
         height: 45px;
-        margin-top: 25px;
-        margin-left: 50px;
+        padding-right: 40px;
         background-color: #02a8cf;
         color: white;
         border: none;
