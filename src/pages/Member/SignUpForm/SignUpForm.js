@@ -51,7 +51,16 @@ const SignUpForm = () => {
         body: JSON.stringify({ ...inputState }),
       })
         .then(res => res.json())
-        .then(console.log);
+        .catch(err => {
+          if ((err.message = 'email already exist')) {
+            alert('아이디가 동일합니다');
+            return false;
+          }
+        });
+      // .then(data => {
+      //   alert('회원가입이 완료되었습니다');
+      //   navigate('/');
+      // });
     }
   };
 
