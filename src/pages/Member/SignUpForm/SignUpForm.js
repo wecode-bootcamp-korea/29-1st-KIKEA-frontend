@@ -43,25 +43,28 @@ const SignUpForm = () => {
       return alert('정보를 입력하세요.');
     return true;
   };
-  // catch(), 리절트 이용할 방법 생각
+
   const signUp = () => {
     if (isValid()) {
       fetch('http://10.58.5.10:8000/users/signup', {
         method: 'POST',
         body: JSON.stringify({ ...inputState }),
       })
+        .then(
+          res => res.json()
+          // if (!res.ok) throw Error('잘못된');
+          // else res.json();
+        )
         .then(res => {
-          if (!res.ok) throw Error('잘못된');
-          else res.json();
-        })
-
-        .then(data => {
-          alert('회원가입이 완료되었습니다');
-          navigate('/');
-        })
-        .catch(err => {
-          if ((err.message = 'email already exist')) {
+          if (res.message === 'email already exist') {
             alert('아이디가 동일합니다');
+            return false;
+          } else if (res.message === 'Please type valid email address') {
+            alert('아이디 형식이 유효하지 않습니다');
+            return false;
+          } else {
+            alert('회원가입이 완료되었습니다');
+            navigate('/');
           }
         });
     }
