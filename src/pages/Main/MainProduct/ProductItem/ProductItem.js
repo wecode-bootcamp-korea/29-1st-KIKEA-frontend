@@ -5,7 +5,7 @@ const ProductItem = ({ item }) => {
   return (
     <div className="productitem">
       <div className="productitem-item-wrapper">
-        {(item.result &&
+        {/* {(item.result &&
           item.result.map(({ description, image, id }) => (
             <div className="productitem-item-flex" key={id}>
               <img
@@ -32,7 +32,7 @@ const ProductItem = ({ item }) => {
                   )
                 )
               )
-            ))}
+            ))} */}
       </div>
     </div>
   );

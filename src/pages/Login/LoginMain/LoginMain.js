@@ -26,21 +26,22 @@ const LoginMain = () => {
   };
 
   const signIn = () => {
-    console.log('로그인');
     fetch('http://10.58.5.10:8000/users/signin', {
       method: 'POST',
       body: JSON.stringify({ ...inputState }),
     })
-      .then(res => res.json())
-
+      .then(res => {
+        console.log(res);
+        if (!res.ok) throw Error(res.json());
+        else res.json();
+      })
       .then(data => {
         sessionStorage.setItem('token', data.Token);
         navigate('/');
       })
       .catch(err => {
-        console.log(err);
-        if (err) alert('유효하지 않은 이메일 입니다');
-        else alert('유효하지 않은 비밀번호입니다.');
+        console.log('error');
+        console.log(err.messasge);
       });
   };
 
