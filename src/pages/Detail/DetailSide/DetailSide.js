@@ -1,49 +1,41 @@
-import React, { useState } from 'react';
+import React from 'react';
+import DetailColor from './DetailColor';
+import DetailSize from './DetailSize';
 import './DetailSide.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 
 const DetailSide = ({ toggleAddBtn, productBox }) => {
-  const [selectedColor, setSelectedColor] = useState('');
-
   return (
     <div className="side-container">
       <div className="side-product-box">
-        <div className="side-product-container">
-          <h1 className="side-product-name">TÄLLBYN 텔뷘</h1>
-          <div className="side-product-price-wrap">
-            <span className="side-product-price-unit">₩</span>
-            <span className="side-product-price">59,900</span>
+        <div className="side-product-wrap">
+          <div className="side-product-container">
+            <h1 className="side-product-name">{productBox.result?.[0].name}</h1>
+            <div className="side-product-price-wrap">
+              <span className="side-product-price-unit">₩</span>
+              <span className="side-product-price">
+                {productBox.result?.[0].price}
+              </span>
+            </div>
+          </div>
+          <p className="side-product-type">{productBox.result?.[0].type}</p>
+          <div className="side-product-review-wrap">
+            <div className="side-product-review">★★★★</div>
+            <span className="side-product-review-value">(8)</span>
           </div>
         </div>
-        <p className="side-product-type">
-          탁상스탠드, 니켈 도금/오팔 화이트 유리, 40cm
-        </p>
-        <div className="side-product-review">★★★★</div>
-        <span className="side-product-review-value">(8)</span>
-        <div className="side-product-color-value-container">
-          <div className="side-product-color-value-comment">제품 색상</div>
-          <p className="side-product-color-value">{selectedColor}</p>
-        </div>
         <div className="side-product-color-list-wrap">
-          {productBox[0]?.color.map(({ id, colorValue, mainSrc }, index) => {
-            return (
-              <div
-                key={index}
-                className="side-product-color-box"
-                onMouseOver={() => setSelectedColor(colorValue)}
-              >
-                <img
-                  key={colorValue}
-                  id={id}
-                  src={mainSrc}
-                  alt="side-product-color-img"
-                  className="side-product-color-img"
-                />
-              </div>
-            );
-          })}
+          {(productBox.result?.[0].color_id === null && '') || (
+            <DetailColor productBox={productBox} />
+          )}
         </div>
+        <div className="side-product-size-list-wrap">
+          {(productBox.result?.[0].size === null && <></>) || (
+            <DetailSize productBox={productBox} />
+          )}
+        </div>
+
         <div className="btn-wrap">
           <button className="buying-btn" onClick={toggleAddBtn}>
             구매하기
