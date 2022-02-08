@@ -30,18 +30,22 @@ const LoginMain = () => {
       method: 'POST',
       body: JSON.stringify({ ...inputState }),
     })
-      .then(res => {
-        console.log(res);
-        if (!res.ok) throw Error(res.json());
-        else res.json();
-      })
+      .then(res => res.json())
       .then(data => {
-        sessionStorage.setItem('token', data.Token);
-        navigate('/');
-      })
-      .catch(err => {
-        console.log('error');
-        console.log(err.messasge);
+        console.log('data');
+        console.log(data);
+        if (data.message === 'wrong password') {
+          alert('비밀번호 오류입니다');
+          return false;
+        } else if (data.message === 'invaild email') {
+          alert('아이디 오류입니다');
+          return false;
+        } else {
+          console.log('로그인 성공');
+          sessionStorage.setItem('token', data.Token);
+          sessionStorage.setItem('name', data.Name);
+          navigate('/');
+        }
       });
   };
 

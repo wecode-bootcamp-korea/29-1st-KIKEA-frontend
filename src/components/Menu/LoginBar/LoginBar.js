@@ -51,7 +51,9 @@ const LoginBar = ({ closeLoginBar, loginBarVisible }) => {
             <span className="login-message">
               Hej
               {sessionStorage.getItem('token') && (
-                <span style={{ color: '#FFDB00' }}>&nbsp; 로그인완료</span>
+                <span style={{ color: '#FFDB00' }}>
+                  &nbsp; {sessionStorage.getItem('name')}
+                </span>
               )}
               <span className="user-name" />
             </span>

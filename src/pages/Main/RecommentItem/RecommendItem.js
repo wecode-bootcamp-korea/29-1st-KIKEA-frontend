@@ -1,26 +1,26 @@
-import React, { createRef, useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './RecommendItem.scss';
 
 const RecommendItem = () => {
-  const myRef = createRef();
+  const sliderWrapper = useRef();
 
-  const nextClick = () => {
-    const slide = myRef.current;
+  const nextSlider = () => {
+    const slide = sliderWrapper.current;
     slide.scrollLeft += slide.offsetWidth;
     if (slide.scrollLeft >= slide.scrollWidth - slide.offsetWidth) {
       slide.scrollLeft = 0;
     }
   };
   useEffect(() => {
-    const interval = setInterval(nextClick, 3000);
+    const sliderInterval = setInterval(nextSlider, 3000);
     return () => {
-      clearInterval(interval);
+      clearInterval(sliderInterval);
     };
   }, []);
   return (
     <div className="recommenditem">
       <div className="recommendtaion-title">추천 제품</div>
-      <div className="recommendtaion-item-wrapper" ref={myRef}>
+      <div className="recommendtaion-item-wrapper" ref={sliderWrapper}>
         {MOCKDATA.map(item => (
           <div className="recommendtaion-item-box" key={item.id}>
             <img

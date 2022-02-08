@@ -9,8 +9,14 @@ import {
   faUser,
   faTruck,
 } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 const NavIcons = ({ showLoginBar }) => {
+  const navigate = useNavigate();
+
+  const goCart = () => {
+    navigate('/cart');
+  };
   return (
     <ul className="nav-icons-list">
       <div type="button" className="ware-house-btn">
@@ -38,7 +44,11 @@ const NavIcons = ({ showLoginBar }) => {
         <FontAwesomeIcon className="heart-icon icon" icon={faHeart} />
       </li>
       <li className="nav-icon-list">
-        <FontAwesomeIcon className="bag-icon icon" icon={faShoppingBag} />
+        <FontAwesomeIcon
+          className="bag-icon icon"
+          icon={faShoppingBag}
+          onClick={goCart}
+        />
       </li>
     </ul>
   );
