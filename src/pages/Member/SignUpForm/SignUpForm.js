@@ -16,8 +16,9 @@ const SignUpForm = () => {
   });
 
   const changeRadio = ({ target }) => {
-    let obj = { [target.value]: target.checked };
-    setRadioGroup(obj);
+    const { value, checked } = target;
+
+    setRadioGroup({ [value]: checked });
   };
 
   const changeInfo = e => {
@@ -27,12 +28,26 @@ const SignUpForm = () => {
       [name]: value,
     });
   };
-  // catch(), 리절트 이용할 방법 생각
+
   const signUp = () => {
+    // 회원가입
+    // 성공 => 로그인 창
+    // 실패 => 다시 입력해주세요
+    // Promise
+    // resolve 200m
+    // reject 404, 500
+    // then
+    // then
+
     fetch('http://192.168.0.69:8000/users/signup', {
       method: 'POST',
       body: JSON.stringify({ ...inputState }),
-    });
+    })
+      .then(() => {
+        navigate('/main');
+        // statusCode, reject 시키기
+      })
+      .catch(alert('다시 입력해주세요'));
   };
 
   return (

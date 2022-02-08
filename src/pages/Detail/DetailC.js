@@ -12,15 +12,16 @@ const Detail = () => {
   const [descSideOpen, setDescSideOpen] = useState(false);
 
   const toggleCartBtn = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(prev => !prev); // function update
   };
 
   const toggleDescBtn = () => {
-    setDescSideOpen(!descSideOpen);
+    setDescSideOpen(prev => !prev);
   };
 
   const toggleSideBar = () => {
     if (isOpen) return toggleCartBtn();
+
     if (descSideOpen) return toggleDescBtn();
   };
 
@@ -38,7 +39,7 @@ const Detail = () => {
         <DetailNav />
         <div className="detail-container">
           <div
-            className={isOpen || descSideOpen ? 'empty-ele' : 'empty-ele close'}
+            className={`empty-ele ${isOpen || descSideOpen ? '' : 'close'}`}
             onClick={toggleSideBar}
           />
           <DetailMain productBox={productBox} toggleDescBtn={toggleDescBtn} />

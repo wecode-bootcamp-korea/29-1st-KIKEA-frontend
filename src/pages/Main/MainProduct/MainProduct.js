@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { END_POINT } from '../../../config';
 import './MainProduct.scss';
 import ProductFilter from './ProductFilter/ProductFilter';
 import ProductItem from './ProductItem/ProductItem';
@@ -7,8 +8,12 @@ const MainProduct = () => {
   const [category, setCategory] = useState('');
   const [item, setItem] = useState('');
 
+  // 중복
+  // 유지보수하기 힘들어서
+  // 수정할 포인트가 많아져서
+  //
   const sortCategory = name => {
-    fetch('http://192.168.0.69:8000/products?category=' + name)
+    fetch(END_POINT.product + name) // config
       .then(response => response.json())
       .then(result => {
         setItem(result);
