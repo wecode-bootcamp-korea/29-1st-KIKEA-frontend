@@ -32,8 +32,6 @@ const LoginMain = () => {
     })
       .then(res => res.json())
       .then(data => {
-        console.log('data');
-        console.log(data);
         if (data.message === 'wrong password') {
           alert('비밀번호 오류입니다');
           return false;
@@ -41,7 +39,6 @@ const LoginMain = () => {
           alert('아이디 오류입니다');
           return false;
         } else {
-          console.log('로그인 성공');
           sessionStorage.setItem('token', data.Token);
           sessionStorage.setItem('name', data.Name);
           navigate('/');

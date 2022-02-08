@@ -3,16 +3,16 @@
     font-size: 14px;
     padding-top: 20px;
     padding-left: 1vw;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
   }
 }
 
 .type-list {
-  padding-top: 2vh;
+  padding-top: 5px;
+  display: none;
 
   .type-list-items {
-    padding-top: 2vh;
-    padding-left: 1vw;
+    padding: 7px 0px 5px 18px;
   }
 }

@@ -10,7 +10,7 @@ const ProductFilter = ({ category, sortCategory }) => {
             <button
               key={id}
               className="productfilter-button"
-              onClick={() => sortCategory(name)}
+              onClick={() => sortCategory(id)}
             >
               <span>{name}</span>
             </button>
