@@ -19,8 +19,8 @@ const SignUpForm = () => {
   });
 
   const changeRadio = ({ target }) => {
-    let obj = { [target.value]: target.checked };
-    setRadioGroup(obj);
+    const { value, checked } = target;
+    setRadioGroup({ [value]: checked });
   };
 
   const changeInfo = e => {
@@ -50,17 +50,20 @@ const SignUpForm = () => {
         method: 'POST',
         body: JSON.stringify({ ...inputState }),
       })
-        .then(res => res.json())
+        .then(res => {
+          if (!res.ok) throw Error('잘못된');
+          else res.json();
+        })
+
+        .then(data => {
+          alert('회원가입이 완료되었습니다');
+          navigate('/');
+        })
         .catch(err => {
           if ((err.message = 'email already exist')) {
             alert('아이디가 동일합니다');
-            return false;
           }
         });
-      // .then(data => {
-      //   alert('회원가입이 완료되었습니다');
-      //   navigate('/');
-      // });
     }
   };
 
