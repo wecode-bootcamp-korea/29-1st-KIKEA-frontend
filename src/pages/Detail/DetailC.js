@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import DetailNav from './DetailNav';
 import DetailMain from './DetailMain/DetailMain';
 import DetailSide from './DetailSide/DetailSide';

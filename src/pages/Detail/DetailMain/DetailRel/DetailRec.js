@@ -8,7 +8,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 const DetailRec = ({ productBox }) => {
-  const TOTAL_SLIDES = 4;
+  const TOTAL_SLIDES = 2;
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideRef = useRef(null);
 
