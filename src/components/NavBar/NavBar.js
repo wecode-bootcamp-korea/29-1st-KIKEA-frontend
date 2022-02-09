@@ -35,7 +35,7 @@ const NavBar = ({ showMenu, showLoginBar }) => {
   });
 
   useEffect(() => {
-    fetch('/data/data.json')
+    fetch('10.58.5.10:8000/products/product')
       .then(res => res.json())
       .then(data => {
         setSearchData(data);

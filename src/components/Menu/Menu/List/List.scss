@@ -4,7 +4,6 @@
     padding-top: 20px;
     padding-left: 1vw;
     font-weight: 700;
-    cursor: pointer;
   }
 }
 
@@ -15,4 +14,10 @@
   .type-list-items {
     padding: 7px 0px 5px 18px;
   }
+}
+
+.menu-items:hover,
+.type-list-items:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
