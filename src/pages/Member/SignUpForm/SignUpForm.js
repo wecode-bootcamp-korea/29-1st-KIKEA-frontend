@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './SignUpForm.scss';
 
 const SignUpForm = () => {
@@ -10,14 +11,16 @@ const SignUpForm = () => {
     phone_number: '',
   });
 
+  const navigate = useNavigate();
+
   const [radioGroup, setRadioGroup] = useState({
     isFamily: false,
     isNotFamily: false,
   });
 
   const changeRadio = ({ target }) => {
-    let obj = { [target.value]: target.checked };
-    setRadioGroup(obj);
+    const { value, checked } = target;
+    setRadioGroup({ [value]: checked });
   };
 
   const changeInfo = e => {
@@ -27,12 +30,44 @@ const SignUpForm = () => {
       [name]: value,
     });
   };
-  // catch(), 리절트 이용할 방법 생각
+
+  const isValid = () => {
+    if (!inputState.email.includes('@'))
+      return alert('이메일 형식이 맞지 않습니다.');
+    let reg = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+    if (!reg.test(inputState.password))
+      return alert(
+        '비밀번호는 하나 이상의 문자, 숫자, 특수 문자가 필요합니다.'
+      );
+    if (!inputState.name && !inputState.phone_number && !inputState.address)
+      return alert('정보를 입력하세요.');
+    return true;
+  };
+
   const signUp = () => {
-    fetch('http://192.168.0.69:8000/users/signup', {
-      method: 'POST',
-      body: JSON.stringify({ ...inputState }),
-    });
+    if (isValid()) {
+      fetch('http://10.58.5.10:8000/users/signup', {
+        method: 'POST',
+        body: JSON.stringify({ ...inputState }),
+      })
+        .then(
+          res => res.json()
+          // if (!res.ok) throw Error('잘못된');
+          // else res.json();
+        )
+        .then(res => {
+          if (res.message === 'email already exist') {
+            alert('아이디가 동일합니다');
+            return false;
+          } else if (res.message === 'Please type valid email address') {
+            alert('아이디 형식이 유효하지 않습니다');
+            return false;
+          } else {
+            alert('회원가입이 완료되었습니다');
+            navigate('/');
+          }
+        });
+    }
   };
 
   return (
