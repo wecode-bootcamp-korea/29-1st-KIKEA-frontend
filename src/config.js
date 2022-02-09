@@ -7,4 +7,5 @@ export const END_POINT = {
   selectCategory: `${BASE_URL}products?category=`,
   signIn: `${BASE_URL}users/signin`,
   signUp: `${BASE_URL}users/signup`,
+  selectDetail: `${BASE_URL}products?product=`,
 };

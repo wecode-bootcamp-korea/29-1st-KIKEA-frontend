@@ -30,14 +30,18 @@ const NavBar = ({ showMenu, showLoginBar }) => {
     setSearchInput('');
   };
 
-  const filteredSearchData = searchData.filter(kikea => {
-    return kikea.name.toLowerCase().includes(searchInput.toLowerCase());
-  });
+  console.log(searchData);
+  const filteredSearchData =
+    searchData.result &&
+    searchData.result.filter(kikea => {
+      return kikea.name.toLowerCase().includes(searchInput.toLowerCase());
+    });
 
   useEffect(() => {
-    fetch('/data/data.json')
+    fetch('http://192.168.147.117:8000/products?sort=price')
       .then(res => res.json())
       .then(data => {
+        console.log('asdf');
         setSearchData(data);
       });
   }, []);

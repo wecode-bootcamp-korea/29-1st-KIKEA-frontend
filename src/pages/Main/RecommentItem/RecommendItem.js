@@ -1,13 +1,29 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { END_POINT } from '../../../config';
 import './RecommendItem.scss';
 const RecommendItem = () => {
   const [item, setItem] = useState('');
+  let tt;
+
+  const navigate = useNavigate();
+
   useEffect(() => {
     fetch(END_POINT.recommendItem)
       .then(response => response.json())
       .then(result => {
         setItem(result.products);
+      });
+
+    fetch(
+      'http://192.168.147.117:8000/products/product?subcategory=1&subcategory=2'
+    )
+      .then(re => re.json())
+      .then(data => {
+        tt = data.products;
+        tt.sort((a, b) => b.price - a.price);
+        console.log(tt);
+        return null;
       });
   }, []);
 
@@ -29,12 +45,16 @@ const RecommendItem = () => {
     }
   };
 
-  useEffect(() => {
-    const sliderInterval = setInterval(nextSlider, 4000);
-    return () => {
-      clearInterval(sliderInterval);
-    };
-  }, []);
+  const goDetail = id => {
+    navigate(`/detail?product=${id}`);
+  };
+
+  // useEffect(() => {
+  //   const sliderInterval = setInterval(nextSlider, 4000);
+  //   return () => {
+  //     clearInterval(sliderInterval);
+  //   };
+  // }, []);
 
   return (
     <div className="recommenditem">
@@ -47,6 +67,7 @@ const RecommendItem = () => {
                 alt={item.type}
                 src={item.default_image}
                 className="recommendtaion-item-img"
+                onClick={() => goDetail(item.id)}
               />
               <div className="recommendtaion-item-info">
                 <h3>{item.name}</h3>

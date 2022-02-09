@@ -3,6 +3,8 @@ import SearchCard from './SearchCard/SearchCard';
 import './SearchFilter.scss';
 
 const SearchFilter = ({ searchData, setFilterVisible, setSearchInput }) => {
+  console.log('dfsdfsdfsd');
+  console.log(searchData);
   return (
     <>
       <div
@@ -13,9 +15,10 @@ const SearchFilter = ({ searchData, setFilterVisible, setSearchInput }) => {
         }}
       />
       <div className="search-filter-container">
-        {searchData.map(kikea => {
-          return <SearchCard key={kikea.id} kikea={kikea} />;
-        })}
+        {searchData &&
+          searchData.map(kikea => {
+            return <SearchCard key={kikea.id} kikea={kikea} />;
+          })}
       </div>
     </>
   );

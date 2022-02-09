@@ -7,6 +7,7 @@ import ProductItem from './ProductItem/ProductItem';
 const MainProduct = () => {
   const [category, setCategory] = useState('');
   const [item, setItem] = useState('');
+  const [color, setColor] = useState(true);
 
   const sortCategory = name => {
     fetch(END_POINT.selectCategory + name)
@@ -14,6 +15,8 @@ const MainProduct = () => {
       .then(result => {
         setItem(result);
       });
+
+    setColor(prev => !prev);
   };
   useEffect(() => {
     fetch(END_POINT.category)
@@ -32,7 +35,11 @@ const MainProduct = () => {
   return (
     <div className="mainproduct">
       <h2 className="main-wrapper-homefurnishing">홈 퍼니싱 상품</h2>
-      <ProductFilter category={category} sortCategory={sortCategory} />
+      <ProductFilter
+        category={category}
+        sortCategory={sortCategory}
+        color={color}
+      />
       <ProductItem item={item} />
     </div>
   );
