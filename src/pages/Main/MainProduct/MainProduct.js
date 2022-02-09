@@ -8,8 +8,6 @@ const MainProduct = () => {
   const [item, setItem] = useState('');
 
   const sortCategory = name => {
-    console.log('name');
-    console.log(name);
     fetch(`http://10.58.5.10:8000/products?category=${name}`)
       .then(response => response.json())
       .then(result => {

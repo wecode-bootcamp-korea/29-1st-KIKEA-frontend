@@ -23,8 +23,6 @@ const TypeList = () => {
   };
 
   const goType = id => {
-    console.log('digh');
-    console.log(id);
     navigate(`/products?subcategory=${id}`);
   };
 
