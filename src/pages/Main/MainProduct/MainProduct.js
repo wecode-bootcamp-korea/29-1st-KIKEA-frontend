@@ -16,8 +16,6 @@ const MainProduct = () => {
         setItem(result);
       });
   };
-  console.log('item');
-  console.log(item);
   useEffect(() => {
     fetch('http://10.58.5.10:8000/products/category')
       .then(response => response.json())

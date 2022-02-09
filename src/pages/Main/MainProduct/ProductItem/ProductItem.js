@@ -2,8 +2,6 @@ import React from 'react';
 import './ProductItem.scss';
 
 const ProductItem = ({ item }) => {
-  console.log('product');
-  console.log(item);
   return (
     <div className="productitem">
       <div className="productitem-item-wrapper">
