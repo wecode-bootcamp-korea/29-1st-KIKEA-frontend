@@ -10,8 +10,8 @@ import {
 const TOTAL_SLIDES = 3;
 
 const CartRecBox = ({ cartBox }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
   const slideRef = useRef(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {
     if (currentSlide >= TOTAL_SLIDES) {
