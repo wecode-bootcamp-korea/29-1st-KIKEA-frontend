@@ -1,0 +1,41 @@
+.rec-products-wrap {
+  width: 20%;
+  margin-right: 20px;
+  flex-shrink: 0;
+
+  .rec-products-img {
+    width: 100%;
+  }
+
+  .rec-products-comment-wrap {
+    width: 100%;
+    line-height: 23px;
+
+    .rec-products-name {
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .rec-products-type {
+      font-size: 13px;
+    }
+
+    .rec-products-price-unit {
+      font-size: 5px;
+      vertical-align: 40%;
+      margin-right: 5px;
+    }
+
+    .rec-products-price {
+      font-size: 23px;
+      font-weight: 800;
+    }
+
+    .rec-products-review {
+      display: flex;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  }
+}
