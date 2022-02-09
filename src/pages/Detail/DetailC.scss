@@ -1,0 +1,30 @@
+.detail-page-container {
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-y: hidden;
+
+  .detail-page {
+    margin-left: 50px;
+    overflow-x: hidden;
+
+    .detail-container {
+      display: flex;
+      width: 100vw;
+      margin-top: 20px;
+    }
+  }
+}
+
+.empty-ele {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.close {
+  visibility: hidden;
+}

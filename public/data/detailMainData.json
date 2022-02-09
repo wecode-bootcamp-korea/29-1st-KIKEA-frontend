@@ -1,0 +1,280 @@
+[
+  {
+    "id": 1,
+    "name": "TÄLLBYN 텔뷘",
+    "unit": "₩",
+    "price": "59,900",
+    "type": "탁상스탠드, 니켈 도금/오팔 화이트 유리, 40cm",
+    "content": "TÄLLBYN 텔뷘 시리즈의 조명은 메탈과 입으로 불어 만드는 유리 소재로 만들어서 클래식하면서도 튼튼한 디자인이에요. 멋진 분위기를 연출하는 기능성 조명이죠. 집안에 추억을 떠올리게 하는 공간을 만들어보세요.",
+    "description": "부드러운 느낌의 불빛이 따뜻하고 포근한 분위기를 연출합니다. 이 유리 전등갓은 숙련된 전문가가 입으로 불어서 만든 제품으로 독특한 개성을 느낄 수 있어요.",
+    "material": "스틸, 니켈도금, 아크릴 코팅",
+    "review": "★★★★",
+    "color": [
+      {
+        "id": 1,
+        "colorValue": "사바나 그레이",
+        "mainSrc": "https://www.ikea.com/kr/ko/images/products/taellbyn-table-lamp-nickel-plated-opal-white-glass__0779136_pe759268_s5.jpg?f=xl"
+      },
+      {
+        "id": 2,
+        "colorValue": "임페리얼 블루",
+        "mainSrc": "https://www.ikea.com/kr/ko/images/products/snoebyar-table-lamp-grey-turquoise-ceramic-grey__0952098_pe801573_s5.jpg?f=xl"
+      }
+    ],
+
+    "mainSrc": "https://www.ikea.com/kr/ko/images/products/taellbyn-table-lamp-nickel-plated-opal-white-glass__0779133_pe759267_s5.jpg?f=xl",
+    "img": [
+      {
+        "id": 1,
+        "src": "https://www.ikea.com/kr/ko/images/products/taellbyn-table-lamp-nickel-plated-opal-white-glass__0779136_pe759268_s5.jpg?f=xl"
+      },
+      {
+        "id": 2,
+        "src": "https://www.ikea.com/kr/ko/images/products/taellbyn-table-lamp-nickel-plated-opal-white-glass__0779133_pe759267_s5.jpg?f=xl"
+      },
+      {
+        "id": 3,
+        "src": "https://www.ikea.com/kr/ko/images/products/taellbyn-table-lamp-nickel-plated-opal-white-glass__0779134_pe759270_s5.jpg?f=xl"
+      },
+      {
+        "id": 4,
+        "src": "https://www.ikea.com/kr/ko/images/products/taellbyn-table-lamp-nickel-plated-opal-white-glass__0779142_pe759273_s5.jpg?f=xl"
+      },
+      {
+        "id": 5,
+        "src": "https://www.ikea.com/kr/ko/images/products/taellbyn-table-lamp-nickel-plated-opal-white-glass__0779135_pe759269_s5.jpg?f=xl"
+      },
+      {
+        "id": 6,
+        "src": "https://www.ikea.com/kr/ko/images/products/taellbyn-table-lamp-nickel-plated-opal-white-glass__0974551_ph171410_s5.jpg?f=xl"
+      },
+      {
+        "id": 7,
+        "src": "https://www.ikea.com/kr/ko/images/products/taellbyn-table-lamp-nickel-plated-opal-white-glass__0979583_ph172360_s5.jpg?f=xl"
+      },
+      {
+        "id": 8,
+        "src": "https://www.ikea.com/kr/ko/images/products/taellbyn-table-lamp-nickel-plated-opal-white-glass__0964594_ph172828_s5.jpg?f=xl"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "STOCKHOLM 2017",
+    "unit": "₩",
+    "price": "99,900",
+    "type": "탁상스탠드",
+    "content": "보석처럼 은은하게 반짝이는 전등입니다. 기분 좋은 빛을 눈부심 없이 고르게 비춰주는 제품으로, 함께 구성된 디머 스위치로 원하는 무드를 간편하게 설정할 수 있습니다.",
+    "description": "디머가 내장되어 있어서 전체조명과 무드조명으로 모두 사용할 수 있습니다. 전등갓 위아래에 반투명유리를 덧대어 은은하고 아늑한 빛을 비춥니다.",
+    "material": "스틸, 크롬도금, 강화유리",
+    "review": "★★★",
+    "color": [
+      {
+        "id": 1,
+        "colorValue": "grey",
+        "mainSrc": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0880875_pe625255_s5.jpg?f=xl"
+      },
+      {
+        "id": 2,
+        "colorValue": "blue",
+        "mainSrc": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0880875_pe625255_s5.jpg?f=xl"
+      }
+    ],
+    "mainSrc": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0880875_pe625255_s5.jpg?f=xl",
+    "img": [
+      {
+        "id": 1,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0610420_pe684947_s5.jpg?f=xl"
+      },
+      {
+        "id": 2,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0880875_pe625255_s5.jpg?f=xl"
+      },
+      {
+        "id": 3,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__1049504_pe844185_s5.jpg?f=xl"
+      },
+      {
+        "id": 4,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__1049503_pe844186_s5.jpg?f=xl"
+      },
+      {
+        "id": 5,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0914129_ph166589_s5.jpg?f=xl"
+      },
+      {
+        "id": 6,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0523544_ph141726_s5.jpg?f=xl"
+      },
+      {
+        "id": 7,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0523528_ph141727_s5.jpg?f=xl"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "STOCKHOLM 2017",
+    "unit": "₩",
+    "price": "99,900",
+    "type": "탁상스탠드",
+    "content": "보석처럼 은은하게 반짝이는 전등입니다. 기분 좋은 빛을 눈부심 없이 고르게 비춰주는 제품으로, 함께 구성된 디머 스위치로 원하는 무드를 간편하게 설정할 수 있습니다.",
+    "description": "디머가 내장되어 있어서 전체조명과 무드조명으로 모두 사용할 수 있습니다. 전등갓 위아래에 반투명유리를 덧대어 은은하고 아늑한 빛을 비춥니다.",
+    "material": "스틸, 크롬도금, 강화유리",
+    "review": "★★★",
+    "color": [
+      {
+        "id": 1,
+        "colorValue": "grey",
+        "mainSrc": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0880875_pe625255_s5.jpg?f=xl"
+      },
+      {
+        "id": 2,
+        "colorValue": "blue",
+        "mainSrc": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0880875_pe625255_s5.jpg?f=xl"
+      }
+    ],
+
+    "mainSrc": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0880875_pe625255_s5.jpg?f=xl",
+    "img": [
+      {
+        "id": 1,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0610420_pe684947_s5.jpg?f=xl"
+      },
+      {
+        "id": 2,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0880875_pe625255_s5.jpg?f=xl"
+      },
+      {
+        "id": 3,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__1049504_pe844185_s5.jpg?f=xl"
+      },
+      {
+        "id": 4,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__1049503_pe844186_s5.jpg?f=xl"
+      },
+      {
+        "id": 5,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0914129_ph166589_s5.jpg?f=xl"
+      },
+      {
+        "id": 6,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0523544_ph141726_s5.jpg?f=xl"
+      },
+      {
+        "id": 7,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0523528_ph141727_s5.jpg?f=xl"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "STOCKHOLM 2017",
+    "unit": "₩",
+    "price": "99,900",
+    "type": "탁상스탠드",
+    "content": "보석처럼 은은하게 반짝이는 전등입니다. 기분 좋은 빛을 눈부심 없이 고르게 비춰주는 제품으로, 함께 구성된 디머 스위치로 원하는 무드를 간편하게 설정할 수 있습니다.",
+    "description": "디머가 내장되어 있어서 전체조명과 무드조명으로 모두 사용할 수 있습니다. 전등갓 위아래에 반투명유리를 덧대어 은은하고 아늑한 빛을 비춥니다.",
+    "material": "스틸, 크롬도금, 강화유리",
+    "review": "★★★",
+    "color": [
+      {
+        "id": 1,
+        "colorValue": "grey",
+        "mainSrc": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0880875_pe625255_s5.jpg?f=xl"
+      },
+      {
+        "id": 2,
+        "colorValue": "blue",
+        "mainSrc": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0880875_pe625255_s5.jpg?f=xl"
+      }
+    ],
+
+    "mainSrc": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0880875_pe625255_s5.jpg?f=xl",
+    "img": [
+      {
+        "id": 1,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0610420_pe684947_s5.jpg?f=xl"
+      },
+      {
+        "id": 2,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0880875_pe625255_s5.jpg?f=xl"
+      },
+      {
+        "id": 3,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__1049504_pe844185_s5.jpg?f=xl"
+      },
+      {
+        "id": 4,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__1049503_pe844186_s5.jpg?f=xl"
+      },
+      {
+        "id": 5,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0914129_ph166589_s5.jpg?f=xl"
+      },
+      {
+        "id": 6,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0523544_ph141726_s5.jpg?f=xl"
+      },
+      {
+        "id": 7,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0523528_ph141727_s5.jpg?f=xl"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "STOCKHOLM 2017",
+    "unit": "₩",
+    "price": "99,900",
+    "type": "탁상스탠드",
+    "content": "보석처럼 은은하게 반짝이는 전등입니다. 기분 좋은 빛을 눈부심 없이 고르게 비춰주는 제품으로, 함께 구성된 디머 스위치로 원하는 무드를 간편하게 설정할 수 있습니다.",
+    "description": "디머가 내장되어 있어서 전체조명과 무드조명으로 모두 사용할 수 있습니다. 전등갓 위아래에 반투명유리를 덧대어 은은하고 아늑한 빛을 비춥니다.",
+    "material": "스틸, 크롬도금, 강화유리",
+    "review": "★★★",
+    "color": [
+      {
+        "id": 1,
+        "colorValue": "grey",
+        "mainSrc": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0880875_pe625255_s5.jpg?f=xl"
+      },
+      {
+        "id": 2,
+        "colorValue": "blue",
+        "mainSrc": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0880875_pe625255_s5.jpg?f=xl"
+      }
+    ],
+
+    "mainSrc": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0880875_pe625255_s5.jpg?f=xl",
+    "img": [
+      {
+        "id": 1,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0610420_pe684947_s5.jpg?f=xl"
+      },
+      {
+        "id": 2,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0880875_pe625255_s5.jpg?f=xl"
+      },
+      {
+        "id": 3,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__1049504_pe844185_s5.jpg?f=xl"
+      },
+      {
+        "id": 4,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__1049503_pe844186_s5.jpg?f=xl"
+      },
+      {
+        "id": 5,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0914129_ph166589_s5.jpg?f=xl"
+      },
+      {
+        "id": 6,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0523544_ph141726_s5.jpg?f=xl"
+      },
+      {
+        "id": 7,
+        "img": "https://www.ikea.com/kr/ko/images/products/stockholm-2017-table-lamp-chrome-plated__0523528_ph141727_s5.jpg?f=xl"
+      }
+    ]
+  }
+]

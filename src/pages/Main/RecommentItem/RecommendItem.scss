@@ -1,5 +1,5 @@
-.recommendItem {
-  margin-top: 30px;
+.recommenditem {
+  margin-top: 100px;
   margin-left: 10px;
 
   .recommendtaion-title {
@@ -13,11 +13,12 @@
     overflow: hidden;
     flex-wrap: nowrap;
     overflow-x: auto;
+    scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
 
     .recommendtaion-item-box {
-      width: 250px;
+      width: 25%;
       height: 250px;
       margin-right: 20px;
       flex: 0 0 auto;

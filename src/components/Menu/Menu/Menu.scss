@@ -1,0 +1,122 @@
+.side-bar-container-slide-in {
+  overflow-y: scroll;
+  overscroll-behavior-y: none;
+  width: 29vw;
+  height: 100%;
+  z-index: 20;
+  top: 0;
+  position: fixed;
+  background: white;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+
+  .slide-in {
+    transform: translateX(0%);
+  }
+}
+.side-bar-container-slide-out {
+  overflow-y: scroll;
+  overscroll-behavior-y: none;
+  width: 29vw;
+  height: 100%;
+  z-index: 20;
+  top: 0;
+  position: fixed;
+  background: white;
+  transform: translateX(0%);
+  transition: transform 0.3s;
+
+  .slide-out {
+    transform: translateX(-100%);
+  }
+}
+.side-bar-nav {
+  height: 50px;
+  width: 29vw;
+  display: flex;
+  align-items: center;
+  padding: 45px 0 45px 65px;
+  position: fixed;
+  top: 0;
+  background-color: white;
+
+  .side-bar-off-btn {
+    border: none;
+    background-color: white;
+  }
+  .close-side-bar-btn {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .kikea-logo {
+    height: 5vh;
+    padding-left: 70px;
+    cursor: pointer;
+  }
+}
+.side-bar-content-container {
+  height: 100%;
+  margin-top: 110px;
+  padding-left: 150px;
+
+  .side-bar-content {
+    .side-bar-category {
+      font-weight: bolder;
+      padding-top: 20px;
+      font-size: 1.8em;
+      cursor: pointer;
+    }
+    .side-bar-category-last {
+      padding-top: 35px;
+      padding-bottom: 25px;
+    }
+
+    .product-list {
+      .product-list-content {
+        padding-left: 3px;
+        padding-top: 20px;
+        font-weight: bolder;
+        cursor: pointer;
+      }
+      .list-last {
+        padding-top: 50px;
+      }
+    }
+    .service-list {
+      .service-list-content {
+        padding-left: 3px;
+        padding-top: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+  .side-bar-footer-container {
+    padding-top: 60px;
+
+    .side-bar-footer-btn {
+      border-radius: 20px;
+      font-size: 15px;
+      height: 35px;
+      width: 100px;
+      border: 0.1em solid #c0c0c0;
+      background-color: white;
+      cursor: pointer;
+    }
+    .side-bar-footer-btn:hover {
+      border: 0.1em solid grey;
+    }
+    .choose-country-btn {
+      margin-left: 15px;
+
+      .choose-country-icon {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.side-bar-category:hover,
+.product-list-content:hover,
+.service-list-content:hover {
+  text-decoration: underline;
+}

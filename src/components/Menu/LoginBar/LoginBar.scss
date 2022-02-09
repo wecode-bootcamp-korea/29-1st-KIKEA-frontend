@@ -1,0 +1,114 @@
+.login-bar-container-slide-in {
+  overscroll-behavior-y: none;
+  width: 36vw;
+  height: 110vh;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  position: fixed;
+  background: white;
+  transform: translateX(100%);
+  transition: transform 0.3s;
+
+  &.slide-in {
+    transform: translateX(0%);
+  }
+}
+
+.login-bar-container-slide-out {
+  overflow-y: scroll;
+  overscroll-behavior-y: none;
+  width: 36vw;
+  height: 110vh;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  position: fixed;
+  background: white;
+  transform: translateX(0%);
+  transition: transform 0.3s;
+
+  &.slide-out {
+    transform: translateX(100%);
+  }
+
+  .login-signup-content {
+    height: 45%;
+    background-color: #0158a3;
+
+    .login-content-container {
+      height: 50%;
+      padding: 15vh 6vh 5vh;
+
+      .login-content {
+        display: flex;
+        justify-content: space-between;
+
+        .login-message {
+          color: white;
+          font-size: 40px;
+
+          .user-name {
+            padding-left: 2vw;
+          }
+        }
+        .to-login-page-btn {
+          width: 80px;
+          font-size: 15px;
+          letter-spacing: 0.1em;
+          border: none;
+          border-radius: 20px;
+          cursor: pointer;
+        }
+        .faTimesCircle {
+          background-color: white;
+        }
+      }
+    }
+    .signup-content-container {
+      .signup-content-wrapper {
+        display: flex;
+        border-top: 1px solid white;
+
+        .signup-content {
+          height: 25%;
+          width: 70%;
+          padding: 20px 50px;
+          color: white;
+
+          .signup-message {
+            font-size: 17px;
+          }
+          .signup-text {
+            width: 320px;
+            font-size: 14px;
+            margin-top: 15px;
+          }
+        }
+      }
+      .signup-btn {
+        position: relative;
+        height: 45px;
+        margin-top: 25px;
+        margin-left: 50px;
+        background-color: #0158a3;
+        border: none;
+        cursor: pointer;
+      }
+      .signup-icon {
+        font-size: 40px;
+      }
+    }
+  }
+  .other-service-content {
+    padding: 50px;
+
+    .other-service-items {
+      padding-bottom: 30px;
+      cursor: pointer;
+    }
+    .other-service-items:hover {
+      text-decoration: underline;
+    }
+  }
+}
