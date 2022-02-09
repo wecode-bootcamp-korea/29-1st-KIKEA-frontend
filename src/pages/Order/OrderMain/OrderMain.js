@@ -1,6 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const OrderMain = () => {
+  const [inputState, setInputState] = useState({
+    email: '',
+    password: '',
+    name: '',
+    address: '',
+    phone_number: '',
+  });
+  const changeInfo = e => {
+    const { name, value } = e.target;
+    setInputState({
+      ...inputState,
+      [name]: value,
+    });
+  };
   return (
     <div className="ordermain">
       <div className="ordermain-container">
