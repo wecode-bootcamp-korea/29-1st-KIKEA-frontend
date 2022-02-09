@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Nav from '../../components/Nav';
 import Footer from '../../components/Footer/Footer';
 import DetailMain from './DetailMain/DetailMain';
@@ -14,7 +14,7 @@ const Detail = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [descSideOpen, setDescSideOpen] = useState(false);
 
-  const { id } = useParams();
+  const location = useLocation();
 
   const toggleCartBtn = () => {
     setIsOpen(prev => !prev);
@@ -26,7 +26,7 @@ const Detail = () => {
   };
 
   useEffect(() => {
-    fetch(`http://192.168.147.112:8000/products?product=${id}`)
+    fetch(`http://192.168.147.112:8000/products?product=${location.search}`)
       .then(res => res.json())
       .then(data => {
         setProductBox(data);
@@ -53,6 +53,7 @@ const Detail = () => {
       body: JSON.stringify({ quantity: 1 }),
     });
   };
+  console.log(productBox);
 
   return (
     <>
