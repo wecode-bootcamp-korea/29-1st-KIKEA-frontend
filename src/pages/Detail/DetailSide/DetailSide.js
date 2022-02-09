@@ -31,7 +31,7 @@ const DetailSide = ({ toggleAddBtn, productBox }) => {
           )}
         </div>
         <div className="side-product-size-list-wrap">
-          {(productBox.result?.[0].size === null && <></>) || (
+          {(productBox.result?.[0].size === null && '') || (
             <DetailSize productBox={productBox} />
           )}
         </div>
