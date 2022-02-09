@@ -10,6 +10,7 @@ const OrderTop = () => {
   const isVisible = () => {
     setIsVisibleLoginBar(prev => !prev);
   };
+
   return (
     <div className="ordertop">
       <div className="logo-container">
@@ -17,16 +18,12 @@ const OrderTop = () => {
       </div>
       <div className="mypage-font">
         <FontAwesomeIcon
-          //onClick={showLoginBar}
           className="user-icon icon"
           icon={faUser}
           onClick={isVisible}
         />
       </div>
-      <LoginBar
-        loginBarVisible={isVisibleLoginBar}
-        closeLoginBar={() => false}
-      />
+      <LoginBar loginBarVisible={isVisibleLoginBar} closeLoginBar={isVisible} />
     </div>
   );
 };
