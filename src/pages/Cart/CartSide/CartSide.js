@@ -7,13 +7,18 @@ const CartSide = ({ cartBox }) => {
   useEffect(() => {
     if (cartBox) {
       getTotal(cartBox);
+      console.log(cartBox);
     }
   }, [cartBox]);
 
   const getTotal = cartItems => {
     let totalPrice = 0;
 
-    cartItems.map(cartItem => (totalPrice += Number(cartItem.price)));
+    cartItems.results?.map(
+      cartItem => (totalPrice += Number(cartItem.result?.total_price))
+    );
+
+    console.log(totalPrice);
     setTotal(totalPrice);
   };
 

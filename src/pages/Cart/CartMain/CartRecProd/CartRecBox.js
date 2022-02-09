@@ -9,7 +9,7 @@ import {
 
 const TOTAL_SLIDES = 3;
 
-const CartRecBox = ({ cartBox }) => {
+const CartRecBox = ({ secondCartBox }) => {
   const slideRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -47,22 +47,16 @@ const CartRecBox = ({ cartBox }) => {
           </button>
           <div className="cart-rec-products-list-wrap">
             <div className="cart-rec-products-list" ref={slideRef}>
-              {cartBox?.map(
-                ({ id, name, type, unit, price, review, mainSrc }) => {
-                  return (
-                    <CartRecProd
-                      key={id}
-                      id={id}
-                      name={name}
-                      type={type}
-                      unit={unit}
-                      price={price}
-                      review={review}
-                      mainSrc={mainSrc}
-                    />
-                  );
-                }
-              )}
+              {secondCartBox.result?.map((item, index) => (
+                <CartRecProd
+                  key={index}
+                  id={item.id}
+                  name={item.name}
+                  type={item.type}
+                  price={item.price}
+                  image={item.default_image}
+                />
+              ))}
             </div>
           </div>
         </div>

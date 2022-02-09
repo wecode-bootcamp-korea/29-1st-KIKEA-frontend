@@ -1,10 +1,11 @@
 .cart {
   box-sizing: border-box;
   width: 100vw;
-  padding-left: 50px;
+  padding-left: 40px;
 
   .cart-main-wrap {
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    margin-left: 80px;
   }
 }
