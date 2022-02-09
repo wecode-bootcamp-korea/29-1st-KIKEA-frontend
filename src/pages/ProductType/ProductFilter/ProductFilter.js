@@ -5,12 +5,13 @@ import ProductCard from './ProductCard/ProductCard';
 
 const ProductFilter = ({ items }) => {
   const [typeFilterVisible, setTypeFilterVisible] = useState(false);
+  const [typeFilterClicked, setTypeFilterClicked] = useState(false);
+
   const TypeFilterRef = useRef();
 
-  const onOffFilter = () => {
-    setTypeFilterVisible(!typeFilterVisible);
-  };
-
+  // const sortFilter = name => {
+  //   fetch();
+  // };
   useEffect(() => {
     const checkIfClickedOutside = e => {
       if (
@@ -19,6 +20,7 @@ const ProductFilter = ({ items }) => {
         !TypeFilterRef.current.contains(e.target)
       ) {
         setTypeFilterVisible(false);
+        setTypeFilterClicked(false);
       }
     };
     document.addEventListener('click', checkIfClickedOutside);
@@ -31,7 +33,16 @@ const ProductFilter = ({ items }) => {
     <>
       <div className="filter-section-container">
         <div className="filter-btn-container" ref={TypeFilterRef}>
-          <button type="button" className="filter-btn" onClick={onOffFilter}>
+          <button
+            type="button"
+            className={
+              'filter-btn' + (typeFilterClicked ? '-focused' : '-default')
+            }
+            onClick={() => {
+              setTypeFilterVisible(!typeFilterVisible);
+              setTypeFilterClicked(!typeFilterClicked);
+            }}
+          >
             정렬
           </button>
           {typeFilterVisible && <Filter />}
@@ -39,8 +50,7 @@ const ProductFilter = ({ items }) => {
         <div className="filter-btn-category" />
       </div>
       <div className="product-card-wrapper">
-        {/* // items.products? */}
-        {DATA.map(kikea => {
+        {items.products?.map(kikea => {
           return <ProductCard key={kikea.id} kikea={kikea} />;
         })}
       </div>
@@ -63,13 +73,15 @@ const Filter = () => {
   );
 };
 
-const DATA = [
-  {
-    id: 1,
-    default_image: '',
-    type: '헬로우',
-    price: 292000,
-    rating: 3.41,
-    reviewNums: 12,
-  },
-];
+// const DATA = [
+//   {
+//     id: 1,
+//     default_image: '',
+//     type: '헬로우',
+//     price: 292000,
+//     review_rating: 3.41,
+//     review_count: {
+//       review_num: 2,
+//     },
+//   },
+// ];

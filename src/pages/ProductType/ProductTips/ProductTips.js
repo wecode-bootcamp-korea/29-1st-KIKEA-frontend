@@ -8,7 +8,6 @@ import './ProductTips.scss';
 const ProductTips = () => {
   return (
     <div className="product-tips-container">
-      {/* <div className="filter-overlay" /> */}
       <div className="tips-description">
         <div>
           <h2 className="tips-title">

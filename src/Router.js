@@ -16,9 +16,9 @@ function Router() {
         <Route path="/member" element={<Member />} />
         <Route path="/login" element={<Login />} />
         <Route path="/type" element={<ProductTypeMain />} />
+        <Route path="/products*" element={<ProductTypeMain />} />
       </Routes>
     </BrowserRouter>
   );
 }
-
 export default Router;

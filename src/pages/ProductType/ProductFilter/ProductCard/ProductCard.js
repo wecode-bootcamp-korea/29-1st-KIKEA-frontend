@@ -6,7 +6,8 @@ import './ProductCard.scss';
 import { useNavigate } from 'react-router-dom';
 
 const ProductCard = ({ kikea }) => {
-  const { default_image, name, type, price, rating, reviewNums } = kikea;
+  const { default_image, name, type, price, review_rating, review_count } =
+    kikea;
   const [isCartVisible, setIsCartVisible] = useState(false);
   const navigate = useNavigate();
 
@@ -17,7 +18,7 @@ const ProductCard = ({ kikea }) => {
     setIsCartVisible(false);
   };
   const toDetail = () => {
-    navigate('/detail');
+    // navigate(`/products?product=${id}`);
   };
 
   return (
@@ -55,14 +56,17 @@ const ProductCard = ({ kikea }) => {
           </p>
         </div>
       </div>
-      <div className="rating-container" style={{ width: `${rating}` * 16 }}>
+      <div
+        className="rating-container"
+        style={{ width: `${review_rating.rating_average}` * 16 }}
+      >
         <img src="/images/star.png" alt="star" className="review-star" />
         <img
           src="/images/blackStar.png"
           alt="star"
           className="review-star-black"
         />
-        <span className="review-nums">({reviewNums})</span>
+        <span className="review-nums">({review_count.rating_count})</span>
       </div>
     </div>
   );

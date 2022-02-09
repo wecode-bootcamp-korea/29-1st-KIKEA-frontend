@@ -23,7 +23,6 @@ const ProductTypeMain = () => {
       });
   }, []);
 
-  console.log(productData);
   return (
     <>
       <Nav />

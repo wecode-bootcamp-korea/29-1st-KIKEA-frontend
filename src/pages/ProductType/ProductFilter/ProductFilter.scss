@@ -7,7 +7,7 @@
     width: 100%;
     border-bottom: 0.1em solid lightgray;
 
-    .filter-btn {
+    .filter-btn-default {
       width: 10vh;
       line-height: 4vh;
       border: none;
@@ -17,13 +17,23 @@
       cursor: pointer;
     }
 
+    .filter-btn-focused {
+      width: 10vh;
+      line-height: 4vh;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      margin-right: 20px;
+      cursor: pointer;
+      color: white;
+      background-color: black;
+    }
     .filter-btn:hover {
       background-color: #dfdfdf;
     }
   }
   .filter-options-container {
     font-weight: 700;
-    // height: 23vh;
     height: auto;
     width: 13vw;
     padding: 2vw 2vw 0 2vw;
