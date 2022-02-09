@@ -1,0 +1,85 @@
+.hide-desc-side {
+  position: fixed;
+  display: none;
+  width: 0vw;
+  z-index: 1;
+}
+
+.show-desc-side {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background-color: white;
+  flex-direction: column;
+  width: 44vw;
+  top: 0px;
+  right: 0px;
+  transform: translateX(130%);
+  animation-duration: 0.3s;
+  animation-name: slide;
+
+  .product-desc-side-wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 70px 40px 55px 30px;
+    border-top-left-radius: 8px;
+
+    .product-desc {
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    .product-desc-comment {
+      margin-top: 20px;
+      font-size: 13px;
+      color: rgb(80, 80, 80);
+      line-height: 30px;
+    }
+
+    .product-desc-read-more {
+      border: none;
+      background: none;
+      color: rgb(80, 80, 80);
+      text-decoration: underline;
+      width: 18%;
+      padding: 0;
+      margin-top: 18px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .product-desc-side-number-wrap {
+      display: flex;
+      flex-direction: column;
+      margin-top: 25px;
+
+      .product-number-comment {
+        font-size: 8px;
+        color: rgb(80, 80, 80);
+      }
+
+      .product-number {
+        background-color: black;
+        color: white;
+        font-size: 12px;
+        font-weight: 800;
+        padding: 5px;
+        margin-top: 20px;
+        width: 23%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@keyframes slide {
+  from {
+    margin-left: 300px;
+  }
+  to {
+    margin-left: 0;
+  }
+}

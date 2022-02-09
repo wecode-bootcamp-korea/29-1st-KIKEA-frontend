@@ -1,0 +1,115 @@
+.add-item-slide-out {
+  position: fixed;
+  display: none;
+  z-index: 999;
+  width: 40vw;
+  right: 0;
+  transform: translate(0, 0);
+  animation-duration: 0.5s;
+  animation-name: slide-out;
+}
+
+.add-item-slide-in {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  top: 0px;
+  right: 0px;
+  transform: translate(230%, 0);
+  animation-duration: 0.5s;
+  animation-name: slide;
+
+  .aside-top {
+    background-color: #0058a3;
+    padding: 70px 40px 55px 30px;
+    border-top-left-radius: 8px;
+
+    .close-btn {
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      background-color: white;
+      border: none;
+      border-radius: 50%;
+      top: 0;
+      right: 0;
+      margin: 15px 25px 10px 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .add-item-comment {
+      color: white;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    .go-bag {
+      background: none;
+      border: none;
+      text-decoration: underline;
+      color: white;
+      margin-left: -5px;
+      margin-top: 5px;
+    }
+  }
+
+  .related-products-wrap {
+    display: flex;
+    flex-direction: column;
+
+    .related-products {
+      font-size: 24px;
+      font-weight: 700;
+      padding: 30px;
+    }
+
+    .related-products-list {
+      margin: 30px;
+    }
+  }
+}
+
+@keyframes slide {
+  from {
+    margin-left: 300px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    margin-left: -300px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+// @keyframes slide {
+//   0% {
+//     transform: translate(240%, 0);
+//   }
+//   100% {
+//     transform: translate(0, 0);
+//   }
+// }
+
+// @keyframes slide-out {
+//   0% {
+//     transform: translate(-240%, 0);
+//   }
+//   100% {
+//     transform: translate(0, 0);
+//     display: none;
+//   }
+// }

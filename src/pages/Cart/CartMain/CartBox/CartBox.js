@@ -23,11 +23,11 @@ const CartBox = ({
         />
         <div className="cart-products-container">
           <div className="cart-products-box">
-            <div className="cart-product-info">
+            <div className="cart-product-info-box">
               <div className="cart-product-name">{name}</div>
               <div className="cart-product-type">{type}</div>
             </div>
-            <div className="cart-product-price">₩{price}</div>
+            <div className="cart-product-price">₩{price?.toLocaleString()}</div>
           </div>
           <div className="cart-product-btn-box ">
             <div className="cart-product-qty-box">

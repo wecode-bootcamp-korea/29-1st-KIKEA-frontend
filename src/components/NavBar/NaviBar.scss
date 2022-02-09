@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  .sidebar-nav-container {
+    width: 100%;
+    display: flex;
+
+    .menu {
+      height: 10vh;
+      width: 9vw;
+      display: flex;
+      justify-content: center;
+      background-color: white;
+      position: fixed;
+      left: 0;
+
+      .side-bar-on-btn {
+        height: 35px;
+        margin-top: 30px;
+        background-color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .side-bar-on-btn:hover {
+        height: 35px;
+        width: 35px;
+        background-color: #f5f5f5;
+        border-radius: 50px;
+      }
+      .side-bar-btn {
+        font-size: 16px;
+      }
+    }
+    .header-container {
+      width: 100%;
+      padding: 10px 80px 0 9vw;
+
+      .main-nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        .nav-left {
+          display: flex;
+          align-items: center;
+          flex-grow: 1;
+
+          .kikea-logo {
+            height: 40px;
+            width: 90px;
+            cursor: pointer;
+          }
+        }
+        .nav-center {
+          flex-grow: 16;
+          padding: 0.5vw;
+          position: relative;
+        }
+        .nav-icons-container {
+          display: flex;
+          justify-content: right;
+          align-items: center;
+          height: 100%;
+          flex-grow: 1;
+        }
+      }
+      .all-products-container {
+        width: 100%;
+        margin-top: 15px;
+        padding-bottom: 5.5vh;
+
+        .all-products-list {
+          display: flex;
+          border-bottom: 0.1em solid lightgray;
+
+          .all-products-menu {
+            font-size: 0.8em;
+            font-weight: 900;
+            margin-right: 20px;
+            padding-bottom: 1vh;
+            cursor: pointer;
+          }
+          .all-products-menu:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

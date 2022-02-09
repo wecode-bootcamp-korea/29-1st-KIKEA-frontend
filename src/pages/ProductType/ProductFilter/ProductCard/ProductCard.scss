@@ -1,0 +1,80 @@
+.product-card-container {
+  height: 45vh;
+  width: 19vw;
+  margin-right: 40px;
+  margin-bottom: 150px;
+
+  .item-select-btn {
+    .checkbox-btn {
+    }
+  }
+  .product-img-wrapper {
+    height: 38vh;
+    width: 19vw;
+
+    .card-img {
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+  .product-name {
+    padding-top: 3vh;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .product-type {
+    padding-top: 0.5vh;
+    color: grey;
+  }
+  .add-cart-btn-container {
+    position: relative;
+    width: 19vw;
+
+    .add-cart-btn-visible {
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-color: #004c99;
+      border: none;
+      border-radius: 120px;
+      position: absolute;
+      right: 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .shopping-cart-icon {
+        color: white;
+        width: 20px;
+        height: 20px;
+        display: block;
+      }
+    }
+    .add-cart-btn-hidden {
+      display: none;
+    }
+  }
+  .price-review-container {
+    width: 19vw;
+
+    .price-review-wrapper {
+      .won-symbol {
+        padding-top: 1vh;
+      }
+      .product-price {
+        font-weight: bold;
+        font-size: 1.6rem;
+      }
+    }
+  }
+  .rating-container {
+    padding-top: 1.2vh;
+
+    .rating {
+    }
+    .review-nums {
+    }
+  }
+}

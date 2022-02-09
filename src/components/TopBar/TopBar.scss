@@ -1,0 +1,23 @@
+.message-container {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+
+  .message-content {
+    min-width: 10vw;
+    max-width: 10vw;
+    margin: 1.2vh 3vw;
+    text-align: center;
+    color: white;
+    font-size: 11.5px;
+    cursor: pointer;
+
+    .message-text {
+      margin-left: 10px;
+    }
+    .message-text:hover {
+      text-decoration: underline;
+      color: gray;
+    }
+  }
+}

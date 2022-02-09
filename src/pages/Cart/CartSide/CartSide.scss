@@ -1,41 +1,41 @@
-.side-container {
+.cart-side-container {
   width: 30vw;
   margin: 50px 30px 0 0;
 
-  .side-order-box {
-    .order-list {
+  .cart-side-order-box {
+    .cart-order-list {
       font-size: 14px;
       font-weight: 700;
     }
 
-    .order-delivery-box {
+    .cart-order-delivery-box {
       margin-top: 30px;
       font-size: 13px;
       display: flex;
       justify-content: space-between;
       border-bottom: 2px solid black;
       padding-bottom: 25px;
-      margin-bottom: 25px;
+      margin-bottom: 26px;
     }
 
-    .order-all-price-box {
+    .cart-order-all-price-box {
       display: flex;
       justify-content: space-between;
       margin-bottom: 50px;
 
-      .order-all-price-comment {
+      .cart-order-all-price-comment {
         font-size: 13px;
         font-weight: 700;
       }
 
-      .order-all-price {
+      .cart-order-all-price {
         font-size: 20px;
         font-weight: 800;
       }
     }
   }
 
-  .side-login-box {
+  .cart-side-login-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,15 +45,15 @@
     height: 120px;
     margin-bottom: 30px;
 
-    .login-title {
-      font-weight: 700;
+    .cart-login-title {
+      font-weight: 800;
     }
 
-    .login-comment {
+    .cart-login-comment {
       margin-top: 5px;
       font-size: 14px;
 
-      .login-comment-prev {
+      .cart-login-comment-prev {
         margin-right: 5px;
         text-decoration: underline;
 
@@ -63,7 +63,7 @@
       }
     }
   }
-  .side-pay-box {
+  .cart-side-pay-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,7 +73,7 @@
     padding: 20px;
     height: 120px;
 
-    .pay-title {
+    .cart-pay-title {
       color: white;
       font-weight: 700;
       background: none;

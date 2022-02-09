@@ -1,0 +1,40 @@
+.nav-icons-list {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+
+  .ware-house-btn {
+    background-color: white;
+    border: none;
+    font-size: 12px;
+
+    span {
+      padding-left: 18px;
+      font-size: 10px;
+    }
+  }
+  .btn-span {
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .btn-span-two {
+    margin-top: 3px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+  }
+  .btn-span-two:hover {
+    text-decoration: underline;
+  }
+  .icon {
+    cursor: pointer;
+  }
+  .truck-icon {
+    margin-left: 100px;
+  }
+  .user-icon,
+  .heart-icon,
+  .bag-icon {
+    margin-left: 30px;
+  }
+}
