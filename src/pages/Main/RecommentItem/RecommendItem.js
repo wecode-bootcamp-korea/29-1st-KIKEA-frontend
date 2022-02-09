@@ -35,7 +35,6 @@ const RecommendItem = () => {
     };
   }, []);
 
-  console.log(item);
   return (
     <div className="recommenditem">
       <div className="recommendtaion-title">추천 제품</div>

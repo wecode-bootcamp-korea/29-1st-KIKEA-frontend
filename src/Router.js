@@ -15,7 +15,6 @@ function Router() {
         <Route path="/detail" element={<DetailC />} />
         <Route path="/member" element={<Member />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/nav" element={<Nav />} />
         <Route path="/products*" element={<ProductTypeMain />} />
       </Routes>
     </BrowserRouter>
