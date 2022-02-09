@@ -16,6 +16,7 @@ const OrderMain = ({ inputState, changeInfo }) => {
               onChange={changeInfo}
               required
               autoComplete="off"
+              value={inputState.name}
             />
             <label className="form-label">
               <span>이름</span>

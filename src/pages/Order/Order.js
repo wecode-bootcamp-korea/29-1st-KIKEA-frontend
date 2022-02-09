@@ -8,7 +8,7 @@ const Order = () => {
   const [inputState, setInputState] = useState({
     email: '',
     password: '',
-    name: '',
+    name: [sessionStorage.getItem('name')] || '',
     address: '',
     phone_number: '',
   });
