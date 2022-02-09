@@ -18,7 +18,7 @@ const ProductCard = ({ kikea }) => {
     setIsCartVisible(false);
   };
   const toDetail = () => {
-    // navigate(`/products?product=${id}`);
+    navigate(`/products?product=${id}`);
   };
 
   return (

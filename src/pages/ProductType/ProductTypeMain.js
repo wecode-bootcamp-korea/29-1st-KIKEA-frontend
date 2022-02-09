@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router';
 import ProductCategory from './ProductCategory/ProductCategory';
 import ProductSuggestion from './ProductSuggestion/ProductSuggestion';
 import ProductFilter from './ProductFilter/ProductFilter';
@@ -10,8 +11,10 @@ import './ProductTypeMain.scss';
 const ProductTypeMain = () => {
   const [productData, setProductData] = useState('');
   const [items, setItems] = useState('');
+  const { id } = useParams();
+
   useEffect(() => {
-    fetch('http://10.58.5.10:8000/products/type?subcategory=1')
+    fetch(`http://10.58.5.10:8000/products/type?subcategory=${id}`)
       .then(res => res.json())
       .then(data => {
         setProductData(data);
