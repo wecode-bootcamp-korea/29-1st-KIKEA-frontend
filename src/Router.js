@@ -4,7 +4,6 @@ import Login from './pages/Login/Login';
 import Main from './pages/Main/Main';
 import ProductTypeMain from './pages/ProductType/ProductTypeMain';
 import Member from './pages/Member/Member';
-import Nav from './components/Nav';
 import Order from './pages/Order/Order';
 import DetailC from './pages/Detail/DetailC';
 
@@ -17,8 +16,8 @@ function Router() {
         <Route path="/detail" element={<DetailC />} />
         <Route path="/member" element={<Member />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/nav" element={<Nav />} />
         <Route path="/order" element={<Order />} />
+        <Route path="/products*" element={<ProductTypeMain />} />
         <Route path="/type" element={<ProductTypeMain />} />
       </Routes>
     </BrowserRouter>

@@ -1,8 +1,13 @@
 .ordermain {
   .ordermain-container {
     .information {
+      p {
+        margin-bottom: 40px;
+        font-size: 30px;
+        font-weight: 700;
+      }
       display: flex;
-      margin-top: 80px;
+      margin-top: 50px;
       flex-direction: column;
 
       .input-box {
