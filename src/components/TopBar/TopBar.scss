@@ -6,20 +6,18 @@
   .message-content {
     min-width: 10vw;
     max-width: 10vw;
-    margin: 1.3vh 3vw;
+    margin: 1.2vh 3vw;
     text-align: center;
     color: white;
+    font-size: 11.5px;
     cursor: pointer;
 
     .message-text {
-      font-size: 13px;
       margin-left: 10px;
     }
     .message-text:hover {
-      font-size: 13px;
-      margin-left: 10px;
       text-decoration: underline;
-      font: gray;
+      color: gray;
     }
   }
 }

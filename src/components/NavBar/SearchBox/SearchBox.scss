@@ -1,11 +1,10 @@
 .search-box-container {
   display: flex;
   align-items: center;
-  height: 100%;
   position: relative;
 
   .search-box {
-    line-height: 7vh;
+    line-height: 5vh;
     width: 100%;
     font-size: 17px;
     padding-left: 58px;
@@ -15,6 +14,7 @@
     outline: none;
     position: relative;
     z-index: 10;
+    font-size: 14px;
   }
   .search-btn {
     display: flex;
@@ -42,6 +42,7 @@
   }
   .search-box:hover {
     background-color: #dfdfdf;
+    border-color: #2d919e;
   }
   .search-box:focus {
     background-color: white;

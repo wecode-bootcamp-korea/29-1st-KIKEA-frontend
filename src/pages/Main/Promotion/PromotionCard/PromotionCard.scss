@@ -1,33 +1,38 @@
 .promotioncard {
-  width: 22vw;
+  width: 32vw;
   margin-right: 13px;
-  background-color: #0b79ba;
+  background-color: #dd999e;
 
-  .promotioncard-img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
+  .promotioncard-img-box {
+    height: 450px;
+
+    .promotioncard-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   .promotioncard-description {
     position: relative;
-    height: 300px;
+    height: 250px;
     padding-top: 20px;
+    line-height: 1.3;
   }
 
   .promotioncard-description p:nth-child(1) {
     margin-top: 0px;
     margin-bottom: 0px;
     padding: 10px 20px;
-    font-weight: 800;
-    font-size: 23px;
+    font-weight: 700;
+    font-size: 21px;
   }
 
   .promotioncard-description p:nth-child(2) {
     margin-top: 0px;
     padding-left: 20px;
     padding-right: 20px;
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .arrow-wrapper {
@@ -37,9 +42,10 @@
 
     .arrow-span {
       .arrwo-button {
-        height: 40px;
+        height: 35px;
         padding: 2px;
-        width: 40px;
+        width: 35px;
+        font-size: 8px;
         align-items: center;
         border-style: none;
         background-color: black;
@@ -51,12 +57,9 @@
   }
 }
 .promotioncard:nth-child(2) {
-  background-color: #f5deb2;
+  background-color: #cad4ea;
 }
 
 .promotioncard:nth-child(3) {
-  background-color: #e4ccc6;
-}
-.promotioncard:nth-child(4) {
-  background-color: #81aec6;
+  background-color: #b9d2dc;
 }
