@@ -6,7 +6,7 @@ import './ProductCard.scss';
 import { useNavigate } from 'react-router-dom';
 
 const ProductCard = ({ kikea }) => {
-  const { default_image, name, type, price, review_rating, review_count } =
+  const { id, default_image, name, type, price, review_rating, review_count } =
     kikea;
   const [isCartVisible, setIsCartVisible] = useState(false);
   const navigate = useNavigate();
@@ -17,17 +17,16 @@ const ProductCard = ({ kikea }) => {
   const hideCart = e => {
     setIsCartVisible(false);
   };
-  const toDetail = () => {
-    // navigate(`/products?product=${id}`);
+  const toDetail = id => {
+    navigate(`/detail?product=${id}`);
   };
-
   return (
     <div
       onMouseOver={showCart}
       onMouseOut={hideCart}
       className="product-card-container"
     >
-      <div className="product-img-wrapper" onClick={toDetail}>
+      <div className="product-img-wrapper" onClick={() => toDetail(id)}>
         <img className="card-img" src={default_image} alt="product" />
       </div>
       <p className="product-name" onClick={toDetail}>

@@ -13,21 +13,34 @@ const ProductTypeMain = () => {
   const [items, setItems] = useState('');
   const location = useLocation();
 
-  console.log(location.search);
+  const filterItems = () => {
+    // fetch(`http://192.168.147.112:8000/products?sort=${name}`)
+
+    fetch('http://192.168.147.117:8000/products?sort=price')
+      .then(res => res.json())
+      .then(data => {
+        setItems(data);
+      });
+  };
+
   useEffect(() => {
     fetch(
-      `http://192.168.147.117:8000/products/type?subcategory=${location.search}`
+      // `http://192.168.147.112:8000/products/type?subcategory=${location.search}`
+      'http://192.168.147.117:8000/products/type?subcategory=1'
     )
       .then(res => res.json())
       .then(data => {
         setProductData(data);
       });
-    fetch('http://192.168.147.117:8000/products/product?')
+    fetch(
+      // `http://192.168.147.112:8000/products?subcategory=${location.search}`
+      'http://192.168.147.117:8000/products/product'
+    )
       .then(res => res.json())
       .then(data => {
         setItems(data);
       });
-  }, []);
+  }, [setItems, setProductData, location]);
 
   return (
     <>
@@ -35,7 +48,7 @@ const ProductTypeMain = () => {
       <ProductCategory productData={productData} />
       <ProductSuggestion />
       <ProductTips />
-      <ProductFilter items={items} />
+      <ProductFilter items={items} filterItems={filterItems} />
       <Footer />
     </>
   );
