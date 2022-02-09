@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './DetailSide.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 
 const DetailSide = ({ toggleAddBtn, productBox }) => {
+  const [selectedColor, setSelectedColor] = useState('');
+
   return (
     <div className="side-container">
       <div className="side-product-box">
@@ -21,22 +23,16 @@ const DetailSide = ({ toggleAddBtn, productBox }) => {
         <span className="side-product-review-value">(8)</span>
         <div className="side-product-color-value-container">
           <div className="side-product-color-value-comment">제품 색상</div>
-          <div className="side-product-color-value">
-            {productBox[0]?.color.map(({ id, colorValue }) => {
-              return (
-                <div className="side-product-color-box">
-                  <div className="side-product-color" key={id}>
-                    {colorValue}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <p className="side-product-color-value">{selectedColor}</p>
         </div>
         <div className="side-product-color-list-wrap">
-          {productBox[0]?.color.map(({ id, colorValue, mainSrc }) => {
+          {productBox[0]?.color.map(({ id, colorValue, mainSrc }, index) => {
             return (
-              <div className="side-product-color-box">
+              <div
+                key={index}
+                className="side-product-color-box"
+                onMouseOver={() => setSelectedColor(colorValue)}
+              >
                 <img
                   key={colorValue}
                   id={id}
