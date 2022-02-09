@@ -35,12 +35,14 @@ const NavBar = ({ showMenu, showLoginBar }) => {
   });
 
   useEffect(() => {
-    fetch('10.58.5.10:8000/products/product')
+    fetch('http://10.58.5.10:8000/products')
       .then(res => res.json())
       .then(data => {
         setSearchData(data);
       });
   }, []);
+
+  // console.log(searchData);
 
   return (
     <div className="sidebar-nav-container">

@@ -13,7 +13,7 @@ const SearchFilter = ({ searchData, setFilterVisible, setSearchInput }) => {
         }}
       />
       <div className="search-filter-container">
-        {searchData.products?.map(kikea => {
+        {searchData.result?.map(kikea => {
           return <SearchCard key={kikea.id} kikea={kikea} />;
         })}
       </div>
