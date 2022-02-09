@@ -4,9 +4,9 @@ import './ProductCategory.scss';
 const ProductCategory = ({ productData }) => {
   return (
     <div className="product-category-container">
-      <div clasName="category-path">
+      {/* <div clasName="category-path">
         <p className="category-path-items">제품 > 가구 > 소파</p>
-      </div>
+      </div> */}
       <h1 className="category-title">침대</h1>
       <div className="product-category-wrapper">
         {productData.types?.map(kikea => (

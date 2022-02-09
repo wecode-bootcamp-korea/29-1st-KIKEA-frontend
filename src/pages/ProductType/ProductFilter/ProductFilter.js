@@ -36,8 +36,8 @@ const ProductFilter = ({ items, filterItems }) => {
               'filter-btn' + (typeFilterClicked ? '-focused' : '-default')
             }
             onClick={() => {
-              setTypeFilterVisible(!typeFilterVisible);
-              setTypeFilterClicked(!typeFilterClicked);
+              setTypeFilterVisible(prev => !prev);
+              setTypeFilterClicked(prev => !prev);
             }}
           >
             정렬
@@ -69,44 +69,7 @@ const Filter = ({ filterItems }) => {
         >
           낮은 가격 순
         </li>
-        {/* <li
-          className="filter-options"
-          onClick={() => {
-            filterItems(id);
-          }}
-        >
-          높은 가격 순{' '}
-        </li>
-        <li
-          className="filter-options"
-          onClick={() => {
-            filterItems(id);
-          }}
-        >
-          최신순
-        </li>
-        <li
-          className="filter-options"
-          onClick={() => {
-            filterItems(id);
-          }}
-        >
-          재고순
-        </li> */}
       </ol>
     </div>
   );
 };
-
-// const DATA = [
-//   {
-//     id: 1,
-//     default_image: '',
-//     type: '헬로우',
-//     price: 292000,
-//     review_rating: 3.41,
-//     review_count: {
-//       review_num: 2,
-//     },
-//   },
-// ];
