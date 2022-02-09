@@ -6,6 +6,7 @@ import ProductTypeMain from './pages/ProductType/ProductTypeMain';
 import Member from './pages/Member/Member';
 import DetailC from './pages/Detail/DetailC';
 import Nav from './components/Nav';
+import Cart from './pages/Cart/Cart';
 
 function Router() {
   return (
@@ -18,6 +19,8 @@ function Router() {
         <Route path="/login" element={<Login />} />
         <Route path="/nav" element={<Nav />} />
         <Route path="/products/*" element={<ProductTypeMain />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/products*" element={<ProductTypeMain />} />
         <Route path="/type" element={<ProductTypeMain />} />
         <Route path="/products/*" element={<ProductTypeMain />} />
       </Routes>
