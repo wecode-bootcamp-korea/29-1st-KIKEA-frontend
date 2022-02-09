@@ -8,19 +8,23 @@ const MainProduct = () => {
   const [item, setItem] = useState('');
 
   const sortCategory = name => {
-    fetch('http://192.168.0.69:8000/products?category=' + name)
+    fetch(`http://10.58.5.10:8000/products?category=${name}`)
       .then(response => response.json())
       .then(result => {
         setItem(result);
       });
   };
-
   useEffect(() => {
-    fetch('http://192.168.0.69:8000/products/category')
+    fetch('http://10.58.5.10:8000/products/category')
       .then(response => response.json())
       .then(result => {
-        setItem(result.categories);
-        setCategory(result);
+        setCategory(result.categories);
+      });
+
+    fetch('http://10.58.5.10:8000/products')
+      .then(response => response.json())
+      .then(result => {
+        setItem(result);
       });
   }, []);
 

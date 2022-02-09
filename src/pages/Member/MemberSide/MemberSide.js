@@ -1,7 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './MemberSide.scss';
 
 const MemberSide = () => {
+  const navigate = useNavigate();
+  const goLogin = () => {
+    navigate('/login');
+  };
   return (
     <div className="memberside">
       <div className="memberside-title">
@@ -13,7 +18,7 @@ const MemberSide = () => {
           <span>회원 가입</span>
         </p>
         <p className="memberside-title-text2">
-          이미 가입하셨나요? <span>로그인 하기</span>
+          이미 가입하셨나요? <span onClick={goLogin}>로그인 하기</span>
         </p>
         <div className="memberside-img-container">
           <div className="memberside-img-box1">

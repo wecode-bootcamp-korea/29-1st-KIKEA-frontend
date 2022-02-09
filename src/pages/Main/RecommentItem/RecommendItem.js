@@ -1,32 +1,61 @@
-import React, { createRef, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './RecommendItem.scss';
-
 const RecommendItem = () => {
-  const myRef = createRef();
+  const [item, setItem] = useState('');
+  useEffect(() => {
+    fetch('http://10.58.5.10:8000/products/product?type=1')
+      .then(response => response.json())
+      .then(result => {
+        setItem(result.products);
+      });
+  }, []);
 
-  const nextClick = () => {
-    const slide = myRef.current;
+  // const shuffleArray = array => {
+  //   for (let i = 0; i < array.result.length; i++) {
+  //     let j = Math.floor(Math.random() * (i + 5));
+  //     array.result[i] = array.result[j];
+  //   }
+  //   return array.result.splice(0, 15);
+  // };
+
+  const sliderWrapper = useRef();
+
+  const nextSlider = () => {
+    const slide = sliderWrapper.current;
     slide.scrollLeft += slide.offsetWidth;
     if (slide.scrollLeft >= slide.scrollWidth - slide.offsetWidth) {
       slide.scrollLeft = 0;
     }
   };
-  useEffect(() => setInterval(nextClick, 2000), []);
+
+  useEffect(() => {
+    const sliderInterval = setInterval(nextSlider, 4000);
+    return () => {
+      clearInterval(sliderInterval);
+    };
+  }, []);
+
+  console.log(item);
   return (
     <div className="recommenditem">
       <div className="recommendtaion-title">추천 제품</div>
-      <div className="recommendtaion-item-wrapper" ref={myRef}>
-        {MOCKDATA.map(item => (
-          <div className="recommendtaion-item-box" key={item.id}>
-            <img
-              alt={item.description}
-              src={item.img[0]}
-              className="recommendtaion-item-img"
-              onMouseOver={e => (e.target.src = item.img[1])}
-              onMouseOut={e => (e.target.src = item.img[0])}
-            />
-          </div>
-        ))}
+      <div className="recommendtaion-item-wrapper" ref={sliderWrapper}>
+        {item &&
+          item.map((item, index) => (
+            <div className="recommendtaion-item-box" key={index}>
+              <img
+                alt={item.type}
+                src={item.default_image}
+                className="recommendtaion-item-img"
+              />
+              <div className="recommendtaion-item-info">
+                <h3>{item.name}</h3>
+                <p>{item.type}</p>
+                <p>{item.price}</p>
+                <p>{item.review_rating.total_rating}</p>
+              </div>
+            </div>
+          ))}
       </div>
     </div>
   );

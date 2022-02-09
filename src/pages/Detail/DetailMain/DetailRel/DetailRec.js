@@ -32,7 +32,6 @@ const DetailRec = ({ secondProductBox }) => {
     slideRef.current.style.transition = 'all 0.5s ease-in-out';
     slideRef.current.style.transform = `translateX(-${currentSlide * 35}%)`;
   }, [currentSlide]);
-  console.log(secondProductBox.result);
 
   return (
     <div className="rec-wrap">
