@@ -8,7 +8,7 @@ const TypeList = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('http://10.58.5.10:8000/products/category')
+    fetch('http://192.168.147.117:8000/products/category')
       .then(response => response.json())
       .then(result => {
         setCategory(result.categories);
@@ -23,7 +23,7 @@ const TypeList = () => {
   };
 
   const goType = id => {
-    navigate(`/products?subcategory=${id}`);
+    navigate(`/type?subcategory=${id}`);
   };
 
   return (
