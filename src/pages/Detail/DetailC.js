@@ -22,13 +22,13 @@ const Detail = () => {
   };
 
   useEffect(() => {
-    fetch('http://10.58.5.10:8000/products?product=15')
+    fetch('http://192.168.147.117:8000/products?product=15')
       .then(res => res.json())
       .then(data => {
         setProductBox(data);
       });
 
-    fetch('http://10.58.5.10:8000/products?subcategory=1')
+    fetch('http://192.168.147.117:8000/products?subcategory=1')
       .then(res => res.json())
       .then(data => {
         setSecondProductBox(data);
