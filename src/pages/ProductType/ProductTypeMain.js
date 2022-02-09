@@ -14,12 +14,12 @@ const ProductTypeMain = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://10.58.5.10:8000/products/type?subcategory=${id}`)
+    fetch(`http://192.168.147.117:8000/products/type?subcategory=${id}`)
       .then(res => res.json())
       .then(data => {
         setProductData(data);
       });
-    fetch('http://10.58.5.10:8000/products/product')
+    fetch('http://192.168.147.117:8000/products/product')
       .then(res => res.json())
       .then(data => {
         setItems(data);
