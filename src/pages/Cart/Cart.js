@@ -7,11 +7,10 @@ const Cart = () => {
   const [cartBox, setCartBox] = useState([]);
 
   useEffect(() => {
-    fetch('data/detailMainData.json')
+    fetch('/public/data/detailMainData.json')
       .then(res => res.json())
       .then(data => {
         setCartBox(data);
-        console.log(cartBox);
       });
   }, []);
 
