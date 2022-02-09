@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { END_POINT } from '../../../config';
 import './RecommendItem.scss';
 const RecommendItem = () => {
   const [item, setItem] = useState('');
   useEffect(() => {
-    fetch('http://192.168.147.117:8000/products/product?type=1')
+    fetch(END_POINT.recommendItem)
       .then(response => response.json())
       .then(result => {
         setItem(result.products);

@@ -34,6 +34,33 @@
         h3 {
           font-weight: 700;
         }
+
+        .rating-container {
+          display: flex;
+          align-items: center;
+          width: 80px;
+          padding-top: 5px;
+          overflow: hidden;
+
+          .review-star {
+            width: 80px;
+            height: 17px;
+            position: absolute;
+          }
+
+          .review-star-black {
+            width: 80px;
+            height: 17px;
+            z-index: 10;
+          }
+
+          .review-nums {
+            position: absolute;
+            padding-left: 90px;
+            padding-top: 0.5vh;
+            font-size: 0.9rem;
+          }
+        }
       }
       .recommendtaion-item-info > p {
         color: #484848;

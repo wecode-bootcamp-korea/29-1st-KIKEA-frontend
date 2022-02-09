@@ -12,7 +12,7 @@ const ProductFilter = ({ category, sortCategory }) => {
               className="productfilter-button"
               onClick={() => sortCategory(id)}
             >
-              <span>{name}</span>
+              {name}
             </button>
           ))}
       </div>

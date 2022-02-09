@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { END_POINT } from '../../.../../../../config';
 import { useNavigate } from 'react-router-dom';
 import './List.scss';
 
@@ -8,7 +9,7 @@ const TypeList = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('http://192.168.147.117:8000/products/category')
+    fetch(END_POINT.category)
       .then(response => response.json())
       .then(result => {
         setCategory(result.categories);
