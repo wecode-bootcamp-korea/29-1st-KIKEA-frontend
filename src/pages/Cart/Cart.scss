@@ -1,7 +1,10 @@
 .cart {
   box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
   width: 100vw;
   padding-left: 50px;
+
+  .cart-main-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
 }

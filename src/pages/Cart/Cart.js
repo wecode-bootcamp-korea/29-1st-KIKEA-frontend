@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Cart.scss';
 import CartMain from './CartMain/CartMain';
 import CartSide from './CartSide/CartSide';
+import CartRecBox from './CartMain/CartRecProd/CartRecBox';
 
 const Cart = () => {
   const [cartBox, setCartBox] = useState([]);
@@ -20,8 +21,18 @@ const Cart = () => {
 
   return (
     <div className="cart">
-      <CartMain cartBox={cartBox} setCartBox={setCartBox} onRemove={onRemove} />
-      <CartSide cartBox={cartBox} />
+      <div
+        className="cart-main-wrap
+      "
+      >
+        <CartMain
+          cartBox={cartBox}
+          setCartBox={setCartBox}
+          onRemove={onRemove}
+        />
+        <CartSide cartBox={cartBox} />
+      </div>
+      <CartRecBox cartBox={cartBox} setCartBox={setCartBox} />
     </div>
   );
 };

@@ -1,39 +1,32 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState, useEffect, useRef } from 'react';
 import CartBox from './CartBox/CartBox';
-import CartRecProd from './CartRecProd/CartRecProd';
+// import CartRecBox from './CartRecProd/CartRecBox';
 import './CartMain.scss';
-import {
-  faChevronLeft,
-  faChevronRight,
-} from '@fortawesome/free-solid-svg-icons';
-
-const TOTAL_SLIDES = 2;
 
 const CartMain = ({ cartBox, setCartBox, onRemove }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const slideRef = useRef(null);
+  // const [currentSlide, setCurrentSlide] = useState(0);
+  // const slideRef = useRef(null);
 
-  const nextSlide = () => {
-    if (currentSlide >= TOTAL_SLIDES) {
-      setCurrentSlide(0);
-    } else {
-      setCurrentSlide(currentSlide + 1);
-    }
-  };
+  // const nextSlide = () => {
+  //   if (currentSlide >= TOTAL_SLIDES) {
+  //     setCurrentSlide(0);
+  //   } else {
+  //     setCurrentSlide(currentSlide + 1);
+  //   }
+  // };
 
-  const prevSlide = () => {
-    if (currentSlide === 0) {
-      setCurrentSlide(TOTAL_SLIDES);
-    } else {
-      setCurrentSlide(currentSlide - 1);
-    }
-  };
+  // const prevSlide = () => {
+  //   if (currentSlide === 0) {
+  //     setCurrentSlide(TOTAL_SLIDES);
+  //   } else {
+  //     setCurrentSlide(currentSlide - 1);
+  //   }
+  // };
 
-  useEffect(() => {
-    slideRef.current.style.transition = 'all 0.5s ease-in-out';
-    slideRef.current.style.transform = `translateX(-${currentSlide * 35}%)`;
-  }, [currentSlide]);
+  // useEffect(() => {
+  //   slideRef.current.style.transition = 'all 0.5s ease-in-out';
+  //   slideRef.current.style.transform = `translateX(-${currentSlide * 35}%)`;
+  // }, [currentSlide]);
 
   // 제품 수량 +, - 에 따른 가격 업데이트
   const handleAdd = itemId => {
@@ -76,7 +69,8 @@ const CartMain = ({ cartBox, setCartBox, onRemove }) => {
           />
         );
       })}
-      <div className="cart-rec-container">
+      {/* <CartRecBox cartBox={cartBox} setCartBox={setCartBox} /> */}
+      {/* <div className="cart-rec-container">
         <div className="cart-rec-wrap">
           <h2 className="cart-rec-products">추천 제품</h2>
           <div className="cart-top">
@@ -114,7 +108,7 @@ const CartMain = ({ cartBox, setCartBox, onRemove }) => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
