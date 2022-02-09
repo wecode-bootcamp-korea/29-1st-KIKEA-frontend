@@ -26,11 +26,24 @@ const LoginMain = () => {
   };
 
   const signIn = () => {
-    console.log('로그인');
-    fetch('http://192.168.0.69:8000/users/signin', {
+    fetch('http://10.58.5.10:8000/users/signin', {
       method: 'POST',
       body: JSON.stringify({ ...inputState }),
-    });
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.message === 'wrong password') {
+          alert('비밀번호 오류입니다');
+          return false;
+        } else if (data.message === 'invaild email') {
+          alert('아이디 오류입니다');
+          return false;
+        } else {
+          sessionStorage.setItem('token', data.Token);
+          sessionStorage.setItem('name', data.Name);
+          navigate('/');
+        }
+      });
   };
 
   const loginSubmit = event => {

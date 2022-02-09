@@ -5,12 +5,12 @@ const ProductFilter = ({ category, sortCategory }) => {
   return (
     <div className="productfilter">
       <div className="productfilter-carousel">
-        {category.categories &&
-          category.categories.map(({ id, name }) => (
+        {category &&
+          category.map(({ id, name }) => (
             <button
               key={id}
               className="productfilter-button"
-              onClick={() => sortCategory(name)}
+              onClick={() => sortCategory(id)}
             >
               <span>{name}</span>
             </button>
