@@ -61,7 +61,12 @@ const Detail = () => {
               productBox={productBox}
             />
             {isOpen && (
-              <DetailAside isOpen={isOpen} toggleCloseBtn={toggleCartBtn} />
+              <DetailAside
+                isOpen={isOpen}
+                toggleCloseBtn={toggleCartBtn}
+                productBox={productBox}
+                secondProductBox={secondProductBox}
+              />
             )}
             <DetailDescSide
               descSideOpen={descSideOpen}

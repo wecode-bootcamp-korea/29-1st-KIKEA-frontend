@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import './DetailSize.scss';
 
 const DetailSize = ({ productBox }) => {
-  const [selected, setSelectedColor] = useState('');
-
   return (
     <>
       <div className="side-product-size-value-container">

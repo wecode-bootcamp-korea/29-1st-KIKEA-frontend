@@ -47,17 +47,16 @@ const DetailRec = ({ secondProductBox }) => {
           </button>
           <div className="rec-products-list-wrap">
             <div className="rec-products-list" ref={slideRef}>
-              {secondProductBox.result &&
-                secondProductBox.result.map((item, index) => (
-                  <DetailRecProd
-                    key={index}
-                    id={item.id}
-                    name={item.name}
-                    type={item.type}
-                    price={item.price}
-                    image={item.default_image}
-                  />
-                ))}
+              {secondProductBox.result?.map((item, index) => (
+                <DetailRecProd
+                  key={index}
+                  id={item.id}
+                  name={item.name}
+                  type={item.type}
+                  price={item.price}
+                  image={item.default_image}
+                />
+              ))}
             </div>
           </div>
         </div>

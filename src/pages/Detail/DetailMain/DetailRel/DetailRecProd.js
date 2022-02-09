@@ -9,7 +9,7 @@ const DetailRecProd = ({ name, type, price, image }) => {
         <div className="rec-products-name">{name}</div>
         <div className="rec-products-type">{type}</div>
         <span className="rec-products-price-unit">₩</span>
-        <span className="rec-products-price">{price}</span>
+        <span className="rec-products-price">{price.toLocaleString()}</span>
         <span className="rec-products-review">★★★★</span>
       </div>
     </div>

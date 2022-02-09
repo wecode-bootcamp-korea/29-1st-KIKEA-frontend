@@ -15,7 +15,7 @@ const DetailSide = ({ toggleAddBtn, productBox }) => {
             <div className="side-product-price-wrap">
               <span className="side-product-price-unit">₩</span>
               <span className="side-product-price">
-                {productBox.result?.[0].price}
+                {productBox.result?.[0].price.toLocaleString()}
               </span>
             </div>
           </div>
