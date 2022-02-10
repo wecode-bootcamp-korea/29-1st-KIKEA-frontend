@@ -11,7 +11,6 @@ const Cart = () => {
   const [secondCartBox, setSecondCartBox] = useState([]);
 
   useEffect(() => {
-    let test;
     fetch('http://10.58.7.174:8000/orders/carts', {
       headers: {
         Authorization: sessionStorage.getItem('token'),

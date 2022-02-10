@@ -13,12 +13,14 @@ const CartSide = ({ cartBox }) => {
   const getTotal = cartItems => {
     let totalPrice = 0;
 
-    cartItems.results?.map(
-      cartItem => (totalPrice += Number(cartItem.result?.total_price))
-    );
+    cartItems.result?.map(cartItem => (totalPrice += cartItem.total_price));
 
     setTotal(totalPrice);
+    console.log(total);
+    console.log(typeof total);
   };
+
+  console.log(cartBox);
 
   return (
     <div className="cart-side-container">
@@ -32,9 +34,7 @@ const CartSide = ({ cartBox }) => {
         </div>
         <div className="cart-order-all-price-box">
           <span className="cart-order-all-price-comment">총 주문금액</span>
-          <span className="cart-order-all-price">
-            ₩ {total?.toLocaleString()}
-          </span>
+          <span className="cart-order-all-price">₩ {total}</span>
         </div>
       </div>
       <div className="cart-side-login-box">

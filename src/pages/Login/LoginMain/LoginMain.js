@@ -24,7 +24,6 @@ const LoginMain = () => {
   const signUp = () => {
     navigate('/member');
   };
-
   const signIn = () => {
     fetch('http://10.58.7.174:8000/users/signin', {
       method: 'POST',
