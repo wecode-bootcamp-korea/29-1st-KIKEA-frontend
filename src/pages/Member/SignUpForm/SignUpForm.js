@@ -48,10 +48,14 @@ const SignUpForm = () => {
   const signUp = () => {
     if (isValid()) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       fetch('http://172.20.10.9:8000/users/signup', {
 =======
       fetch(END_POINT.signUp, {
 >>>>>>> main
+=======
+      fetch(END_POINT.signUp, {
+>>>>>>> d43ac0bb2ee0565900532f7636ab74775cccbeeb
         method: 'POST',
         body: JSON.stringify({ ...inputState }),
       })

@@ -28,10 +28,14 @@ const LoginMain = () => {
 
   const signIn = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     fetch('http://10.58.7.174:8000/users/signin', {
 =======
     fetch(END_POINT.signIn, {
 >>>>>>> main
+=======
+    fetch(END_POINT.signIn, {
+>>>>>>> d43ac0bb2ee0565900532f7636ab74775cccbeeb
       method: 'POST',
       body: JSON.stringify({ ...inputState }),
     })

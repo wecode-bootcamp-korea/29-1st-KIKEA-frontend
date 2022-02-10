@@ -20,10 +20,15 @@ function Router() {
         <Route path="/login" element={<Login />} />
         <Route path="/products*" element={<ProductTypeMain />} />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Route path="/type" element={<ProductTypeMain />} />
         <Route path="/order" element={<Order />} />
 =======
 >>>>>>> main
+=======
+        <Route path="/type" element={<ProductTypeMain />} />
+        <Route path="/order" element={<Order />} />
+>>>>>>> d43ac0bb2ee0565900532f7636ab74775cccbeeb
       </Routes>
     </BrowserRouter>
   );
