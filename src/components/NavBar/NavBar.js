@@ -44,7 +44,6 @@ const NavBar = ({ showMenu, showLoginBar }) => {
       });
   }, []);
 
-  console.log(searchData);
   return (
     <div className="sidebar-nav-container">
       <section className="menu">
