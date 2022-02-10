@@ -64,6 +64,7 @@
   .related-products-wrap {
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     .related-products {
       font-size: 24px;
@@ -73,6 +74,42 @@
 
     .related-products-list {
       margin: 30px;
+
+      .related-products-item {
+        display: flex;
+        margin-bottom: 30px;
+
+        .related-products-img {
+          width: 45%;
+          margin-right: 8px;
+        }
+
+        .related-products-item-contents {
+          line-height: 22px;
+
+          .related-products-item-name {
+            font-size: 14px;
+            font-weight: 700;
+          }
+
+          .related-products-item-info {
+            font-size: 14px;
+          }
+
+          .related-products-item-price-box {
+            .related-products-item-unit {
+              font-size: 10px;
+              font-weight: 800;
+              margin-right: 5px;
+              vertical-align: 20%;
+            }
+
+            .related-products-item-price {
+              font-weight: 800;
+            }
+          }
+        }
+      }
     }
   }
 }
