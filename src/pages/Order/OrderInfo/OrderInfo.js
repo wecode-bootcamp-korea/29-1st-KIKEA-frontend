@@ -3,6 +3,7 @@ import './OrderInfo.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import 'font-awesome/css/font-awesome.min.css';
 import { faHeart, faLock } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 const OrderInfo = () => {
   useEffect(() => {
@@ -11,8 +12,10 @@ const OrderInfo = () => {
   }, []);
   const [item, setItem] = useState('');
 
+  const navigate = useNavigate();
+
   const fetchdata = async () => {
-    const response = await fetch('http://172.20.10.9:8000/orders/carts', {
+    const response = await fetch('http://172.20.10.4:8000/orders/carts', {
       headers: {
         Authorization: sessionStorage.getItem('token'),
       },
@@ -21,24 +24,43 @@ const OrderInfo = () => {
   };
 
   const checkout = () => {
-    fetch('http://172.20.10.9:8000/orders', {
+    fetch('http://172.20.10.4:8000/orders', {
       method: 'POST',
       headers: {
         Authorization: sessionStorage.getItem('token'),
       },
-      body: JSON.stringify({ quantity: 1 }),
     })
       .then(res => res.json())
-      .then(data => console.log);
+      .then(data => {
+        if (data.message === 'LACK_OF_POINT') {
+          alert(
+            `현재 가진 포인트는 ${data.point}이며 결제할 포인트가 부족합니다.`
+          );
+        } else if (data.message === 'SUCCESS') {
+          alert('결제가 완료되었습니다');
+        }
+      });
   };
 
-  const price =
-    (item && item.result.map(e => e.price).reduce((a, b) => a + b)) || 90000;
-  //item?.result.map(e => e.price).reduce((a, b) => a + b) || 90000;
+  const go = () => {
+    fetch('http://172.20.10.4:8000/orders/carts/1', {
+      method: 'POST',
+      headers: {
+        Authorization: sessionStorage.getItem('token'),
+      },
+      body: {
+        quantity: JSON.stringify({ quantity: 1 }),
+      },
+    });
+  };
+
+  const price = 90000;
+  // (item && item.result.map(e => e.price).reduce((a, b) => a + b)) || 90000;
   const additionalTax = price / 10;
   const totalPrice = price + additionalTax;
   return (
     <div className="orderinfo">
+      <button onClick={go}>ekarl</button>
       <div className="order-data">
         <div className="order-data-top">
           <h1>주문정보</h1>
