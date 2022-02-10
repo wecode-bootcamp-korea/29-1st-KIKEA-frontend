@@ -58,7 +58,7 @@ const Menu = ({ closeMenu, menuVisible }) => {
           <h1
             className="side-bar-category"
             onClick={() => {
-              setTypeListVisible(!typeListVisible);
+              setTypeListVisible(prev => !prev);
             }}
           >
             모든 제품

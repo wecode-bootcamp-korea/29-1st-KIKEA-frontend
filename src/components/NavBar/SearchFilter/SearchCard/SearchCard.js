@@ -18,7 +18,7 @@ const SearchCard = ({ kikea }) => {
       </div>
       <div className="product-description">
         <p className="product-name">{name}</p>
-        <p className="product-class">{type}</p>
+        <p className="product-class">{description}</p>
       </div>
     </div>
   );

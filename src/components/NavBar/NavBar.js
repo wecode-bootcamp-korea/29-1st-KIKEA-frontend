@@ -37,15 +37,13 @@ const NavBar = ({ showMenu, showLoginBar }) => {
     });
 
   useEffect(() => {
-    // fetch('http://10.58.5.10:8000/products')
-    fetch('http://192.168.147.117:8000/products?sort=price')
+    fetch('http://10.58.5.10:8000/products')
+      // fetch('http://192.168.147.117:8000/products?sort=price')
       .then(res => res.json())
       .then(data => {
         setSearchData(data);
       });
   }, []);
-
-  // console.log(searchData);
 
   return (
     <div className="sidebar-nav-container">
