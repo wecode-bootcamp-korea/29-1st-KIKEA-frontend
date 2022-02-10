@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { END_POINT } from '../../.../../../config';
 import './LoginMain.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-regular-svg-icons';
@@ -26,7 +27,11 @@ const LoginMain = () => {
   };
 
   const signIn = () => {
+<<<<<<< HEAD
     fetch('http://10.58.7.174:8000/users/signin', {
+=======
+    fetch(END_POINT.signIn, {
+>>>>>>> main
       method: 'POST',
       body: JSON.stringify({ ...inputState }),
     })
