@@ -7,8 +7,8 @@ import {
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 
-const DetailRec = ({ productBox }) => {
-  const TOTAL_SLIDES = 4;
+const DetailRec = ({ secondProductBox }) => {
+  const TOTAL_SLIDES = 2;
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideRef = useRef(null);
 
@@ -46,22 +46,16 @@ const DetailRec = ({ productBox }) => {
           </button>
           <div className="rec-products-list-wrap">
             <div className="rec-products-list" ref={slideRef}>
-              {productBox.map(
-                ({ id, name, type, unit, price, review, mainSrc }) => {
-                  return (
-                    <DetailRecProd
-                      key={id}
-                      id={id}
-                      name={name}
-                      type={type}
-                      unit={unit}
-                      price={price}
-                      review={review}
-                      mainSrc={mainSrc}
-                    />
-                  );
-                }
-              )}
+              {secondProductBox.result?.map((item, index) => (
+                <DetailRecProd
+                  key={index}
+                  id={item.id}
+                  name={item.name}
+                  type={item.type}
+                  price={item.price}
+                  image={item.default_image}
+                />
+              ))}
             </div>
           </div>
         </div>
