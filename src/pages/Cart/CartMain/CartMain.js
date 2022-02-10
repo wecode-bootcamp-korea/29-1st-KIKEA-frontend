@@ -3,22 +3,33 @@ import CartBox from './CartBox/CartBox';
 import './CartMain.scss';
 
 const CartMain = ({ cartBox, setCartBox, onRemove }) => {
-  const handleAdd = itemId => {
-    const addQty = cartBox.result?.map(item => {
-      if (itemId === item.id && item.quantity < 5) {
-        return { ...item, quantity: item.quantity + 1 };
-      } else return item;
-    });
-    setCartBox(addQty);
-  };
+  // const handleAdd = itemId => {
+  //   const addQty = cartBox.result?.map(item => {
+  //     if (itemId === item.id && item.quantity < 5) {
+  //       return { ...item, quantity: item.quantity + 1 };
+  //     } else return item;
+  //   });
+  //   setCartBox(addQty);
+  // };
 
-  const handleMinus = itemId => {
-    const minusQty = cartBox.result?.map(item => {
-      if (itemId === item.id && item.quantity > 1) {
-        return { ...item, quantity: item.quantity - 1 };
-      } else return item;
+  // const handleMinus = itemId => {
+  //   const minusQty = cartBox.result?.map(item => {
+  //     if (itemId === item.id && item.quantity > 1) {
+  //       return { ...item, quantity: item.quantity - 1 };
+  //     } else return item;
+  //   });
+  //   setCartBox(minusQty);
+  // };
+
+  const handleqty = (itemId, operator, quantity) => {
+    fetch(`http://10.58.7.174:8000/orders/carts/${itemId}`, {
+      method: 'PATCH',
+      headers: {
+        Authorization: sessionStorage.getItem('token'),
+      },
+      body: JSON.stringify({ quantity: quantity + operator }),
     });
-    setCartBox(minusQty);
+    console.log(quantity + operator);
   };
 
   return (
@@ -51,8 +62,9 @@ const CartMain = ({ cartBox, setCartBox, onRemove }) => {
               total_price={total_price}
               type={type}
               onRemove={onRemove}
-              handleAdd={handleAdd}
-              handleMinus={handleMinus}
+              // handleAdd={handleAdd}
+              // handleMinus={handleMinus}
+              handleqty={handleqty}
             />
           );
         }

@@ -7,7 +7,6 @@ const CartSide = ({ cartBox }) => {
   useEffect(() => {
     if (cartBox) {
       getTotal(cartBox);
-      console.log(cartBox);
     }
   }, [cartBox]);
 
@@ -18,7 +17,6 @@ const CartSide = ({ cartBox }) => {
       cartItem => (totalPrice += Number(cartItem.result?.total_price))
     );
 
-    console.log(totalPrice);
     setTotal(totalPrice);
   };
 

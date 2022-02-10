@@ -11,8 +11,7 @@ const CartBox = ({
   total_price,
   type,
   onRemove,
-  handleAdd,
-  handleMinus,
+  handleqty,
 }) => {
   return (
     <div className="cart-box-container">
@@ -36,14 +35,14 @@ const CartBox = ({
             <div className="cart-product-qty-box">
               <button
                 className="cart-product-minus-btn"
-                onClick={() => handleMinus(id)}
+                onClick={() => handleqty(id, -1, quantity)}
               >
                 <FontAwesomeIcon icon={faMinus} className="cart-minus-icon" />
               </button>
               <div className="cart-product-qty">{quantity}</div>
               <button
                 className="cart-product-add-btn"
-                onClick={() => handleAdd(id)}
+                onClick={() => handleqty(id, 1, quantity)}
               >
                 <FontAwesomeIcon icon={faPlus} className="cart-prev-icon" />
               </button>
