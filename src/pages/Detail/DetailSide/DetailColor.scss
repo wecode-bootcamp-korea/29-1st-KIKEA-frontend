@@ -1,0 +1,42 @@
+.side-product-color-value-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .side-product-color-value-comment {
+    margin-top: 25px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .side-product-color-value {
+    margin-top: 20px;
+    font-size: 13px;
+  }
+}
+
+.side-product-color-list-wrap {
+  margin: 20px 0;
+  text-align: center;
+
+  .side-product-color-box {
+    display: inline;
+    flex-direction: row;
+    width: 6vw;
+    margin-right: 10px;
+
+    &:hover {
+      cursor: pointer;
+      border: 4px solid rgb(93, 93, 93);
+      border-radius: 10px;
+      transition: 0.3s;
+      padding: 0;
+    }
+
+    .side-product-color-img {
+      width: 80%;
+      height: 80%;
+      margin: auto;
+    }
+  }
+}

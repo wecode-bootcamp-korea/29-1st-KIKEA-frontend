@@ -14,10 +14,10 @@ function Router() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/productTypeMain" element={<ProductTypeMain />} />
-        <Route path="/detail" element={<DetailC />} />
+        <Route path="/detail*" element={<DetailC />} />
         <Route path="/member" element={<Member />} />
-        <Route path="/login" element={<Login />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/products*" element={<ProductTypeMain />} />
         <Route path="/type" element={<ProductTypeMain />} />
         <Route path="/order" element={<Order />} />
