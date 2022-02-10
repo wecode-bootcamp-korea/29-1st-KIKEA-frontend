@@ -6,18 +6,28 @@ import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 const CartBox = ({
   id,
   name,
-  type,
-  price,
   quantity,
+  default_image,
+  total_price,
+  type,
   onRemove,
-  handleAdd,
-  handleMinus,
 }) => {
+  const handleqty = (itemId, operator, quantity) => {
+    fetch(`http://10.58.7.174:8000/orders/carts/${itemId}`, {
+      method: 'PATCH',
+      headers: {
+        Authorization: sessionStorage.getItem('token'),
+      },
+      body: JSON.stringify({ quantity: quantity + operator }),
+    });
+    console.log(quantity + operator);
+  };
+
   return (
     <div className="cart-box-container">
       <div className="cart-box">
         <img
-          src="https://www.ikea.com/kr/ko/images/products/vimle-2-seat-sofa-bed-with-wide-armrests-hallarp-beige__0952172_pe801617_s3.jpg"
+          src={default_image}
           className="cart-products-img"
           alt="product-img"
         />
@@ -27,20 +37,22 @@ const CartBox = ({
               <div className="cart-product-name">{name}</div>
               <div className="cart-product-type">{type}</div>
             </div>
-            <div className="cart-product-price">₩{price?.toLocaleString()}</div>
+            <div className="cart-product-price">
+              ₩{total_price?.toLocaleString()}
+            </div>
           </div>
           <div className="cart-product-btn-box ">
             <div className="cart-product-qty-box">
               <button
                 className="cart-product-minus-btn"
-                onClick={() => handleMinus(id)}
+                onClick={() => handleqty(id, -1, quantity)}
               >
                 <FontAwesomeIcon icon={faMinus} className="cart-minus-icon" />
               </button>
               <div className="cart-product-qty">{quantity}</div>
               <button
                 className="cart-product-add-btn"
-                onClick={() => handleAdd(id)}
+                onClick={() => handleqty(id, 1, quantity)}
               >
                 <FontAwesomeIcon icon={faPlus} className="cart-prev-icon" />
               </button>
