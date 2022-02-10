@@ -1,7 +1,7 @@
 import React from 'react';
 import './ProductFilter.scss';
 
-const ProductFilter = ({ category, sortCategory }) => {
+const ProductFilter = ({ category, sortCategory, color }) => {
   return (
     <div className="productfilter">
       <div className="productfilter-carousel">
@@ -9,10 +9,12 @@ const ProductFilter = ({ category, sortCategory }) => {
           category.map(({ id, name }) => (
             <button
               key={id}
-              className="productfilter-button"
+              className={
+                color ? 'productfilter-button color ' : 'productfilter-button '
+              }
               onClick={() => sortCategory(id)}
             >
-              <span>{name}</span>
+              {name}
             </button>
           ))}
       </div>

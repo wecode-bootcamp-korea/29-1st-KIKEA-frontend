@@ -1,22 +1,18 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { END_POINT } from '../../../config';
 import './RecommendItem.scss';
 const RecommendItem = () => {
   const [item, setItem] = useState('');
+  const navigate = useNavigate();
+
   useEffect(() => {
-    fetch('http://10.58.5.10:8000/products/product?type=1')
+    fetch(END_POINT.recommendItem)
       .then(response => response.json())
       .then(result => {
         setItem(result.products);
       });
   }, []);
-
-  // const shuffleArray = array => {
-  //   for (let i = 0; i < array.result.length; i++) {
-  //     let j = Math.floor(Math.random() * (i + 5));
-  //     array.result[i] = array.result[j];
-  //   }
-  //   return array.result.splice(0, 15);
-  // };
 
   const sliderWrapper = useRef();
 
@@ -28,6 +24,10 @@ const RecommendItem = () => {
     }
   };
 
+  const goDetail = id => {
+    navigate(`/detail?product=${id}`);
+  };
+
   useEffect(() => {
     const sliderInterval = setInterval(nextSlider, 4000);
     return () => {
@@ -35,7 +35,6 @@ const RecommendItem = () => {
     };
   }, []);
 
-  console.log(item);
   return (
     <div className="recommenditem">
       <div className="recommendtaion-title">추천 제품</div>
@@ -47,6 +46,7 @@ const RecommendItem = () => {
                 alt={item.type}
                 src={item.default_image}
                 className="recommendtaion-item-img"
+                onClick={() => goDetail(item.id)}
               />
               <div className="recommendtaion-item-info">
                 <h3>{item.name}</h3>

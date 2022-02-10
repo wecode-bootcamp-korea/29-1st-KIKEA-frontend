@@ -13,6 +13,12 @@
   display: none;
 
   .type-list-items {
+    width: 130px;
     padding: 7px 0px 5px 18px;
+  }
+
+  .type-list-items:hover {
+    cursor: pointer;
+    text-decoration: underline;
   }
 }

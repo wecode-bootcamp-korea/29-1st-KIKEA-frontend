@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { END_POINT } from '../../.../../../config';
 import './SignUpForm.scss';
 
 const SignUpForm = () => {
@@ -46,7 +47,7 @@ const SignUpForm = () => {
 
   const signUp = () => {
     if (isValid()) {
-      fetch('http://10.58.5.10:8000/users/signup', {
+      fetch(END_POINT.signUp, {
         method: 'POST',
         body: JSON.stringify({ ...inputState }),
       })

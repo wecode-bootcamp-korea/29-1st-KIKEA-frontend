@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { END_POINT } from '../../.../../../../config';
 import { useNavigate } from 'react-router-dom';
 import './List.scss';
 
@@ -8,7 +9,7 @@ const TypeList = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('http://10.58.5.10:8000/products/category')
+    fetch(END_POINT.category)
       .then(response => response.json())
       .then(result => {
         setCategory(result.categories);
@@ -23,7 +24,7 @@ const TypeList = () => {
   };
 
   const goType = id => {
-    navigate(`/products?subcategory=${id}`);
+    navigate(`/type?subcategory=${id}`);
   };
 
   return (
