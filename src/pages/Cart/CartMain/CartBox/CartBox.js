@@ -11,6 +11,8 @@ const CartBox = ({
   total_price,
   type,
   onRemove,
+  changeNum,
+  cartBox,
 }) => {
   const handleqty = (itemId, operator, quantity) => {
     fetch(`http://10.58.7.174:8000/orders/carts/${itemId}`, {
@@ -19,10 +21,14 @@ const CartBox = ({
         Authorization: sessionStorage.getItem('token'),
       },
       body: JSON.stringify({ quantity: quantity + operator }),
+    }).then(res => {
+      if (res.ok === true) {
+        changeNum();
+      }
     });
+    changeNum();
     console.log(quantity + operator);
   };
-
   return (
     <div className="cart-box-container">
       <div className="cart-box">
@@ -57,7 +63,10 @@ const CartBox = ({
                 <FontAwesomeIcon icon={faPlus} className="cart-prev-icon" />
               </button>
             </div>
-            <button className="delete-btn" onClick={() => onRemove(id)}>
+            <button
+              className="delete-btn"
+              onClick={() => onRemove(cartBox.result?.id)}
+            >
               삭제
             </button>
             <button className="add-wishlist">위시리스트 저장</button>

@@ -34,7 +34,9 @@ const CartSide = ({ cartBox }) => {
         </div>
         <div className="cart-order-all-price-box">
           <span className="cart-order-all-price-comment">총 주문금액</span>
-          <span className="cart-order-all-price">₩ {total}</span>
+          <span className="cart-order-all-price">
+            ₩ {total?.toLocaleString()}
+          </span>
         </div>
       </div>
       <div className="cart-side-login-box">
