@@ -5,7 +5,6 @@ import Main from './pages/Main/Main';
 import ProductTypeMain from './pages/ProductType/ProductTypeMain';
 import Member from './pages/Member/Member';
 import DetailC from './pages/Detail/DetailC';
-import Nav from './components/Nav';
 import Cart from './pages/Cart/Cart';
 
 function Router() {
