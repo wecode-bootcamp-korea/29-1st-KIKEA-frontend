@@ -26,7 +26,7 @@ const LoginMain = () => {
   };
 
   const signIn = () => {
-    fetch('http://172.20.10.4:8000/users/signin', {
+    fetch('http://10.58.7.174:8000/users/signin', {
       method: 'POST',
       body: JSON.stringify({ ...inputState }),
     })
@@ -40,7 +40,7 @@ const LoginMain = () => {
           return false;
         } else {
           sessionStorage.setItem('token', data.Token);
-          sessionStorage.setItem('name', data.Name);
+          sessionStorage.setItem('name', data.name);
           navigate('/');
         }
       });

@@ -15,7 +15,7 @@ const OrderInfo = () => {
   const navigate = useNavigate();
 
   const fetchdata = async () => {
-    const response = await fetch('http://172.20.10.4:8000/orders/carts', {
+    const response = await fetch('http://10.58.7.174:8000/orders/carts', {
       headers: {
         Authorization: sessionStorage.getItem('token'),
       },
@@ -24,7 +24,7 @@ const OrderInfo = () => {
   };
 
   const checkout = () => {
-    fetch('http://172.20.10.4:8000/orders', {
+    fetch('http://10.58.7.174:8000/orders', {
       method: 'POST',
       headers: {
         Authorization: sessionStorage.getItem('token'),
@@ -36,6 +36,9 @@ const OrderInfo = () => {
           alert(
             `현재 가진 포인트는 ${data.point}이며 결제할 포인트가 부족합니다.`
           );
+        } else if (data.message === 'OUT_OF_STOCK') {
+          const outofStock = data.sold_out.map(item => item.product_name);
+          alert(outofStock + '의 재고가 부족합니다.');
         } else if (data.message === 'SUCCESS') {
           alert('결제가 완료되었습니다');
           navigate('/');
@@ -43,25 +46,12 @@ const OrderInfo = () => {
       });
   };
 
-  const go = () => {
-    fetch('http://172.20.10.4:8000/orders/carts/1', {
-      method: 'POST',
-      headers: {
-        Authorization: sessionStorage.getItem('token'),
-      },
-      body: {
-        quantity: JSON.stringify({ quantity: 1 }),
-      },
-    });
-  };
-
-  const price = 90000;
-  // (item && item.result.map(e => e.price).reduce((a, b) => a + b)) || 90000;
+  const price =
+    (item && item.result.map(e => e.price).reduce((a, b) => a + b)) || 90000;
   const additionalTax = price / 10;
   const totalPrice = price + additionalTax;
   return (
     <div className="orderinfo">
-      <button onClick={go}>ekarl</button>
       <div className="order-data">
         <div className="order-data-top">
           <h1>주문정보</h1>
