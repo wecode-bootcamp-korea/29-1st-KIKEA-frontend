@@ -38,6 +38,7 @@ const OrderInfo = () => {
           );
         } else if (data.message === 'SUCCESS') {
           alert('결제가 완료되었습니다');
+          navigate('/');
         }
       });
   };
