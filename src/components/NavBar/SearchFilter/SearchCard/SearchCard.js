@@ -1,10 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './SearchCard.scss';
 
 const SearchCard = ({ kikea }) => {
-  const { id, default_image, name, type } = kikea;
+  const { id, default_image, name, description } = kikea;
+
+  const navigate = useNavigate();
+
+  const goDetail = id => {
+    navigate(`/datail?products?${id}`);
+  };
+
   return (
-    <div className="product-items" key={id}>
+    <div className="product-items" key={id} onClick={() => goDetail(id)}>
       <div className="product-img">
         <img src={default_image} alt="product" className="img" />
       </div>

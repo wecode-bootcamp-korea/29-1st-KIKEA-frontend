@@ -1,0 +1,10 @@
+.cart {
+  box-sizing: border-box;
+  width: 80vw;
+  padding-left: 50px;
+
+  .cart-main-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+}

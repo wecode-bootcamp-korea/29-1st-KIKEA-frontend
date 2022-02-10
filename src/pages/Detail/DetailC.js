@@ -1,5 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-import DetailNav from './DetailNav';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import Nav from '../../components/Nav';
+import Footer from '../../components/Footer/Footer';
 import DetailMain from './DetailMain/DetailMain';
 import DetailSide from './DetailSide/DetailSide';
 import DetailAside from './DetailAside/DetailAside';
@@ -8,52 +10,89 @@ import './DetailC.scss';
 
 const Detail = () => {
   const [productBox, setProductBox] = useState([]);
+  const [secondProductBox, setSecondProductBox] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [descSideOpen, setDescSideOpen] = useState(false);
 
+  const location = useLocation();
+
   const toggleCartBtn = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(prev => !prev);
+    goCart();
   };
 
   const toggleDescBtn = () => {
-    setDescSideOpen(!descSideOpen);
+    setDescSideOpen(prev => !prev);
   };
+
+  useEffect(() => {
+    fetch(`http://192.168.147.112:8000/products?product=${location.search}`)
+      .then(res => res.json())
+      .then(data => {
+        setProductBox(data);
+      });
+
+    fetch('http://192.168.147.112:8000/products?subcategory=1')
+      .then(res => res.json())
+      .then(data => {
+        setSecondProductBox(data);
+      });
+  }, []);
 
   const toggleSideBar = () => {
     if (isOpen) return toggleCartBtn();
     if (descSideOpen) return toggleDescBtn();
   };
 
-  useEffect(() => {
-    fetch('/data/detailMainData.json')
-      .then(res => res.json())
-      .then(data => {
-        setProductBox(data);
-      });
-  }, []);
+  const goCart = () => {
+    fetch('http://192.168.147.112:8000/orders/carts/1', {
+      method: 'POST',
+      headers: {
+        Authorization: sessionStorage.getItem('token'),
+      },
+      body: JSON.stringify({ quantity: 1 }),
+    });
+  };
+  console.log(productBox);
 
   return (
-    <main className="detail-page-container">
-      <div className="detail-page">
-        <DetailNav />
-        <div className="detail-container">
-          <div
-            className={isOpen || descSideOpen ? 'empty-ele' : 'empty-ele close'}
-            onClick={toggleSideBar}
-          />
-          <DetailMain productBox={productBox} toggleDescBtn={toggleDescBtn} />
-          <DetailSide
-            isOpen={isOpen}
-            toggleAddBtn={toggleCartBtn}
-            productBox={productBox}
-          />
-          {isOpen && (
-            <DetailAside isOpen={isOpen} toggleCloseBtn={toggleCartBtn} />
-          )}
-          <DetailDescSide descSideOpen={descSideOpen} />
+    <>
+      <Nav />
+      <main className="detail-page-container">
+        <div className="detail-page">
+          <div className="detail-container">
+            <div
+              className={`empty-ele ${isOpen || descSideOpen ? '' : 'close'}`}
+              onClick={toggleSideBar}
+            />
+            <DetailMain
+              productBox={productBox}
+              secondProductBox={secondProductBox}
+              toggleDescBtn={toggleDescBtn}
+            />
+            <DetailSide
+              isOpen={isOpen}
+              toggleAddBtn={toggleCartBtn}
+              productBox={productBox}
+              goCart={goCart}
+            />
+            {isOpen && (
+              <DetailAside
+                isOpen={isOpen}
+                toggleCloseBtn={toggleCartBtn}
+                productBox={productBox}
+                secondProductBox={secondProductBox}
+              />
+            )}
+            <DetailDescSide
+              descSideOpen={descSideOpen}
+              productBox={productBox}
+            />
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 };
 
