@@ -11,6 +11,7 @@ const Cart = () => {
   const [secondCartBox, setSecondCartBox] = useState([]);
 
   useEffect(() => {
+    let test;
     fetch('http://10.58.7.174:8000/orders/carts', {
       headers: {
         Authorization: sessionStorage.getItem('token'),
@@ -20,7 +21,9 @@ const Cart = () => {
       .then(data => {
         setCartBox(data);
       });
+  }, []);
 
+  useEffect(() => {
     fetch('http://10.58.7.174:8000/products?subcategory=1')
       .then(res => res.json())
       .then(data => {

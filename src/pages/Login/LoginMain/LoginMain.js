@@ -87,7 +87,6 @@ const LoginMain = () => {
             onChange={changeInfo}
             required
           />
-
           <label className="form-label">
             <span>비밀번호</span>
           </label>

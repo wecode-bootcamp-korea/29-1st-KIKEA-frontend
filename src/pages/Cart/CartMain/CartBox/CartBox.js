@@ -11,8 +11,18 @@ const CartBox = ({
   total_price,
   type,
   onRemove,
-  handleqty,
 }) => {
+  const handleqty = (itemId, operator, quantity) => {
+    fetch(`http://10.58.7.174:8000/orders/carts/${itemId}`, {
+      method: 'PATCH',
+      headers: {
+        Authorization: sessionStorage.getItem('token'),
+      },
+      body: JSON.stringify({ quantity: quantity + operator }),
+    });
+    console.log(quantity + operator);
+  };
+
   return (
     <div className="cart-box-container">
       <div className="cart-box">

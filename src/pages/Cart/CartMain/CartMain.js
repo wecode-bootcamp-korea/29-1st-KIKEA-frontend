@@ -21,16 +21,16 @@ const CartMain = ({ cartBox, setCartBox, onRemove }) => {
   //   setCartBox(minusQty);
   // };
 
-  const handleqty = (itemId, operator, quantity) => {
-    fetch(`http://10.58.7.174:8000/orders/carts/${itemId}`, {
-      method: 'PATCH',
-      headers: {
-        Authorization: sessionStorage.getItem('token'),
-      },
-      body: JSON.stringify({ quantity: quantity + operator }),
-    });
-    console.log(quantity + operator);
-  };
+  // const handleqty = (itemId, operator, quantity) => {
+  //   fetch(`http://10.58.7.174:8000/orders/carts/${itemId}`, {
+  //     method: 'PATCH',
+  //     headers: {
+  //       Authorization: sessionStorage.getItem('token'),
+  //     },
+  //     body: JSON.stringify({ quantity: quantity + operator }),
+  //   });
+  //   console.log(quantity + operator);
+  // };
 
   return (
     <div className="cart-main-container">
@@ -64,7 +64,7 @@ const CartMain = ({ cartBox, setCartBox, onRemove }) => {
               onRemove={onRemove}
               // handleAdd={handleAdd}
               // handleMinus={handleMinus}
-              handleqty={handleqty}
+              // handleqty={handleqty}
             />
           );
         }
