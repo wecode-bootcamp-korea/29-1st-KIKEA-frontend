@@ -20,18 +20,6 @@ const OrderInfo = () => {
     return response;
   };
 
-  const goCart = () => {
-    fetch('http://172.20.10.9:8000/orders/carts/1', {
-      method: 'POST',
-      headers: {
-        Authorization: sessionStorage.getItem('token'),
-      },
-      body: JSON.stringify({ quantity: 1 }),
-    })
-      .then(res => res.json())
-      .then(data => console.log);
-  };
-
   const checkout = () => {
     fetch('http://172.20.10.9:8000/orders', {
       method: 'POST',
@@ -44,9 +32,6 @@ const OrderInfo = () => {
       .then(data => console.log);
   };
 
-  console.log(item);
-  console.log('data');
-
   const price =
     (item && item.result.map(e => e.price).reduce((a, b) => a + b)) || 90000;
   //item?.result.map(e => e.price).reduce((a, b) => a + b) || 90000;
@@ -54,7 +39,6 @@ const OrderInfo = () => {
   const totalPrice = price + additionalTax;
   return (
     <div className="orderinfo">
-      <button onClick={goCart}>asdf</button>
       <div className="order-data">
         <div className="order-data-top">
           <h1>주문정보</h1>
