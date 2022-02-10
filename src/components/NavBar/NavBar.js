@@ -30,7 +30,6 @@ const NavBar = ({ showMenu, showLoginBar }) => {
     setSearchInput('');
   };
 
-  console.log(searchData);
   const filteredSearchData =
     searchData.result &&
     searchData.result.filter(kikea => {
@@ -41,7 +40,6 @@ const NavBar = ({ showMenu, showLoginBar }) => {
     fetch('http://192.168.147.117:8000/products?sort=price')
       .then(res => res.json())
       .then(data => {
-        console.log('asdf');
         setSearchData(data);
       });
   }, []);

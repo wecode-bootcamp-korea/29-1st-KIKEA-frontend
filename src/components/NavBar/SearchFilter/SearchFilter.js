@@ -3,8 +3,6 @@ import SearchCard from './SearchCard/SearchCard';
 import './SearchFilter.scss';
 
 const SearchFilter = ({ searchData, setFilterVisible, setSearchInput }) => {
-  console.log('dfsdfsdfsd');
-  console.log(searchData);
   return (
     <>
       <div

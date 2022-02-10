@@ -4,8 +4,6 @@ import { END_POINT } from '../../../config';
 import './RecommendItem.scss';
 const RecommendItem = () => {
   const [item, setItem] = useState('');
-  let tt;
-
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -14,26 +12,7 @@ const RecommendItem = () => {
       .then(result => {
         setItem(result.products);
       });
-
-    fetch(
-      'http://192.168.147.117:8000/products/product?subcategory=1&subcategory=2'
-    )
-      .then(re => re.json())
-      .then(data => {
-        tt = data.products;
-        tt.sort((a, b) => b.price - a.price);
-        console.log(tt);
-        return null;
-      });
   }, []);
-
-  // const shuffleArray = array => {
-  //   for (let i = 0; i < array.result.length; i++) {
-  //     let j = Math.floor(Math.random() * (i + 5));
-  //     array.result[i] = array.result[j];
-  //   }
-  //   return array.result.splice(0, 15);
-  // };
 
   const sliderWrapper = useRef();
 
@@ -49,12 +28,12 @@ const RecommendItem = () => {
     navigate(`/detail?product=${id}`);
   };
 
-  // useEffect(() => {
-  //   const sliderInterval = setInterval(nextSlider, 4000);
-  //   return () => {
-  //     clearInterval(sliderInterval);
-  //   };
-  // }, []);
+  useEffect(() => {
+    const sliderInterval = setInterval(nextSlider, 4000);
+    return () => {
+      clearInterval(sliderInterval);
+    };
+  }, []);
 
   return (
     <div className="recommenditem">
