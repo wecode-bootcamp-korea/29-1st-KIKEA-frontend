@@ -2,7 +2,7 @@ import React from 'react';
 import CartBox from './CartBox/CartBox';
 import './CartMain.scss';
 
-const CartMain = ({ cartBox, setCartBox, onRemove }) => {
+const CartMain = ({ cartBox, setCartBox, onRemove, changeNum }) => {
   // const handleAdd = itemId => {
   //   const addQty = cartBox.result?.map(item => {
   //     if (itemId === item.id && item.quantity < 5) {
@@ -62,6 +62,8 @@ const CartMain = ({ cartBox, setCartBox, onRemove }) => {
               total_price={total_price}
               type={type}
               onRemove={onRemove}
+              changeNum={changeNum}
+              cartBox={cartBox}
               // handleAdd={handleAdd}
               // handleMinus={handleMinus}
               // handleqty={handleqty}

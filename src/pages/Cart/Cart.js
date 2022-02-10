@@ -10,7 +10,7 @@ const Cart = () => {
   const [cartBox, setCartBox] = useState([]);
   const [secondCartBox, setSecondCartBox] = useState([]);
 
-  useEffect(() => {
+  const changeNum = () => {
     fetch('http://10.58.7.174:8000/orders/carts', {
       headers: {
         Authorization: sessionStorage.getItem('token'),
@@ -20,6 +20,10 @@ const Cart = () => {
       .then(data => {
         setCartBox(data);
       });
+  };
+
+  useEffect(() => {
+    changeNum();
   }, []);
 
   useEffect(() => {
@@ -43,6 +47,7 @@ const Cart = () => {
             cartBox={cartBox}
             setCartBox={setCartBox}
             onRemove={onRemove}
+            changeNum={changeNum}
           />
           <CartSide cartBox={cartBox} />
         </div>
