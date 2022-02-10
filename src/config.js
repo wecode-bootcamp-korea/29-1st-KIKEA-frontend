@@ -8,4 +8,6 @@ export const END_POINT = {
   signIn: `${BASE_URL}users/signin`,
   signUp: `${BASE_URL}users/signup`,
   selectDetail: `${BASE_URL}products?product=`,
+  selectCart: `${BASE_URL}orders/carts`,
+  order: `${BASE_URL}orders`,
 };

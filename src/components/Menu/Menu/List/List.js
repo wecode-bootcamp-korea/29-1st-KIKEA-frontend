@@ -3,7 +3,7 @@ import { END_POINT } from '../../.../../../../config';
 import { useNavigate } from 'react-router-dom';
 import './List.scss';
 
-const TypeList = () => {
+const TypeList = closeMenu => {
   const [category, setCategory] = useState('');
 
   const navigate = useNavigate();
@@ -23,7 +23,13 @@ const TypeList = () => {
         : 'block';
   };
 
-  const goType = id => {
+  const goType = (id, object) => {
+    // closeMenu();
+    console.log(
+      object.target.parentNode.parentNode.parentNode.parentNode.parentNode
+    );
+    object.target.parentNode.parentNode.parentNode.parentNode.parentNode.style.display =
+      'none';
     navigate(`/type?subcategory=${id}`);
   };
 
@@ -47,7 +53,7 @@ const TypeList = () => {
                   <li
                     className="type-list-items"
                     key={type.id}
-                    onClick={() => goType(type.id)}
+                    onClick={object => goType(type.id, object)}
                   >
                     {type.name}
                   </li>

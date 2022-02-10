@@ -37,7 +37,7 @@ const NavBar = ({ showMenu, showLoginBar }) => {
     });
 
   useEffect(() => {
-    fetch('http://192.168.147.117:8000/products?sort=price')
+    fetch('http://172.20.10.4:8000/products?sort=price')
       .then(res => res.json())
       .then(data => {
         setSearchData(data);

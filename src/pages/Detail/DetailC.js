@@ -16,6 +16,11 @@ const Detail = () => {
 
   const location = useLocation();
 
+  console.log('location');
+  const path = location.seaarch !== '' && location.search.split('=')[1];
+
+  console.log(path);
+  console.log('path');
   const toggleCartBtn = () => {
     setIsOpen(prev => !prev);
     goCart();
@@ -26,13 +31,13 @@ const Detail = () => {
   };
 
   useEffect(() => {
-    fetch(`http://192.168.147.112:8000/products?product=${location.search}`)
+    fetch(`http://10.58.7.174:8000/products${location.search}`)
       .then(res => res.json())
       .then(data => {
         setProductBox(data);
       });
 
-    fetch('http://192.168.147.112:8000/products?subcategory=1')
+    fetch('http://10.58.7.174:8000/products?subcategory=1')
       .then(res => res.json())
       .then(data => {
         setSecondProductBox(data);
@@ -45,7 +50,7 @@ const Detail = () => {
   };
 
   const goCart = () => {
-    fetch('http://192.168.147.112:8000/orders/carts/1', {
+    fetch(`http://10.58.7.174:8000/orders/carts/${path}`, {
       method: 'POST',
       headers: {
         Authorization: sessionStorage.getItem('token'),

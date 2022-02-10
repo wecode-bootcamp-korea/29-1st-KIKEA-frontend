@@ -14,7 +14,6 @@ const Menu = ({ closeMenu, menuVisible }) => {
   const toMain = () => {
     navigate('/');
   };
-
   useEffect(() => {
     const checkIfClickedOutside = e => {
       if (
@@ -63,7 +62,7 @@ const Menu = ({ closeMenu, menuVisible }) => {
           >
             모든 제품
           </h1>
-          {typeListVisible && <TypeList />}
+          {typeListVisible && <TypeList closeMenu={closeMenu} />}
           <p className="side-bar-category side-bar-category-last">
             온라인 쇼룸
           </p>

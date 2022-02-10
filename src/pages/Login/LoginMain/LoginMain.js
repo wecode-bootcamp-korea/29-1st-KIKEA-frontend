@@ -41,7 +41,7 @@ const LoginMain = () => {
           return false;
         } else {
           sessionStorage.setItem('token', data.Token);
-          sessionStorage.setItem('name', data.Name);
+          sessionStorage.setItem('name', data.name);
           navigate('/');
         }
       });
