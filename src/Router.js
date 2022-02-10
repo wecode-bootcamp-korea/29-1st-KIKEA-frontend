@@ -13,7 +13,7 @@ function Router() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/productTypeMain" element={<ProductTypeMain />} /
+        <Route path="/productTypeMain" element={<ProductTypeMain />} />
         <Route path="/detail*" element={<DetailC />} />
         <Route path="/member" element={<Member />} />
         <Route path="/cart" element={<Cart />} />
@@ -25,5 +25,4 @@ function Router() {
     </BrowserRouter>
   );
 }
-
 export default Router;

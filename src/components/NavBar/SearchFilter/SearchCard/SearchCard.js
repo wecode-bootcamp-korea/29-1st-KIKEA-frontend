@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './SearchCard.scss';
 
 const SearchCard = ({ kikea }) => {
-  const { id, default_image, name, description } = kikea;
+  const { id, default_image, name, type } = kikea;
 
   const navigate = useNavigate();
 
@@ -18,7 +18,7 @@ const SearchCard = ({ kikea }) => {
       </div>
       <div className="product-description">
         <p className="product-name">{name}</p>
-        <p className="product-class">{description}</p>
+        <p className="product-class">{type}</p>
       </div>
     </div>
   );

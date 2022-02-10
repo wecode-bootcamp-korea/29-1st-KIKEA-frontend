@@ -1,4 +1,4 @@
-const BASE_URL = 'http://192.168.147.112:8000/';
+const BASE_URL = 'http://172.20.10.4:8000/';
 
 export const END_POINT = {
   recommendItem: `${BASE_URL}products/product?type=1`,

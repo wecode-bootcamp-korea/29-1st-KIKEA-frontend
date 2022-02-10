@@ -1,0 +1,55 @@
+.product-tips-container {
+  padding: 10vh 80px 7vh 9vw;
+
+  .tips-description {
+    display: flex;
+    width: 100%;
+
+    .tips-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      line-height: 1.45;
+      padding-bottom: 4vh;
+    }
+  }
+  .tips-img-container {
+    display: flex;
+    width: 85vw;
+
+    .tips-router {
+      padding: 4vw;
+      background-color: #009984;
+      width: 31vw;
+
+      .tips-text {
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 6.5vh;
+        cursor: pointer;
+      }
+      .tips-text:hover {
+        text-decoration: underline;
+      }
+      .signup-btn {
+        display: block;
+        height: 45px;
+        margin-top: 54vh;
+        background-color: inherit;
+        border: none;
+        cursor: pointer;
+      }
+      .signup-icon {
+        font-size: 70px;
+      }
+    }
+    .tips-img-wrapper {
+      width: 55vw;
+      height: 90vh;
+
+      .tips-img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
