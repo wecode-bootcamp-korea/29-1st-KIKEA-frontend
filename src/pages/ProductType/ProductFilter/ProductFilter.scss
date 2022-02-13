@@ -3,6 +3,9 @@
   padding-right: 80px;
 
   .filter-btn-container {
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
     padding: 6vh 0 3vh 0;
     width: 100%;
     border-bottom: 0.1em solid lightgray;
@@ -31,7 +34,13 @@
     .filter-btn:hover {
       background-color: #dfdfdf;
     }
+    .num-of-products {
+      color: grey;
+      font-size: 0.9rem;
+      padding-left: 72vw;
+    }
   }
+
   .filter-options-container {
     font-weight: 700;
     height: auto;

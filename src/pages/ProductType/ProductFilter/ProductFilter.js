@@ -3,11 +3,13 @@ import './ProductFilter.scss';
 
 import ProductCard from './ProductCard/ProductCard';
 
-const ProductFilter = ({ items, filterItems }) => {
+const ProductFilter = ({ items, sortPriceToHigh }) => {
   const [typeFilterVisible, setTypeFilterVisible] = useState(false);
   const [typeFilterClicked, setTypeFilterClicked] = useState(false);
 
   const TypeFilterRef = useRef();
+
+  const numOfProducts = items.products?.length;
 
   useEffect(() => {
     const checkIfClickedOutside = e => {
@@ -42,7 +44,9 @@ const ProductFilter = ({ items, filterItems }) => {
           >
             정렬
           </button>
-          {typeFilterVisible && <Filter filterItems={filterItems} />}
+          <span className="num-of-products">{`${numOfProducts}개의 상품`}</span>
+
+          {typeFilterVisible && <Filter sortPriceToHigh={sortPriceToHigh} />}
         </div>
         <div className="filter-btn-category" />
       </div>
@@ -57,14 +61,14 @@ const ProductFilter = ({ items, filterItems }) => {
 
 export default ProductFilter;
 
-const Filter = ({ filterItems }) => {
+const Filter = ({ sortPriceToHigh }) => {
   return (
     <div className="filter-options-container">
       <ol>
         <li
           className="filter-options"
           onClick={() => {
-            filterItems();
+            sortPriceToHigh();
           }}
         >
           낮은 가격 순
