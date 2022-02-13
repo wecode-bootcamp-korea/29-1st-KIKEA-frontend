@@ -1,0 +1,15 @@
+.ordertop {
+  padding: 30px 100px 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo-container {
+    height: 40px;
+    font-size: 20px;
+
+    .logo-image {
+      height: 100%;
+    }
+  }
+}

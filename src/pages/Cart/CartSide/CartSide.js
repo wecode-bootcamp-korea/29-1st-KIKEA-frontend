@@ -13,9 +13,14 @@ const CartSide = ({ cartBox }) => {
   const getTotal = cartItems => {
     let totalPrice = 0;
 
-    cartItems.map(cartItem => (totalPrice += Number(cartItem.price)));
+    cartItems.result?.map(cartItem => (totalPrice += cartItem.total_price));
+
     setTotal(totalPrice);
+    console.log(total);
+    console.log(typeof total);
   };
+
+  console.log(cartBox);
 
   return (
     <div className="cart-side-container">
