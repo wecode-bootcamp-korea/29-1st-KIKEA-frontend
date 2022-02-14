@@ -10,7 +10,7 @@ const Nav = () => {
   const [menuVisible, setMenuVisible] = useState(false);
   const [loginBarVisible, setLoginBarVisible] = useState(false);
 
-  const closeMenu = e => {
+  const closeMenu = () => {
     setMenuVisible(false);
   };
 

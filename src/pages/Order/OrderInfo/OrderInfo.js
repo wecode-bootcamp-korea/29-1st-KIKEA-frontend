@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './OrderInfo.scss';
+import { END_POINT } from '../../.../../../config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import 'font-awesome/css/font-awesome.min.css';
 import { faHeart, faLock } from '@fortawesome/free-solid-svg-icons';
@@ -12,7 +13,7 @@ const OrderInfo = () => {
   const [item, setItem] = useState('');
 
   const fetchdata = async () => {
-    const response = await fetch('http://172.20.10.9:8000/orders/carts', {
+    const response = await fetch(END_POINT.selectCart, {
       headers: {
         Authorization: sessionStorage.getItem('token'),
       },
@@ -21,7 +22,7 @@ const OrderInfo = () => {
   };
 
   const checkout = () => {
-    fetch('http://172.20.10.9:8000/orders', {
+    fetch(END_POINT.order, {
       method: 'POST',
       headers: {
         Authorization: sessionStorage.getItem('token'),

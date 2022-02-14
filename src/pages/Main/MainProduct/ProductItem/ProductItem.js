@@ -6,7 +6,7 @@ const ProductItem = ({ item }) => {
   const navigate = useNavigate();
 
   const goDetail = id => {
-    navigate(`products?product=&{id}`);
+    navigate(`detail?product=${id}`);
   };
   return (
     <div className="productitem">
@@ -21,7 +21,7 @@ const ProductItem = ({ item }) => {
                   'https://images.unsplash.com/photo-1634712282287-14ed57b9cc89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZnVybml0dXJlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60'
                 }
                 className="productitem-item-flex-img"
-                onClick={goDetail(id)}
+                onClick={() => goDetail(id)}
               />
             </div>
           ))}

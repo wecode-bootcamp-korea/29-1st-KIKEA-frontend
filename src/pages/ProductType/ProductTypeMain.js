@@ -15,7 +15,7 @@ const ProductTypeMain = () => {
 
   const filterItems = () => {
     // fetch(`http://192.168.147.112:8000/products?sort=${name}`)
-    fetch('http://192.168.147.117:8000/products?sort=price')
+    fetch('http://10.58.7.174:8000/products?sort=price')
       .then(res => res.json())
       .then(data => {
         setItems(data);
@@ -23,16 +23,12 @@ const ProductTypeMain = () => {
   };
 
   useEffect(() => {
-    fetch(
-      `http://192.168.147.112:8000/products/type?subcategory=${location.search}`
-    )
+    fetch(`http://10.58.7.174:8000/products/type${location.search}`)
       .then(res => res.json())
       .then(data => {
         setProductData(data);
       });
-    fetch(
-      'http://192.168.147.117:8000/products/product?subcategory=1&subcategory=2'
-    )
+    fetch('http://10.58.7.174:8000/products/product?type=6')
       .then(res => res.json())
       .then(data => {
         setItems(data);

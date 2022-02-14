@@ -21,11 +21,12 @@
 
     .order-image-container {
       display: flex;
-
+      width: 400px;
       margin-top: 20px;
+      overflow-x: scroll;
 
       .order-image-box {
-        width: 85px;
+        width: 150px;
         margin-right: 10px;
         img {
           width: 100%;
@@ -58,7 +59,7 @@
     hr {
       margin-top: 30px;
       border-top: 2px solid black;
-      width: 20vw;
+      width: 100%;
     }
 
     .total-price-box {
